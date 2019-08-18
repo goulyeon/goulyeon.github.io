@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+@font-face { font-family: 'NanumBarunGothic';
+    src: url('/fonts/NanumBarunGothic.eot');
+    src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+    url('/font/NanumBarunGothic.ttf') format('ttf');}
+
+
+*{margin: 0; padding: 0;}
+body {font-family: 'NanumBarunGothic', 'serif';padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+button{background: none; border:0;outline: none;}
+.blind{font-size: 0; position: absolute; left:-9999px;}
+.center{max-width: 1120px; margin: auto;}
+label, span{display: inline-block;`}
+#btn-menu{display: none;}
+
+
+.icon{
+    display: inline-block;
+    background-image: url(../img/sprite.png);
+}
+.icon-search{width: 50px; height: 50px; background-position: -0px -100px;}
+.icon-real-search{width: 50px; height: 50px; background-position: -60px -100px;}
+.icon-search:hover{width: 50px; height: 50px; background-position: -60px -100px;}
+.icon-close-small-o{
+    width: 30px; height: 30px; background-position: -440px -310px;
+    position: absolute; right: 0;
+}
+.icon-plus{width: 60px; height: 60px; background-position: -280px -240px;}
+.icon-label-red{width: 70px; height: 70px; background-position: 0px 0px;}
+.icon-label-small-red{width: 40px; height: 40px; background-position: -89px 0px;}
+.icon-label-small-pink{width: 40px; height: 40px; background-position: -150px 0px;}
+.icon-up{width: 60px; height: 60px; background-position: 0px -240px;}
+.icon-down{width: 60px; height: 60px; background-position: -70px -240px;}
+.icon-prev{width: 60px; height: 60px; background-position: -210px -240px;}
+.icon-next{width: 60px; height: 60px; background-position: -140px -240px;}
+.icon-search-wihte{width: 40px; height: 40px; background-position: -120px -100px;}
+.icon-youtube{width: 40px; height: 40px; background-position: -460px 0px;}
+.icon-facebook{width: 40px; height: 40px; background-position: -520px 0px;}
+.icon-instagram{width: 40px; height: 40px; background-position: -580px 0px;}
+.icon-membership{width: 50px; height: 50px; background-position: 0px -310px;}
+.icon-top{width: 50px; height: 50px; background-position: -70px -310px;}
+
+
+
+nav .gnb-menu > li:nth-child(3){top: -300px; width: 150px;}
+nav .gnb-menu > li:nth-child(4){top: -80px; width: 120px;}
+nav .gnb-menu > li:nth-child(3):hover>div{height: 300px; transition: 0.5s;}
+nav .gnb-menu > li:nth-child(4):hover>div{height: 80px; transition: 0.5s;}
