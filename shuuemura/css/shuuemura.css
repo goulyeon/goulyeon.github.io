@@ -654,6 +654,7 @@ footer .center .wrap{
     position: relative;
     width: 50%;
     padding:0 20px;
+    vertical-align: top;
 }
 footer .center .wrap div{
     width: 100%;
