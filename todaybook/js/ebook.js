@@ -101,8 +101,8 @@ $(function(){
     })
 
     //진짜듣기 
+    var audio=$('audio')[0];
     $('.play .bottom #audio').click(function(){
-        var audio=$('audio')[0];
         console.log(audio);
         if(audio.paused){
             audio.play();//재생
@@ -124,10 +124,16 @@ $(function(){
 
     $('.icon-plus').on('click', function(){
         $('.num').text(parseInt($('.num').text()) + 1)
+        var num=$('.num').text();
+        audio.playbackRate = num;
+        console.log(audio.playbackRate);
+        
     });
 
     $('.icon-minus').on('click', function(){
         $('.num').text(parseInt($('.num').text()) - 1)
+        var num=$('.num').text();
+        audio.playbackRate = num;
     });
 
     $('button').on('click', function(){
