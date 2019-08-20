@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>search</title>
+    <link rel="stylesheet" href="css/search.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <header>
+        <form action="#">
+            <div class="search">
+                <label for="search"><span class="blind">검색</span></label>
+                <input type="text" id="search" placeholder="책, 태그, 사람 검색">
+            </div>
+        </form>
+        <a href="home.html"><i class="icon icon-back"></i></a>
+        <a href="#"><i class="icon icon-search"></i></a>
+    </header>
+    <section>
+        <article id="search-contents">
+            <div class="recent">
+                <h3>최근검색어</h3>
+                <ul>
+                    <li><a href="#">언어의 온도</a><button class="icon icon-close-small"></button></li>
+                    <li><a href="#">데미안</a><button class="icon icon-close-small"></button></li>
+                    <li><a href="#">변신</a><button class="icon icon-close-small"></button></li>
+                </ul>
+            </div>
+            <div class="tag">
+                <h3>인기태그</h3>
+                <ul>
+                    <li><a href="#"># 배낭여행</a></li>
+                    <li><a href="#"># 존재</a></li>
+                    <li><a href="#"># 여유</a></li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="search-result">
+            <div class="popup-search">
+                <span><b>언어의 온도</b> 검색결과 "51" 건</span>
+                <div class="result-img">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_1.jpg" alt="">
+                                <span>[시/에세이] 언어의 온도(3주년 150만부 기념 에디션)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="img/main_search_2.jpg" alt="">
+                            <span>[시/에세이] 적도의 온도 여행의 언어</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_3.jpg" alt="">
+                                <span>[e-오디오북] 언어의 온도(eBook 본문 포함 + 요약 발췌 e오디오북)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_4.jpg" alt="">
+                                <span>[시/에세이] 언어의 온도 + 문장의 온도 세트 [ 도서 2종 ]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_5.jpg" alt="">
+                                <span>[시/에세이] 언어의 온도[종이책+오디오북]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_6.jpg" alt="">
+                                <span>[시/에세이] [트윈북]언어의 온도(종이책+오디오북 구매)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_7.jpg" alt="">
+                                <span>[가요] 나무+언어 [합본패키지 한정반] [LP]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_8.jpg" alt="">
+                                <span>[가요] 언어</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main_search_9.jpg" alt="">
+                                <span>문장의 온도 - 지극히 소소하지만 너무나도 따스한 이덕무의 위로</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

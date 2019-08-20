@@ -1,0 +1,93 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+/* icon */
+.icon{background-image: url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-back{width: 40px; height: 40px; background-position: -280px -140px;}
+.icon-down-small{width: 20px; height: 20px; background-position: -660px 0px;}
+.icon-up-small{width: 20px; height: 20px; background-position: -680px 0px;}
+
+.icon-checkbox{width: 20px; height: 20px; background-position: -440px -20px;}
+.icon-checkbox.active{width: 20px; height: 20px; background-position: -460px -20px;}
+.icon-radiobox{width: 20px; height: 20px; background-position: -480px -20px;}
+.icon-radiobox.active{width: 20px; height: 20px; background-position: -500px -20px;}
+
+/* header */
+header{position: fixed; width: 100%; height: 60px; background: #f7ecd2; z-index: 1;}
+header h3{position: relative; text-align: center; line-height: 60px; font-size: 22px;}
+header .icon-back{position: absolute; top: 12px; left: 12px;}
+.recommend-header{display: none;}
+
+/* 추천 맞춤설정 팝업 */
+#recommend-setting{display: none; position: relative; top: 0px; margin: 0 20px;}
+
+.age{height: 40px; line-height: 40px; padding: 40px 0;}
+.select-choice i{position: absolute; right: 10px;}
+.select-choice > span{color: #595959; font-size: 16px;}
+#age-select ul{
+    display: none;
+    width: 50%;
+    border: 2px solid #F2D4AE; background: #fff;
+    position: absolute; top: 90px; right: 0;
+    text-align: center; box-sizing: border-box;
+}
+#age-select ul a{width: 100%; height: 40px;}
+#age-select ul a.active{background: #f2d4ae; width: 100%; height: 40px;}
+#age-select > button{
+    width: 50%; height: 40px; 
+    border: 2px solid #F2D4AE; box-sizing: border-box;
+    position: absolute; right: 0; top: 40px;
+}
+
+
+.genre{height: 222px;}
+
+.level{width: 100%; height: 40px; position: absolute; top: 400px;}
+
+#recommend-setting > button{
+    width: 100%; height: 40px;
+    background: #F2D4AE; color: #595959;
+    font-size: 16px; font-weight: bold;
+    position: absolute; top: 480px;
+}
+
+
+/* 체크박스/라디오 */
+[type=radio],
+[type=checkbox]{display: none;}
+.genre > label:nth-child(1){display: block;}
+
+.checkbox{padding: 20px 0px 20px 30px; height: 222px; box-sizing: border-box;}
+.radio{position: absolute; right: 0; top: 10px; width: 60%; text-align: center;}
+
+.checkbox label,
+.radio label{color: #595959; font-size: 16px;}
+
+.genre label, 
+.level label{margin: 10px 10px 15px 0; display: inline-block;}
+
+.level label{margin: 0; width: 31.5%;}
+
+.genre > label:nth-child(1), 
+.level > label:nth-child(1){
+    height: 40px; line-height: 40px; 
+    display: inline-block; 
+    margin:0; padding-top: 9px;
+}
+
+.level > label:nth-child(1){padding: 0;}
+
+.genre label i, 
+.level label i{margin-right: 5px; vertical-align: middle;}

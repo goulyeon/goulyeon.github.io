@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mypage</title>
+    <link rel="stylesheet" href="css/mypage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/mypage.js"></script>
+</head>
+<body>
+    <header>
+        <h3>마이페이지</h3>
+    </header>
+
+    <section>
+        <article id="mypage">
+            <div class="setting">
+                <div>
+                    <strong>계정</strong>
+                    <ul>
+                        <li>todaybook12</li>
+                        <a href="#">로그아웃<i class="icon icon-next"></i></a>
+                    </ul>
+                </div>
+                <div>
+                    <strong>개인정보설정</strong>
+                    <ul>
+                        <li>암호설정</li>
+                        <div class="on-off-wrap">
+                            <input type="checkbox" id="on-off1" class="active">
+                            <label for="on-off1" class="on-off">
+                                <span class="blind">ON</span>
+                                <span class="blind">OFF</span>
+                                <span class="btn"></span>
+                            </label>
+                        </div>  
+                    </ul>
+                </div>
+                <div>
+                    <strong>동기화</strong>
+                    <ul>
+                        <li>데이터 자동 동기화</li>
+                        <div class="on-off-wrap">
+                            <input type="checkbox" id="on-off2">
+                            <label for="on-off2" class="on-off">
+                                <span class="blind">ON</span>
+                                <span class="blind">OFF</span>
+                                <span class="btn"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </div>
+                <div>
+                    <strong>알림</strong>
+                    <ul>
+                        <li>푸시 알림 받기</li>
+                        <div class="on-off-wrap">
+                            <input type="checkbox" id="on-off3">
+                            <label for="on-off3" class="on-off">
+                                <span class="blind">ON</span>
+                                <span class="blind">OFF</span>
+                                <span class="btn"></span>
+                            </label>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="customer">
+                <strong>고객센터</strong>
+                <ul>
+                    <li>공지사항</li>
+                    <button class="icon icon-next"></button>
+                    <li>이용안내</li>
+                    <button class="icon icon-next"></button>
+                    <li>고객센터</li>
+                    <p>1234-1234</p>
+                    <li>버전정보</li>
+                    <p>오늘한권 1.0.2</p>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <div class="popup-logout">
+        <div class="message-wrap">
+            <span class="message">로그아웃 하시겠습니까?</span>
+            <div class="button-wrap">
+                <button id="cancel"><span>취소</span></button>
+                <button id="confirm"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="tab-menu">
+            <ul>
+                <li><a href="home.html"><i class="icon icon-home"></i></a></li>
+                <li><a href="library.html"><i class="icon icon-book"></i></a></li>
+                <li><a href="book-list.html"><i class="icon icon-review"></i></a></li>
+                <li><a href="mypage.html" class="active"><i class="icon icon-my"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

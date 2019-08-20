@@ -1,0 +1,133 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;width: 100%;}
+.center{max-width: 1100px; margin: auto; position: relative;}
+button{background: none; border: none;outline:none; cursor: pointer;}
+[type=radio], [type=checkbox]{display: none;}
+input{font-family: 'THEmpgt';}
+
+
+
+
+
+
+
+.bookshelf{
+    width: 100%; height: 100%; position: fixed;
+    top: 0; left: 0; background: #fff; z-index: 1;
+}
+.bookshelf h3{
+    background: #f7ecd2; height: 60px; text-align: center;
+    font-size: 22px; font-weight: bold; padding: 20px 0; box-sizing: border-box;
+    border-bottom: 1px solid #D3D3D3;
+}
+.bookshelf .left-top{position: absolute; top: 12px; left: 12px;}
+
+.bookshelf .wrap{width: 100%;}
+
+/* .bookshelf .wrap li{height: auto; overflow: hidden;}
+.bookshelf .wrap li.active{height: 40px;} */
+
+.bookshelf .wrap li>div{
+    padding: 0 20px;
+    
+}
+.bookshelf .wrap li .title{
+    position: relative;
+    background: #F2F0E9;
+    border-bottom: 1px solid #D3D3D3;
+    height: 40px; box-sizing: border-box;
+}
+.bookshelf .wrap li .title span{
+    display: block;
+    height: 40px; padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.bookshelf .wrap li .title button{
+    position: absolute; right: 10px; top: 0;
+}
+.bookshelf .wrap  .my-list li{
+    position: relative;
+    border-bottom: 1px solid #D3D3D3;
+    padding: 0 20px;
+    height: 40px; box-sizing: border-box;
+}
+.bookshelf .wrap  .my-list li span{
+    display: block; padding: 12px 0;
+}
+.bookshelf .wrap  .my-list li p{
+    position: absolute;
+    top: 10px; right: 20px;
+}
+.bookshelf .wrap .my-list .list-plus{height: auto;}
+.bookshelf .wrap .my-list .list-plus .name{
+    display: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #D3D3D3;
+    position: relative;
+    height: 40px; box-sizing: border-box;
+}
+.bookshelf .wrap .my-list .list-plus .name input{
+    border: none; width: 260px;
+}
+.bookshelf .wrap .my-list .list-plus .name button{
+    position: absolute; right: 0; top: 10px;
+    font-size: 16px;
+    font-family: 'THEmpgt';
+}
+.bookshelf .wrap .my-list .list-plus button{
+    font-family: 'THEmpgt';
+}
+.bookshelf .wrap .my-list .list-plus .plus{
+    box-sizing: border-box;
+    padding: 0;
+    position: relative;
+    height: 40px; box-sizing: border-box;
+}
+.bookshelf .wrap .my-list .list-plus .plus i{
+    margin-right:10px; margin-top: 10px; float: left;
+}
+.bookshelf .wrap .my-list .list-plus .plus button{
+    font-size: 16px; padding: 12px 0;
+}
+
+.bookshelf .wrap .part-list li{
+    position: relative;
+    border-bottom: 1px solid #D3D3D3;
+    padding: 0 20px;
+}
+.bookshelf .wrap .part-list li span{
+    display: block; padding: 10px 0;
+}
+.bookshelf .wrap .part-list li p{
+    position: absolute;
+    top: 10px; right: 20px;
+}
+
+
+.bookshelf .wrap .file-plus{
+    position: absolute; bottom: 0;
+    width: 100%; height: 60px; padding: 10px 0;
+    box-sizing: border-box; text-align: center;
+}
+.bookshelf .wrap .file-plus button{
+    width: 80%; height: 40px;
+    background: #F2D4AE; 
+    margin: auto;
+}
+.bookshelf .wrap .file-plus span{
+    display: block; padding: 10px 0;
+    color: #606060;
+}

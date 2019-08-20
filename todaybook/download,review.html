@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>download,review</title>
+    <link rel="stylesheet" href="css/download,review.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/download,review.js"></script>
+</head>
+<body>
+    <header>
+        <h3>도서상세</h3>
+        <a href="home.html"><i class="icon icon-back"></i></a>
+    </header>
+
+    <section>
+        <article id="book-info">
+            <div class="info-bg">
+                <div class="info-wrap">
+                    <img src="img/main_recommend_3.jpg" alt="">
+                    <dl>
+                        <dt>삶이 괴롭냐고 심리학이 물었다. 부정적인 사고패턴에서 벗어나는 방법</dt>
+                        <dd>게일 브레너 지음 | 이주만 옮김</dd>
+                        <dd>포레스트북스</dd>
+                    </dl>
+                    <div class="star-wrap">
+                        <i class="icon icon-star on"></i>
+                        <i class="icon icon-star on"></i>
+                        <i class="icon icon-star on"></i>
+                        <i class="icon icon-star on"></i>
+                        <i class="icon icon-star"></i>
+                    </div>
+                    <span>무료</span>
+                    <a href=""><i class="icon icon-download"></i></a>
+                </div>
+            </div>
+            
+            <div class="tab">
+                <ul>
+                    <li><a href="#bookinfo" class="active">책 소개<span class="active"></span></a></li>
+                    <li><a href="#bookcontent">목차<span></span></a></li>
+                    <li><a href="#bookreview">출판사 서평<span></span></a></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents">
+                <div id="bookinfo" class="active">
+                    <div class="bookinfo-wrap">
+                        <span>이 책이 속한 분야</span>
+                        <span>인문 > 교양심리</span>
+                        <p class="overflow">“내 인생을 망친 건 언제나 나 자신이었다” 부정적인 생각, 불안, 두려움의 터널에서 빠져나오는 방법 25년 동안 심리 상담가로 활동하면서 우울증과 무기력증, 자살 충동에 시달리는 많은 사람의 상처를 어루만지고 인생을 바꿔준 저자는 말한다. “일반적으로 알려진 ‘부족한 내 모습도 사랑하기’, ‘긍정적으로 생각하기’는 오히려 부정적인 사고를 강화합니다. 이는 ‘나는 부족한 사람’이라는 것을 전제하고 있기 때문이지요. 하지만 애초에 ‘부족한 나’는 실재하지 않습니다. 이것이 당신을 힘들게 하는 생각을 사실로 믿지 않아도 되는 이유입니다.” </p>
+                    </div>
+                    <button class="btn-more"><span>더보기</span><i class="icon icon-down-small"></i></button>
+                    <div class="review-write">
+                        <div class="star-wrap">
+                            <a href="#" class="icon icon-star"></a>
+                            <a href="#" class="icon icon-star"></a>
+                            <a href="#" class="icon icon-star"></a>
+                            <a href="#" class="icon icon-star"></a>
+                            <a href="#" class="icon icon-star"></a>
+                        </div>
+                        <div class="review-input">
+                            <textarea name="review" id="review" cols="30" rows="10" placeholder="리뷰를 작성해주세요."></textarea>
+                        </div>
+                        <button class="btn-submit"><span>등록</span></button>
+                    </div>
+                    <div class="review-list">
+                        <div class="my-review-new" id="review">
+                            <div class="review-info">
+                                <span class="id">ddd***</span>
+                                <div class="star-wrap">
+                                    <i class="icon icon-smallstar"></i>
+                                    <i class="icon icon-smallstar"></i>
+                                    <i class="icon icon-smallstar"></i>
+                                    <i class="icon icon-smallstar"></i>
+                                    <i class="icon icon-smallstar"></i>
+                                </div>
+                                <span class="date">19.05.21</span>
+                                <a href="#" class="delete">삭제</a>
+                            </div>
+                            <div class="review-contents">
+                                <p class="overflow"></p>
+                            </div>
+                        </div>
+                        <div class="my-review" id="review">
+                            <div class="review-info">
+                                <span class="id">ddd***</span>
+                                <div class="star-wrap">
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar"></i>
+                                </div>
+                                <span class="date">19.05.21</span>
+                                <a href="#" class="delete">삭제</a>
+                            </div>
+                            <div class="review-contents">
+                                <p class="overflow">하고 싶은 것도, 이루고 싶은 것도 많았지만 ‘아마 난 못 할 거야’, ‘나는 그럴 만한 능력이 없어’라는 생각에 사로잡혀 아무것도 시도할 수 없었다. 부정적인 생각에서 벗어나기 위해 심리 치료를 받기도 했지만 결국 해결하지 못했다. 그렇게 오랜 시간 괴로워하다 ‘나는 내가 생각하는 것만큼 정말 부족한 사람인가’라는 물음에 진지하게 답하고자 직접 심리학을 공부하기 시작했다. 이후 자기 생각과 감정을 관찰하고 심리학 연구를 거듭한 결과 부정적인 사고패턴을 벗어날 수 있는 방법을 찾게 되었다. 이 경험을 살려 25년간 심리 상담가로 활동하면서 두려움과 불안감으로 힘들어하는 사람들의 마음을 어루만지고 그들의 인생을 바꿔주었다.</p>
+                            </div>
+                            <div class="more-read"><a href="#">... 계속읽기</a></div>
+                        </div>
+                        <div class="review" id="review">
+                            <div class="review-info">
+                                <span class="id">hhh***</span>
+                                <div class="star-wrap">
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                    <i class="icon icon-smallstar on"></i>
+                                </div>
+                                <span class="date">19.05.21</span>
+                                <a href="#" class="report">신고</a>
+                            </div>
+                            <div class="review-contents">
+                                <p>현재의 순간에 머물면 그 자체로 당신이 온전하게 느껴집니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bookcontent">
+                    <div class="content-wrap">
+                        <dl>
+                            <dt>[추천의 글 1]</dt>
+                            <dt>[추천의 글 1]</dt>
+                            <dt>[프롤로그] 왜 우리는 이토록 괴로운가</dt>
+                            <dt>[1부] 고통을 벗어나기 위해서는 무엇이 필요할까</dt>
+                            <dd>- 1장 고통과 행복은 연결되어 있다</dd>
+                            <dd>- 2장 자신의 한계를 규정하지 않는다 </dd>
+                            <dt>[2부] 나로 사는 건 왜 이렇게 힘이 들까 </dt>
+                            <dd>- 3장 모든 정답은 내 안에 있다</dd>
+                            <dd>- 4장 과거와 미래에 마음을 빼앗기지 않는다 </dd>
+                            <dd>- 5장 생각에 관심을 주지 않는다 </dd>
+                            <dd>- 6장 감정에 휘둘리지 않는다</dd>
+                            <dd>- 7장 삶의 영적인 측면을 들여다본다	</dd>
+                            <dt>[3부] 지금 여기에서 행복을 찾을 수 있을까 </dt>
+                            <dd>- 8장 과거와 새로운 관계를 맺는다</dd>
+                            <dd>- 9장 상황을 객관적으로 바라본다</dd>
+                            <dd>- 10장 두려움이 삶을 가로막지 못하게 한다</dd>
+                            <dt>[에필로그] 고통은 선택의 문제다</dt>
+                        </dl>
+                    </div>
+                </div>
+                <div id="bookreview">
+                    <div class="review-wrap">
+                        <dl>
+                            <dt>“내 인생을 망친 건 언제나 나 자신이었다” </dt>
+                            <dt>부정적인 생각, 두려움의 터널에서 빠져나오는 방법 </dt>
+                            <dd>매일 자신에게 상처를 주는 사람들이 있다. ‘나는 왜 이렇게 부족할까’, ‘나는 사랑받을 가치가 없어’, ‘나는 뭘 해도 안 될 거야’라며 친구나 가족, 그 누구에게도 하지 않을 말을 자기 자신에게 하고, 이를 그대로 믿으며 괴로워한다. 그런데 스스로 내린 이 평가는 사실일까? 그들은 정말 아무것도 해낼 수 없을 만큼 무능한 사람일까? 25년 동안 심리 상담가로 활동하면서 우울증과 무기력증, 자살 충동에 시달리는 많은 사람의 상처를 어루만지고 인생을 바꿔준 저자는 말한다. “일반적으로 알려진 ‘부족한 내 모습도 사랑하기’, ‘긍정적으로 생각하기’는 오히려 부정적인 사고를 강화합니다. 이는 ‘나는 부족한 사람’이라는 것을 전제하고 있기 때문이지요. 하지만 애초에 ‘부족한 나’는 실재하지 않습니다. 이것이 당신을 힘들게 하는 생각을 사실로 믿지 않아도 되는 이유입니다.” </dd>
+                            <dd>『삶이 괴롭냐고 심리학이 물었다』는 저자 자신과 그가 만난 수많은 내담자의 사례를 통해 우리가 왜 부정적인 생각과 감정에 빠지게 되었으며, 스스로 부족한 사람이라는 평가를 하게 되었는지 그 원인을 밝혀낸다. 또 여기에 지배당하지 않을 방법을 소개하면서 자신의 모습이라고 믿으며 자책하고 비난했던 거짓 자아를 조각조각 해체하고, 존재 자체로 빛나는 참자아를 찾아 당당하게 살아나갈 것을 제안한다.</dd>
+                            <dd>“왜 우리는 이토록 괴로운가” 당신이 불행에서 벗어날 수 없었던 단 한 가지 이유 저자의 상담실을 찾는 사람들은 모두 괴로움에 시달리고 있었다. 남들의 인정을 받기 위해 애쓰느라 매일 녹초가 되는 사람, 죄책감에 시달리는 사람, 무기력에 빠져 헤어나오지 못하는 사람, 용기가 없어 아무것도 시도하지 못하는 사람…. 저자는 이들이 겪는 고통의 유형은 제각기 달라 보이지만, 원인은 모두 ‘거짓 자아’로 살고 있기 때문이라고 말한다. 거짓 자아는 부정적인 사고패턴에 빠져 자신의 모습을 함부로 규정지은 데서 형성된 자아를 말한다. 이 자아는 자신에게 “너는 모자란 사람이야”, “너는 해낼 수 없을 거야”라고 속삭이며 목표를 향해 나아갈 수 없도록 만든다. 저자는 자신 역시 이 자아에 사로잡혀 오랜 시간 괴로워했음을 고백하면서, 이 목소리를 믿지 않는 것이 고통에서 벗어나는 길이라고 말한다. 또 이를 위해서는 먼저 이 자아가 무엇인지 살피고 어떻게 생겨났는지를 밝혀내야 한다고 설명한다. 이 단계가 먼저 이루어져야 거짓 자아를 구성하는 생각과 감정을 해체할 수 있기 때문이다.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div class="popup-download">
+        <div class="message-wrap">
+            <span class="message">다운로드 하시겠습니까?</span>
+            <div class="button-wrap">
+                <button id="cancel"><span>취소</span></button>
+                <button id="confirm"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-web">
+        <div class="message-wrap">
+            <span class="message">웹 사이트로 이동하시겠습니까?</span>
+            <div class="button-wrap">
+                <button id="cancel"><span>취소</span></button>
+                <button id="confirm"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

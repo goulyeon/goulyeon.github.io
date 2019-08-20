@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt'; background: #F7ECD2;}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+/* icon */
+.icon{background-image:url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-logo-big{width: 151px;height: 114px;background-position: 0px 0px;}
+
+/* intro */
+.intro{width: 100%; height: 100vh; position: relative;}
+.intro i{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
