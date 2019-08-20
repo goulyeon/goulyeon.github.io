@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todaybook-ebook</title>
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/todaybook-ebook.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/ebook.js"></script>
+</head>
+<body>
+    <header>
+        <h3>별 헤는 밤</h3>
+        <a href="library.html"><button class="icon icon-back"></button></a>
+        <button class="icon icon-search"></button>
+    </header>
+
+
+    <section>
+        <article class="book-box">
+            <div>
+                <span>
+                    계절이 지나가는 하늘에는<br>
+                    가을로 가득 차 있습니다.<br>
+                    <br>
+                    나는 아무 걱정도 없이<br>
+                    가을 속의 별들을 다 헤일 듯합니다.<br>
+                    <br>
+                    가슴속에 하나 둘 새겨지는 별을<br>
+                    이제 다 못 헤는 것은<br>
+                    쉬이 아침이 오는 까닭이요,<br>
+                    내일 밤이 남은 까닭이요,<br>
+                    아직 나의 청춘이 다하지 않은 까닭입니다<br>
+                    <br>
+                    별 하나에 추억과<br>
+                    별 하나에 사랑과<br>
+                    별 하나에 쓸쓸함과<br>
+                    별 하나에 동경과<br>
+                    별 하나에 시와<br>
+                    별 하나에 어머니, 어머니,<br>
+                    <br>
+                    어머님, 나는 <p>별 하나에</p> 아름다운 말 한 마디씩 불러 봅니다. 소학교 때 책상을 같이했던 아이들의 이름과 패(佩), 경(鏡), 옥(玉), 이런 이국 소녀들의 이름과, 벌써 애기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 잠', '라이너 마리아 릴케', 이런 시인의 이름을 불러봅니다.<br>
+                    <br>
+                    이네들은 너무나 멀리 있습니다,<br>
+                    별이 아슬히 멀 듯이,<br>
+                    <br>
+                    어머님,<br>
+                    그리고 당신은 북간도에 계십니다.<br>
+                    <br>
+                    나는 무엇인지 그리워<br>
+                    이 많은 별빛이 내린 언덕 위에도<br>
+                    내 이름자를 써 보고,<br>
+                    흙으로 덮어 버리었습니다.</p><br>
+                    <br>
+                    딴은, 밤을 새워 우는 벌레는<br>
+                    부끄러운 이름을 슬퍼하는 까닭입니다.<br>
+                    <br>
+                    그러나, 겨울이 지나고 나의 별에도 봄이 오면<br>
+                    무덤 위에 파란 잔디가 피어나듯이<br>
+                    내 이름자 묻힌 언덕 위에도<br>
+                    자랑처럼 풀이 무성할 게외다.<br>
+                </span>
+            </div>
+        </article>
+        <article class="balloon">
+            <div class="delet-box">
+                <button id="pen"><span>형광펜</span></button>
+                <button id="memo"><span>메모</span></button>
+                <button id="share"><span>공유</span></button>
+                <button id="search"><span>검색</span></button>
+                <button id="clear"><span>삭제</span></button>
+            </div>
+            <div class="pen-box">
+                <button><span class="btn-y"></span></button>
+                <button><span class="btn-p"></span></button>
+                <button><span class="btn-g"></span></button>
+                <button><span class="btn-b"></span></button>
+                <button><span class="pen-text">삭제</span></button>
+            </div>
+            
+            <div class="memo">
+                    <textarea cols="30" rows="10"></textarea>
+                    <button><span>확인</span></button>
+            </div>
+            <div class="share">
+                    <div class="wrap">
+                        <button class="icon icon-facebook2"><a href="#"></a></button>
+                        <button class="icon icon-kakaotalk2"><a href="#"></a></button>
+                        <button class="icon icon-instagram"><a href="#"></a></button>
+                    </div>
+                </div>
+        </article>
+        <article class="search">
+            <div class="top">
+                <button class="icon icon-back"></button>
+                <input type="text" id="star">
+                <button class="icon icon-search"></button>
+            </div>
+            <div class="bottom">
+                <button class="icon icon-prev"></button>
+                <button class="icon icon-next"></button>
+            </div>
+            <ul class="tab-nav">
+                <li><a href="#tab1" class="active">본문</a></li>
+                <li><a href="#tab2">국어사전</a></li>
+                <li><a href="#tab3">영어사전</a></li>
+                <li><a href="#tab4">백과사전</a></li>
+            </ul>
+            <div class="tab-contents">
+                <div class="active" id="tab1">
+                    <div class="info"><span>"별 하나에" 검색결과 7건</span></div>
+                    <div class="wrap">
+                        <span>
+                            계절이 지나가는 하늘에는<br>
+                            가을로 가득 차 있습니다.<br>
+                            <br>
+                            나는 아무 걱정도 없이<br>
+                            가을 속의 별들을 다 헤일 듯합니다.<br>
+                            <br>
+                            가슴속에 하나 둘 새겨지는 별을<br>
+                            이제 다 못 헤는 것은<br>
+                            쉬이 아침이 오는 까닭이요,<br>
+                            내일 밤이 남은 까닭이요,<br>
+                            아직 나의 청춘이 다하지 않은 까닭입니다<br>
+                            <br>
+                            <p>별 하나에</p> 추억과<br>
+                            <p>별 하나에</p> 사랑과<br>
+                            <p>별 하나에</p> 쓸쓸함과<br>
+                            <p>별 하나에</p> 동경과<br>
+                            <p>별 하나에</p> 시와<br>
+                            <p>별 하나에</p> 어머니, 어머니,<br>
+                            <br>
+                            어머님, 나는 <p>별 하나에</p> 아름다운 말 한 마디씩 불러 봅니다. 소학교 때 책상을 같이했던 아이들의 이름과 패(佩), 경(鏡), 옥(玉), 이런 이국 소녀들의 이름과, 벌써 애기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 잠', '라이너 마리아 릴케', 이런 시인의 이름을 불러봅니다.<br>
+                            
+                        </span>
+                    </div>
+                </div>
+                <div id="tab2">국어사전 검색 결과입니다.</div>
+                <div id="tab3">영어사전 검색 결과입니다.</div>
+                <div id="tab4">백과사전 검색 결과입니다.</div>
+            </div>
+        </article>
+
+        <article class="play">
+            <audio src="source/별헤는밤.mp3" type="audio/mpeg"></audio>
+            <div class="bottom">
+                <button class="icon icon-close-o"></button>
+                <button id="audio" class="icon icon-play"></button>
+                <button class="icon icon-play-set"></button>
+                <button class="icon icon-play-alarm"></button>
+            </div>
+            <div class="play-set">
+                <ul>
+                    <li>
+                        <p>언어설정</p>
+                        <input type="radio" name="language" id="ko" checked>
+                        <label for="ko"><i></i>한국어</label>
+                        <input type="radio" name="language" id="en">
+                        <label for="en"><i></i>영어</label>
+                    </li>
+                    <li>
+                        <p>목소리</p>
+                        <input type="radio" name="voice" id="f" checked>
+                        <label for="f"><i></i>여자</label>
+                        <input type="radio" name="voice" id="m">
+                        <label for="m"><i></i>남자</label>
+                        <input type="radio" name="voice" id="k">
+                        <label for="k"><i></i>어린이</label>
+                    </li>
+                    <li>
+                        <p>배속</p>
+                        <label>
+                            <i class="icon icon-minus"></i>
+                            <span class="num">1</span>
+                            <!-- <p>1</p> -->
+                            <i class="icon icon-plus"></i>
+                        </label>
+                        
+                        <button><span>초기화</span></button>
+                    </li>
+                    <li>
+                        <p>괄호 안 문장 읽기</p>
+                        <input type="checkbox" id="on-off">
+                        <label for="on-off" class="on-off">
+                            <span></span>
+                            <span></span>
+                            <span class="btn"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="alarm">
+                <div class="top">
+                    <button class="icon icon-back"></button>
+                    <h3>종료 시간 설정</h3>
+                </div>
+                <div class="wrap">
+                    <div class="time">
+                        <ul>
+                            <li>
+                                <p>12</p>
+                                <p>59</p>
+                            </li>
+                            <li class="timeset">
+                                <strong>00</strong>
+                                <p>시간</p>
+                                <strong>00</strong>
+                                <p>분</p>
+                            </li>
+                            <li>
+                                <p>01</p>
+                                <p>01</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button><span>시작</span></button>
+                    <span>
+                        설정된 시간이 지나면<br>
+                        음성재생이 자동으로 종료됩니다.
+                    </span>
+                </div>
+            </div>
+        </article>
+        <article class="look">
+            <button class="icon icon-look"></button>
+        </article>
+
+        <article class="text">
+            <div class="wrap">
+                <ul>
+                    <li class="color">
+                        <i class="icon icon-color"></i>
+                        <label style="background: #ffffff" id="color1" class="color active"></label>
+                        <label style="background: #E2D3B5" id="color2" class="color"></label>
+                        <label style="background: #335140" id="color3" class="color"></label>
+                        <label style="background: #CCCCCC" id="color4" class="color"></label>
+                        <label style="background: #727272" id="color5" class="color"></label>
+                        <label style="background: #000000" id="color6" class="color"></label>
+                    </li>
+                    <li class="t1">
+                        <i class="icon icon-t1"></i>
+                        <span>글꼴</span>
+                        <button class="icon icon-prev"></button>
+                        <div>
+                            <ul>
+                                <li>기본</li>
+                                <li>명조체</li>
+                                <li>바탕체</li>
+                            </ul>
+                        </div>  
+                        <button class="icon icon-next"></button>
+                    </li>
+                    <li class="t2">
+                        <i class="icon icon-t2"></i>
+                        <span>글자 크기</span>
+                        <button class="icon icon-prev"></button>
+                        <div>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </div>
+                        <button class="icon icon-next"></button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="set">
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <strong>터치 설정</strong>
+                        <input type="radio" name="touch" id="l_r" checked>
+                        <label for="l_r">좌/우 터치 영역<i class="icon icon-none-radiobox"></i></label>
+                        <input type="radio" name="touch" id="u_d">
+                        <label for="u_d">상/하 터치 영역<i class="icon icon-none-radiobox"></i></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>페이지 설정</strong>
+                        <input type="checkbox" id="popup">
+                        <label for="popup">팝업으로 주석보기<i class="icon icon-none-radiobox"></i></label>
+                        <label>하단 좌/우 정보 표시<button class="icon icon-check-small"></button></label>
+                        <label id="box">페이지 넘김 효과<button class="icon icon-check-small"></button></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>뷰어 설정</strong>
+                        <input type="checkbox" id="bright" checked>
+                        <label for="bright">밝기 조절 제스처 사용<i class="icon icon-none-radiobox"></i></label>
+                        <input type="checkbox" id="fixed" checked>
+                        <label for="fixed">화면 회전 고정<i class="icon icon-none-radiobox"></i></label>
+                    </li>
+                    
+                </ul>
+                <div class="box">
+                    <ul>
+                        <li>효과없음</li>
+                        <li>슬라이드 효과</li>
+                        <li>책장 넘김 효과</li>
+                        <li>서서히 나타남</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+
+    <nav>
+        <div class="book-nav">
+            <div class="progress-bar">
+                <span class="bar"></span>
+                <button class="icon icon-return"></button>
+                <i></i>
+                <span class="page">9 / 34</span>
+
+
+            </div> 
+            <ul>
+                <li><button class="icon icon-play"></button></li>
+                <li><button class="icon icon-look"></button></li>
+                <li id="text"><button class="icon icon-text"></button></li>
+                <li id="set"><button class="icon icon-set"></button></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
+
+
+

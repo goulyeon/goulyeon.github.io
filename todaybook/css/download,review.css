@@ -1,0 +1,239 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+/* icon */
+.icon{background-image: url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-back{width: 40px; height: 40px; background-position: -280px -140px;}
+.icon-down-small{width: 20px; height: 20px; background-position: -660px 0px;}
+.icon-star{width: 20px; height: 20px; background-position: -700px 0px;}
+.icon-star.on{width: 20px; height: 20px; background-position: -740px 0px;}
+.icon-download{width: 30px; height: 30px; background-position: -640px -20px;} 
+.icon-smallstar{width: 12px; height: 12px; background-position: -764px 0px;}
+.icon-smallstar.on{width: 12px; height: 12px; background-position: -777px 0px;}
+
+/* header */
+header{position: fixed; width: 100%; height: 60px; background: #f7ecd2; z-index: 1;}
+header h3{position: relative; text-align: center; line-height: 60px; font-size: 22px;}
+header .icon-back{position: absolute; top: 12px; left: 12px;}
+header .icon-search{position: absolute; top: 12px; right: 12px;}
+
+/* section */
+section{
+    height: calc(100vh - 60px);
+    position: relative; top: 60px; overflow-y: auto;
+}
+.info-bg{    
+    width: 100%; height: 220px; 
+    background: #F7ECD2; 
+    position: relative; 
+}
+.info-wrap{
+    width: 320px; height: 140px; 
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    padding: 20px; 
+}
+.info-wrap img{width: 100px; height: 140px;}
+.info-wrap dl{position: absolute; right: 20px; top: 30px; width: 190px; height: 90px;}
+.info-wrap dt{font-size: 14px; font-weight: bold; line-height: 17px;}
+.info-wrap dd{font-size: 12px; color: #595959; margin: 5px 0;}
+
+.info-wrap .star-wrap{position: absolute; top: 130px; left: 150px;}
+.star-wrap i{display: block; float: left;}
+.info-wrap span{position: absolute; bottom: 30px; right: 60px;}
+.info-wrap a i{position: absolute; bottom: 30px; right: 20px;}
+
+/* 탭메뉴 */
+.tab{position: relative; top: 0px; height: 40px;}
+.tab li{
+    width: 33.3%; height: 40px; 
+    line-height: 40px; text-align: center;
+    float: left; display: block;
+    position: relative;
+}
+.tab li a{width: 100%;}
+.tab span.active{
+    width: 100%; height: 4px; 
+    background: #F2D4AE;
+    position: absolute; left: 0; bottom: -2px; 
+}
+
+/* 탭-내용 */
+.tab-contents > div{display: none;}
+.tab-contents > .active{display: block;}
+
+.tab-contents{position: relative; top: 10px; margin: 0 20px;}
+#bookinfo{position: relative; left: 50%; transform: translateX(-50%);}
+#bookinfo .bookinfo-wrap span{
+    width: 120px; height: 20px; 
+    display: block; line-height: 20px; 
+    margin: 10px 0 10px 0;
+    font-size: 14px; font-weight: bold;
+}
+#bookinfo .bookinfo-wrap p{
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+    display: block;
+}
+#bookinfo .bookinfo-wrap .overflow{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+#bookinfo .btn-more{
+    width: 100%;
+    height: 40px;
+    background: #F2D4AE;
+    position: relative; left: 50%; transform: translateX(-50%);
+}
+#bookinfo .btn-more span{
+    font-size: 16px; font-weight: bold; 
+    color: #595959; line-height: 40px;
+    display: inline-block; 
+    position: absolute; 
+    top: 0; left: 50%; transform: translateX(-50%);
+    padding-right: 10px;
+}
+#bookinfo .btn-more i{margin-left: 70px;}
+
+.review-input{margin-top: 20px;}
+
+#bookcontent{}
+#bookcontent .content-wrap{}
+.content-wrap dl{line-height: 20px;}
+.content-wrap dt{font-size: 14px; margin: 20px 0; font-weight: bold;}
+.content-wrap dd{font-size: 12px; color: #595959; margin: 20px 0;}
+
+.review-wrap dl{line-height: 20px;}
+.review-wrap dt{font-size: 14px; margin: 20px 0; font-weight: bold;}
+.review-wrap dd{font-size: 12px; color: #595959; margin: 20px 0;}
+
+/* 리뷰작성 */
+.review-write{height: 100px; position: relative; left: 50%; transform: translateX(-50%);}
+.review-write .star-wrap{
+    width: 120px; height: 20px; margin-bottom: 20px;
+    position: absolute; top: 0; left: 0;
+}
+.review-write .star-wrap a{display: block; float: left;}
+.review-input textarea{
+    resize: none;
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 12px; font-weight: bold;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.tab-contents .btn-submit{
+    width: 100%; height: 40px;
+    background: #F2D4AE;
+    position: absolute; top: 120px; left: 50%; transform: translateX(-50%);
+}
+.tab-contents .btn-submit span{
+    font-size: 16px; font-weight: bold; 
+    color: #595959; line-height: 40px;
+    display: inline-block; 
+    position: absolute; 
+    top: 0; left: 50%; transform: translateX(-50%);
+}
+
+/* 리뷰등록 */
+.review-list .my-review-new{display: none;}
+.review-list{font-size: 12px; margin: 70px 0 20px;}
+.review-list > div{
+    height: 100px; border-bottom: 1px solid #595959;
+    padding: 10px 0; box-sizing: border-box;
+    position: relative;
+}
+.review-info{margin-bottom: 10px;}
+.date{position: absolute; top: 10px; right: 30px;}
+.review-list .star-wrap{position: absolute; top: 10px; left: 60px;}
+.delete, .report{position: absolute; top: 10px; right: 0;}
+.review-list .review-contents p{height: 40px; line-height: 14px; text-align: justify;}
+.review-list .review-contents .overflow{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.review-list .more-read a{
+    color: #595959; background: #fff;
+    position: absolute; right: 0; bottom: 26px;
+}
+
+/* 팝업 */
+.popup-download{display: none;}
+.popup-download{
+    width: 100%; height: 100vh; 
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; top: 0; left: 0;
+    z-index: 1;
+}
+.popup-download .message-wrap{
+    width: 80%; height: 160px; font-size: 18px;
+    background: #fff;
+    position: absolute; 
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.popup-download .message-wrap > span{
+    width: 240px; height: 20px;
+    margin: 40px 0; padding: 0 30px;
+    text-align: center;
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.popup-download .message-wrap .button-wrap{
+    width:240px; position: absolute; top: 80px; left: 50%; transform: translateX(-50%);
+}
+.popup-download .message-wrap button{
+    width: 100px; height: 40px; background: #F2D4AE; 
+    float: left; margin: 0 10px;
+    font-size: 16px; font-weight: bold; 
+    color: #595959;
+}
+
+
+.popup-web{display: none;}
+.popup-web{
+    width: 100%; height: 100vh; 
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; top: 0; left: 0;
+    z-index: 1;
+}
+.popup-web .message-wrap{
+    width: 80%; height: 160px; font-size: 18px;
+    background: #fff;
+    position: absolute; 
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.popup-web .message-wrap > span{
+    width: 240px; height: 20px;
+    margin: 40px 0; padding: 0 30px;
+    text-align: center;
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.popup-web .message-wrap .button-wrap{
+    width:240px; position: absolute; top: 80px; left: 50%; transform: translateX(-50%);
+}
+.popup-web .message-wrap button{
+    width: 100px; height: 40px; background: #F2D4AE; 
+    float: left; margin: 0 10px;
+    font-size: 16px; font-weight: bold; 
+    color: #595959;
+}
