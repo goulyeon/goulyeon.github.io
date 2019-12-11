@@ -1,0 +1,102 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf')
+}
+
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+.icon{background-image:url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+.icon-book-prev{width: 40px; height: 40px; background-position: -280px -140px;}
+.icon-check{width: 40px; height: 40px; background-position: -220px -220px;}
+.icon-text{width: 40px; height: 40px; background-position: -240px -180px;}
+.icon-tab-color{width: 40px; height: 40px; background-position: -400px -180px;}
+.icon-color{width: 40px; height: 40px; background-position: -320px -180px;}
+.icon-share{width: 40px; height: 40px; background-position: -260px -220px;}
+.icon-t1{width: 40px; height: 40px; background-position: -300px -220px;}
+.icon-t2{width: 40px; height: 40px; background-position: -340px -220px;}
+.icon-prev{width: 40px; height: 40px; background-position: -320px -140px;}
+.icon-next{width: 40px; height: 40px; background-position: -360px -140px;}
+.icon-facebook2{width: 80px; height: 80px; background-position: -270px -60px;}
+.icon-kakaotalk2{width: 80px; height: 80px; background-position: -430px -60px;}
+.icon-instagram{width: 80px; height: 80px; background-position: -350px -60px;}
+
+header{position: fixed; width: 100%; height: 60px; background: #f7ecd2; z-index: 100;}
+header h1{text-align: center; font-size: 22px; line-height: 60px;}
+header .top-area a{position: absolute;top: 50%; transform: translateY(-50%);}
+header .top-area a:nth-child(1){left:10px;}
+header .top-area a:nth-child(2){right: 10px;}
+
+nav{position: fixed; bottom:0; width: 100%; height: 60px; background: #fff;z-index: 100;}
+.tab-menu ul{width: 100%;}
+.tab-menu ul li{float: left;width: 33.3%; height: 60px;position: relative;}
+.tab-menu ul li a.active{background: #f7ecd2;}
+.tab-menu ul li a{width: 100%; height: 100%;}
+.tab-menu ul li a i{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+.content{padding: 80px 20px;}
+.content p{text-align: justify; line-height: 22px;}
+.text-style{
+    display: none;
+    position: fixed; width: 100%; height: 120px;
+    bottom: 60px; background: #fff;
+    padding:20px;
+    box-sizing: border-box;
+    box-shadow: 0px -1px 8px #bfbfc2;
+}
+
+.text-style .text{position: relative;}
+.text-style .style{position: absolute; top: 0; left: 50px; line-height: 40px;}
+.wrap{
+    position: absolute; width: 140px;
+    top: 20px;right: 30px;
+}
+.font-number{position: absolute; width: 140px; right: 30px;top: 60px;}
+.wrap1{position: relative;}
+.wrap1 .wrap2{overflow: hidden; height: 40px; margin: 0px 30px;}
+.wrap1 .wrap2 ul li{text-align: center; line-height: 40px; float: left;}
+.wrap1 button{position: absolute; right: 0; top: 0;}
+#prev{left: 0;}
+#next{right: 0;}
+#prev1{left: 0;}
+#next2{right: 0;}
+.bg-color{   
+    display: none;
+    position: fixed;
+    width: 100%; bottom: 60px; height: 80px;
+    background: #fff;
+    padding:20px; box-sizing: border-box;
+    box-shadow: 0px -1px 8px #bfbfc2;
+}
+.bg-color i{margin-left:5px;}
+.bg-color .color-palette{position: absolute; top: 25px; right: 25px;}
+.bg-color .color{
+    width:30px; height: 30px;
+    border-radius: 50%;
+    background: #e2d3b5;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #000;
+    margin: 0 4px;
+}
+.bg-color #color1{background: #fff;}
+.bg-color #color2{background:#e2d3b5;}
+.bg-color #color3{background: #335140;}
+.bg-color #color4{background: #cccccc;}
+.bg-color #color5{background: #727272;}
+.bg-color #color6{background: #000;}
+
+.sns-share{
+    display: none;
+    position: fixed; bottom: 60px;
+    height: 100px; width: 100%; background: #fff;
+    box-shadow: 0px -1px 8px #bfbfc2;
+    text-align: center;
+}
+.sns-share ul{display: inline-block; margin: 10px 15px;}
+.sns-share ul li{float: left; padding: 0 15px;}

@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf')
+}
+
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+.icon{background-image:url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-logo{width: 79px; height: 30px; background-position: -170px -80px;}
+.icon-home{width: 40px; height: 40px; background-position: -120px -140px;}
+.icon-book{width: 40px; height: 40px; background-position: -160px -140px;}
+.icon-review{width: 40px; height: 40px; background-position: -200px -140px;}
+.icon-my{width: 40px; height: 40px; background-position: -240px -140px;}
+.icon-menu{width: 40px; height: 40px; background-position: 0px -140px;}
+.icon-search{width: 40px; height: 40px; background-position: -80px -140px;}
+.icon-web{width: 40px; height: 40px; background-position: -40px -140px;}
+
+.icon-book-search{width: 20px; height: 20px; background-position: -440px 0px;}
+.icon-book-report{width: 20px; height: 20px; background-position: -540px 0px;}
+.icon-mark{width: 20px; height: 20px; background-position: -560px 0px;}
+.icon-memo{width: 20px; height: 20px; background-position: -580px 0px;}
+.icon-book-prev{width: 40px; height: 40px; background-position: -280px -140px;}
+.icon-book-plus{width: 20px; height: 20px; background-position: -620px 0px;}
+.icon-book-del{width: 20px; height: 20px; background-position: -600px 0px;}
+
+/* 탭메뉴 */
+nav{position: fixed; bottom:0; width: 100%; height: 60px; background: #fff;z-index: 100;}
+.tab-menu ul{width: 100%;}
+.tab-menu ul li{float: left;width: 25%; height: 60px;position: relative;}
+.tab-menu ul li a.active{background: #f7ecd2;}
+.tab-menu ul li a{width: 100%; height: 100%;}
+.tab-menu ul li a i{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+/* header */
+header{position: fixed; width: 100%; background: #f7ecd2; z-index: 100;}
+header h2{text-align: center;line-height: 60px;}
+
+/* 검색창 */
+header form{
+    position: relative; width: 100%; background:#f7ecd2; 
+    box-sizing: border-box; left: 0; padding: 10px;
+}
+header form input{width: 100%; height: 30px; padding-left:40px; box-sizing: border-box; border: none;}
+header form .icon-book-search{position: absolute; top: 50%; left: 20px; transform: translateY(-50%);}
+
+section{
+    height: calc(100vh - 170px);
+    position: relative; top: 110px;
+    overflow-y:auto; 
+}
+
+#book-list{margin: 0 20px;}
+.book-info{position: relative; border-bottom: 1px solid #d6d6d6; padding: 20px 10px; box-sizing: border-box;}
+.book-info>a{width: 100%;}
+.book-info:last-child{border:none;} 
+.book-info img{width: 70px; height: 100px; float: left;}
+.book-info dl{margin-left: 80px;}
+.book-info dl dt{
+    font-size: 18px; width:60%;
+    overflow: hidden; text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;   
+    line-height: 1.3em;
+    height: 2.6em;
+}
+.book-info dl dd{font-size: 10px; padding-top: 30px;}
+
+.book-info ul{position: absolute; right: 20px; bottom: 20px;}
+.book-info ul li{float: left; padding-left:12px;}
+.book-info ul li span{padding-left: 20px; font-size: 10px;}
+
+

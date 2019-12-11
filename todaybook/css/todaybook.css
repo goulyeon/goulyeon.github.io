@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+/* icon */
+.icon{background-image: url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-logo{width: 79px; height: 30px; background-position: -170px -80px;}
+.icon-home{width: 40px; height: 40px; background-position: -120px -140px;}
+.icon-book{width: 40px; height: 40px; background-position: -160px -140px;}
+.icon-review{width: 40px; height: 40px; background-position: -200px -140px;}
+.icon-my{width: 40px; height: 40px; background-position: -240px -140px;}
+.icon-menu{width: 40px; height: 40px; background-position: 0px -140px;}
+.icon-search{width: 40px; height: 40px; background-position: -80px -140px;}
+.icon-web{width: 40px; height: 40px; background-position: -40px -140px;}
+
+.icon-delete{width: 40px; height: 40px; background-position: -380px -220px;}
+.icon-facebook{width: 60px; height: 60px; background-position: -280px 0px;}
+.icon-kakaotalk{width: 60px; height: 60px; background-position: -350px 0px;}
+
+
+/* header */
+header{position: fixed; width: 100%; height: 60px; background: #f7ecd2; z-index: 1;}
+header h1{position: relative; text-align: center; line-height: 60px;}
+header .left-top{position: absolute; top: 12px; left: 12px;}
+header .right-top{position: absolute; top: 12px; right: 12px;}
+
+/* tab-menu */
+nav{position: fixed; bottom:0; width: 100%; height: 60px; background: #fff;}
+.tab-menu ul{width: 100%;}
+.tab-menu ul li{float: left; width: 25%; height: 60px; position: relative;}
+.tab-menu ul li a.active{background: #f7ecd2;}
+.tab-menu ul li a{width: 100%; height: 100%;}
+.tab-menu ul li a i{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+
+
+    

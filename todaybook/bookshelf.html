@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bookshelf</title>
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bookshelf.js"></script>
+</head>
+<body>
+    <article class="bookshelf">
+        <h3>책장목록</h3>
+        <div class="left-top">
+            <button class="icon icon-close"></button>
+        </div>
+        <div class="wrap">
+            <!-- 1depth -->
+            <ul>
+                <li class="my-list">
+                    <div class="title">
+                        <span>내 책장</span>
+                        <button class="icon icon-up"></button>
+                    </div>
+                    <!-- 2depth -->
+                    <ul>
+                        <li>
+                            <span>기본책장</span>
+                            <p>4</p>
+                        </li>
+                        <li>
+                            <span>오늘한권</span>
+                            <p>0</p>
+                        </li>
+                        <li class="list-plus">
+                            <div class="name">
+                                <input type="text" placeholder="│ 책장 이름 입력">
+                                <button>취소</button>
+                            </div>
+                            <div class="plus">
+                                <i class="icon icon-book-plus"></i>
+                                <button>책장추가</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="part-list">
+                    <div class="title">
+                        <span>분야별 책장</span>
+                        <button class="icon icon-up"></button>
+                    </div>
+                    <!-- 2depth -->
+                    <ul>
+                        <li>
+                            <span>소설</span>
+                            <p>6</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="file-plus">
+                <button>
+                    <span>내 파일 추가</span>
+                </button>
+            </div>
+        </div>            
+    </article>
+</body>
+</html>

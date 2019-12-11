@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt'; background: #F7ECD2;}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: none;}
+
+/* icon */
+.icon{background-image:url(../sprite.png); display: inline-block; background-size: 1000px 1000px;}
+
+.icon-logo-medium{width: 91px;height: 68px;background-position: -170px 0px;}
+.icon-facebook1{width: 60px; height: 60px; background-position: -280px 0px;}
+ .icon-kakaotalk1{width: 60px; height: 60px; background-position: -350px 0px;}
+
+/* 로그인 */
+#login{margin: 0 40px;}
+#login > i{position: absolute; top: 100px; left: 50%; transform: translateX(-50%);}
+#login form{position: relative; top: 220px;}
+#login input{
+    width: 100%; height: 40px; 
+    border: none; font-size: 14px;
+    margin: 10px 0; padding: 10px; box-sizing: border-box;
+    color: #bfbfc2;
+}
+#login button{
+    width:100%; height: 40px; 
+    background: #F2D4AE;
+    position: relative; top: 20px;
+    font-size: 16px; font-weight: bold;
+    color: #595959;
+}
+
+#login .find-info{
+    width: 280px;
+    position: absolute; 
+    top: 420px; left: 50%; transform: translateX(-50%); 
+}
+#login .find-info a{
+    width: 70px; height: 13px; 
+    float: left;  margin: 0 10px;
+    line-height: 13px; text-align: center;
+}
+#login .find-info span{font-size: 12px; text-decoration: underline; color: #595959;}
+#login .sns{width: 100%; position: relative; top: 330px; text-align: center;}
+#login .sns a{margin: 0 20px;}
+

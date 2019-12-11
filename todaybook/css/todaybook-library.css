@@ -1,0 +1,290 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;width: 100%;}
+.center{max-width: 1100px; margin: auto; position: relative;}
+button{background: none; border: none;outline:none; cursor: pointer;}
+[type=radio], [type=checkbox]{display: none;}
+input{font-family: 'THEmpgt';}
+
+
+header{position: fixed; width: 100%; height: auto; background: #f7ecd2;z-index: 1;}
+header h2{position: relative; text-align: center; line-height: 60px;}
+header .left-top{position: absolute; top: 12px; left: 12px;}
+header .right-top{position: absolute; top: 12px; right: 12px;}
+
+nav{position: fixed; bottom:0; width: 100%; height: 60px; background: #fff;}
+.tab-menu ul{width: 100%;}
+.tab-menu ul li{float: left;width: 25%; height: 60px;position: relative;}
+.tab-menu ul li a.active{background: #f7ecd2;}
+.tab-menu ul li a{width: 100%; height: 100%;}
+.tab-menu ul li a i{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+.library-search.off{opacity: 0; visibility: hidden;}
+.library-search{
+    position: relative; width: 100%; height: 50px;
+    background: #f7ecd2;
+    opacity: 1; visibility: visible;
+    transition: 0.5s;
+}
+.library-search div{
+    position: absolute;
+    width: 90%; height: 30px; 
+    background: #fff;
+    left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+.library-search div button{
+    position: absolute;
+    left: 10px;
+    top: 50%; transform: translateY(-50%)
+}
+.library-search div input{
+    position: absolute;
+    border: none;
+    left: 40px;
+    top: 50%; transform: translateY(-50%);
+    height: 100%; width: 86%;
+    outline: none;
+    
+}
+
+
+
+.library{
+    position: relative;
+}
+
+.library-post{width: 100%;position: relative; top: 60px;}
+.library-post .wrap{padding: 0 20px; box-sizing: border-box;overflow: hidden;}
+.library-post .wrap li{
+    float: left; text-align: center;
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.library-post .wrap li img{
+    width: 100%; max-width: 90px;
+}
+
+.library-post .wrap li .text-box{
+    text-align: left;
+    margin-top: 10px;
+}
+.library-post .wrap li .text-box dl{
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+    font-size: 12px;
+}
+.library-post .wrap li .text-box dt{font-size: 10px;}
+
+.library-post .wrap li .progress-bar{
+    position: relative;
+    width: 100%; height: 10px;
+    margin-top: 10px;
+}
+.library-post .wrap li .progress-bar .bar-bg{
+    display: block;
+    height: 100%; width: 80%;
+    background: #f7ecd2;
+}
+.library-post .wrap li .progress-bar .bar{
+    position: absolute; top: 0;
+    display: block;
+    height: 100%; width: 60%;
+    background: #f2d4ae;
+}
+.library-post .wrap li .progress-bar .percent{
+    position: absolute;
+    font-size: 10px;
+    right: 0; top: -2px;
+}
+
+
+.library-list{
+    display: none;
+    box-sizing: border-box;overflow: hidden;
+    position: absolute; background: #fff;
+    width: 100%; top: 0; left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+}
+.library-list .wrap{
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.library-list .wrap li{
+    width: 100%; height: 130px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.library-list .wrap li img{
+    width: 100%; max-width: 90px;
+}
+
+.library-list .wrap li .box{
+    position: absolute;
+    left: 100px;top: 0; width: 70%;
+    height: 100%; box-sizing: border-box;
+}
+.library-list .wrap li .text-box{
+    margin-top: 10px; 
+}
+.library-list .wrap li .text-box dl{font-size: 14px;}
+.library-list .wrap li .text-box dt{margin-top:5px; font-size: 12px;}
+.library-list .wrap li .text-box dd{font-size: 12px;margin-top: 20px;}
+
+.library-list .wrap li .progress-bar{
+    width: 100%; height: 10px;
+    margin-top: 10px;
+    bottom: 0;
+    position: absolute;
+}
+.library-list .wrap li .progress-bar .bar-bg{
+    display: block;
+    height: 100%; width: 80%;
+    background: #f7ecd2;
+    
+}
+.library-list .wrap li .progress-bar .bar{
+    display: block;
+    background: #f2d4ae;
+    height: 100%; width: 60%;
+    position: absolute; top:0;
+    
+}
+.library-list .wrap li .progress-bar .percent{
+    position: absolute;
+    font-size: 12px;
+    right: 0; top: 0;
+}
+
+.show-box{
+    display: none;
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.show-box .box{
+    position: fixed;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+    width: 140px;
+    box-sizing: border-box;
+}
+.show-box div li{margin: 10px; line-height: 20px;}
+.show-box div li label{display: block; padding: 5px; font-size: 14px;}
+.show-box div li p{
+    font-size: 18px; font-weight: bold; padding: 8px 0;
+    text-align: center; 
+}
+
+.show-box .back-bg{
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+}
+
+input[type="radio"] + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -480px -20px;
+    margin-right: 10px;
+}
+input[type="radio"]:checked + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -500px -20px;
+}
+
+
+/* 편집목록 */
+.edit{
+    display: none;
+    width: 100%; height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: #fff; z-index: 1;
+}
+
+.edit .nav-top{
+    position: relative; width: 100%; height: 60px;
+    background: #f7ecd2;
+    text-align: center;
+    box-sizing: border-box;
+}
+.edit .nav-top h3{font-size: 22px; padding: 20px;}
+.edit .nav-top .left-top{position: absolute; top: 12px; left: 12px;}
+.edit .nav-top .right-top{position: absolute; top: 12px; right: 12px;}
+
+.edit .nav-bottom{
+    position: absolute; width: 100%; height: 60px; bottom: 0;
+    background: #f7ecd2;
+    text-align: center;
+    box-sizing: border-box;
+}
+.edit .nav-bottom .left-bottom{
+    position: absolute; bottom: 12px; left: 12px;    
+    height: 40px; box-sizing: border-box;
+}
+.edit .nav-bottom .right-bottom{
+    position: absolute; bottom: 12px; right: 12px;   
+    height: 40px; box-sizing: border-box;
+}
+
+.edit .library-post{top: 0;}
+.edit .library-post .wrap li label{
+    position: relative;
+    display: block; margin: auto;
+    width: 100%;
+    max-width: 90px;
+}
+.edit .library-post .wrap li label .bg{
+    display: none;
+    position: absolute;
+    width: 100%; height: 100%; background: #000;
+    opacity: 0.6;
+}
+
+.edit .library-post input[type="checkbox"] + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 30px; height: 30px; background-position: -610px -20px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.edit .library-post input[type="checkbox"]:checked + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 30px; height: 30px; background-position: -580px -20px;
+}
+.edit .library-post input[type="checkbox"]:checked + label .bg{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,496 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'THEmpgt';
+    src: url('../fonts/THEmpgtR.otf');
+}
+
+
+
+/* reset */
+*{margin: 0; padding:0;}
+body{font-family: 'THEmpgt';}
+.blind{font-size: 0; position: absolute; left: -9999px; text-indent: -9999px;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+.center{max-width: 1100px; margin: auto; position: relative;}
+button{background: none; border: none;outline:none; cursor: pointer;}
+[type=radio], [type=checkbox]{display: none;}
+span,input{font-family: 'THEmpgt';}
+
+
+header{position: fixed; width: 100%; height: auto; background: #f7ecd2; z-index: 1;}
+header h3{position: relative; text-align: center; line-height: 60px; font-size: 22px;}
+header a{position: absolute; top: 12px; left: 12px;}
+header .icon-search{position: absolute; top: 12px; right: 12px;}
+
+nav{
+    position: fixed; bottom:0; width: 100%; height: auto; background: #fff;
+    /* display: none; */
+}
+
+.book-nav .progress-bar{
+    position: relative; width: 100%;
+    height: 34px;
+    box-shadow: 0px -4px 13px -5px; 
+    color: #606060;
+}
+.book-nav .progress-bar .bar{
+    position: absolute; top: 40%; transform: translateY(-40%);
+    width: 80%; height: 4px; left: 20px; border-radius: 2px;
+    background: #BFBFC2;
+}
+.book-nav .progress-bar button{
+    position: absolute; top: 40%; transform: translateY(-40%); 
+    right: 20px;
+}
+.book-nav .progress-bar i{
+    position: absolute;
+    width: 14px; height: 14px; background: #F2D4AE;
+    border-radius: 50%; display: inline-block;
+    transform: translateY(-40%); top: 40%; left: 50px;
+}
+.book-nav .progress-bar .page{
+    font-size: 10px; position: absolute;
+    bottom: 0; left: 20px;
+}
+
+.book-nav ul{overflow: hidden;}
+.book-nav ul li{
+    display: inline-block; float: left; width: 25%; height: 60px;
+    padding: 10px 0; box-sizing: border-box; text-align: center;
+    position: relative;
+}
+.book-nav ul li.active{
+    background: #F7ECD2;
+}
+
+.book-box{
+    position: relative;
+    top: 60px;overflow: hidden;
+}
+.book-box div{position: relative; top: 20px;}
+.book-box span{
+    display: block;
+    font-size: 14px;
+    padding: 20px; box-sizing: border-box;
+    height: 410px;
+}
+.book-box span p{
+    display: inline-block; background: #FFF4B3
+}
+
+.balloon{position: absolute; width: 100%; height: 100%; top: 0; display: none;}
+.popup-bg{
+    /* display: none; */
+    position: fixed; 
+    top:0; left:0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0);
+}
+.delet-box{
+    background: #BFBFC2;
+    position: relative;
+    text-align: center; overflow: hidden;
+    top: 384px; left: 70px; z-index: 1;
+    width: 200px;
+}
+.delet-box button{
+    float: left;
+    padding: 5px 0;
+}
+.delet-box button span{
+    font-size: 14px; font-weight: bold;
+    display: inline-block; padding: 0 5px; border-right:1px solid #000; 
+}
+.delet-box button:last-child span{border: none;}
+
+
+.pen-box{
+    z-index: 1;
+    background: #BFBFC2;
+    position: absolute;
+    text-align: center; overflow: hidden;
+    top: 384px; left: 70px; height: 25px;
+    display: none; width: 150px;
+}
+.pen-box button{
+    float: left;
+    padding: 5px;
+}
+.pen-box .btn-y{
+    display: inline-block; border-radius: 50%;
+    width: 14px; height: 14px; background: #FFF4B3;
+}
+.pen-box .btn-p{
+    display: inline-block; border-radius: 50%;
+    width: 14px; height: 14px; background: #F9C0FF;
+}
+.pen-box .btn-g{
+    display: inline-block; border-radius: 50%;
+    width: 14px; height: 14px; background: #BDFFB6;
+}
+.pen-box .btn-b{
+    display: inline-block; border-radius: 50%;
+    width: 14px; height: 14px; background: #B6FFFB;
+}
+.pen-box .pen-text{
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1px solid #000;
+    padding: 1px 6px;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+}
+
+.memo{
+    display: none;
+    position: absolute;
+    bottom: 60px; width: 100%; height: 100px;
+    background: #fff;
+    box-shadow: 0px -4px 13px -5px; 
+    color: #606060; overflow: hidden;
+    z-index: 2;
+}
+.memo textarea{
+    width: 70%; height: 100px; border: none;
+    float: left; resize: none; outline: none;
+}
+.memo button{
+    width: 30%; background: #F2D4AE; height: 100px;
+}
+
+.share{
+    display: none;
+    position: absolute;
+    bottom: 60px; width: 100%; height: 100px;
+    background: #fff;
+    box-shadow: 0px -4px 13px -5px; 
+    color: gray; overflow: hidden;
+    z-index: 2;
+}
+.share .wrap{
+    padding: 10px 0;height: 100px; box-sizing: border-box;
+    width: 300px; margin: auto;
+}
+.share .wrap button{
+    float: left; margin: 0 10px;
+}
+
+
+.search{
+    display: none;
+    position: fixed; width: 100%; height: 100%;
+    top: 0; background: #fff; z-index: 1;
+}
+.search .top{
+    background: #F7ECD2; position: relative;
+    height: 60px; padding: 10px 0; box-sizing: border-box;
+    text-align: center;
+}
+.search .top input{
+    width: 65%; height: 40px; box-sizing: border-box;
+    border: none; padding: 0 10px;
+}
+.search .top .icon-back{position: absolute; left: 12px;}
+.search .top .icon-search{position: absolute; right: 12px;}
+
+.search .bottom{
+    background: #F7ECD2; position: fixed; bottom: 0;
+    height: 40px; width: 100%; padding: 10px 0; box-sizing: border-box;
+    text-align: center;
+}
+.search .bottom .icon-prev{position: absolute; left: 12px; top: 0;}
+.search .bottom .icon-next{position: absolute; right: 12px; top: 0;}
+
+.search .tab-nav{overflow: hidden;}
+.search .tab-nav li{
+    display: inline-block; float: left; 
+    width: 25%; height: 40px; text-align: center;
+    box-sizing: border-box;
+}
+.search .tab-nav a{
+    display: inline-block; width: 100%; padding: 10px 0;
+}
+.search .tab-nav a.active{border-bottom: 4px solid #F2D4AE; }
+.search .tab-contents{position: relative; display: none;}
+.search .tab-contents>div{
+    position: absolute; width: 100%; height: 500px; box-sizing: border-box;
+    background: #fff; display: none; padding:10px;
+    overflow: auto;
+}
+.search .tab-contents>div.active{display: block;}
+.search .tab-contents>div .info{text-align: right; margin-bottom: 10px; font-size: 14px; color: #606060;}
+.search .tab-contents>div .wrap{}
+.search .tab-contents>div .wrap span{font-size: 14px;}
+.search .tab-contents>div .wrap span p{background: #F2D4AE;display: inline-block;}
+
+
+.play{
+    display: none;
+    z-index: 1; position: absolute; width: 100%; height: 100%s;
+    top: 0;
+}
+.play .bottom{
+    background: #f7ecd2; width: 100%; height: 60px;
+    position: fixed; bottom: 0;
+}
+.play .bottom .icon-close-o{position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
+.play .bottom .icon-play{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.play .bottom .icon-stop{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.play .bottom .icon-play-set{position: absolute; top: 50%; transform: translateY(-50%); right: 60px;}
+.play .bottom .icon-play-alarm{position: absolute; top: 50%; transform: translateY(-50%); right: 20px;}
+
+.play-set{
+    display: none;
+    position: fixed; bottom: 60px; background: #fff;
+    box-shadow: 0px -4px 13px -5px; width: 100%;
+    color: #606060; overflow: hidden;
+    padding: 10px; box-sizing: border-box;
+}
+.play-set li{padding:8px 0;position: relative;}
+.play-set li p{display: inline-block; width: 30%;}
+.play-set li:last-child p{display: inline-block; width: 70%;}
+.play-set li label{display: inline-block; height: 20px; margin-right: 6px;}
+.play-set li label i{float: left;margin-right: 5px;}
+.play-set li label span{margin-right:5px;}
+.play-set li label .icon-plus{float: right;}
+.play-set li button{
+    position: absolute; right: 10px; color: #606060;
+    width: 80px; height: 20px; background: #F2D4AE; border-radius: 25px;
+}
+
+.play-set li .on-off{
+    display: inline-block;
+    width: 48px; height: 24px;
+    background: #CCCCCC;
+    border-radius: 20px;
+    position: absolute; right: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.play-set li .on-off span{
+    position: absolute; 
+    top:50%; transform: translateY(-50%);
+    color: #fff;
+    transition: 0.5s;
+}
+.play-set li .on-off span:nth-child(1){left: -50%;}
+.play-set li .on-off span:nth-child(2){right: 20%;}
+.play-set li .on-off span.btn{
+    width: 22px; height: 22px;
+    background: #F2D4AE;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.play-set li #on-off:checked+label{background:#F7ECD2;}
+.play-set li #on-off:checked+label span:nth-child(1){left:20%;}
+.play-set li #on-off:checked+label span:nth-child(2){right: -50%;}
+.play-set li #on-off:checked+label span.btn{margin-left: 24px;}
+
+
+.alarm{
+    display: none;
+    position: absolute; width: 100%; height: 100%;
+    top: 0; background: #fff; z-index: 1;
+}
+.alarm .top{
+    background: #F7ECD2; position: fixed; z-index: 2; width: 100%;
+    height: 60px; padding: 10px 0; box-sizing: border-box;
+    text-align: center;
+}
+.alarm .top button{position: absolute; left: 12px;}
+.alarm .top h3{display: inline-block; font-size: 22px; padding: 10px 0;}
+.alarm .wrap{
+    height: 100%; padding-top: 60px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+}
+.alarm .wrap .time{
+    width: 200px; margin: auto; text-align: center;
+    position: relative; top: 50px;
+}
+.alarm .wrap .time p{display: inline-block;}
+.alarm .wrap .time ul li{
+    height: 30px; padding: 8px;
+}
+.alarm .wrap .time ul li p{
+    color: #D3D3D3; padding: 0 20px;
+    font-size: 24px; 
+}
+.alarm .wrap .time ul li p:nth-child(1){padding-left: 0;}
+.alarm .wrap .time ul li p:nth-child(2){}
+.alarm .wrap .time ul li:nth-child(2){
+    padding: 10px; color: #000;border-top: 1px solid #D3D3D3; border-bottom: 1px solid #D3D3D3;
+}
+.alarm .wrap .time ul li:nth-child(2) p{
+    font-size: 14px; font-weight: bold;
+    color: #000; padding-right: 5px; padding-left: 0;
+}
+.alarm .wrap .time ul li:nth-child(2) strong{
+    font-size: 30px;
+}
+.alarm .wrap .time .hour ul, .minute ul{}
+.alarm .wrap .time .minute{}
+.alarm .wrap button{
+    position: relative;
+    display: block;
+    margin: auto; top: 80px;
+    font-size: 20px; font-weight: bold;
+    color: #606060;
+    background: #F2D4AE;
+    width: 160px; height: 40px;
+}
+.alarm .wrap .time span{
+    display: inline-block; padding: 70px 10px;
+    font-size: 14px; font-weight: bold;
+
+}
+.alarm .wrap>span{
+    font-size: 14px; color: #606060;
+    display: block; text-align: center; padding: 20px 0;
+    line-height: 24px;
+    position: relative; top: 90px;
+}
+
+
+.look{
+    display: none;
+    position: absolute;
+    background: #f7ecd2; border-radius: 50%;
+    bottom: 20px; right: 20px;
+    z-index: 1; opacity: 0.8;
+}
+
+.text{
+    display: none;
+    position: absolute; width: 100%; height: 100%;
+    top: -60px; z-index: 1;
+}
+.text .wrap{
+    box-shadow: 0px -4px 13px -5px; 
+    color: gray;
+    background: #fff; width: 100%; height: auto;
+    position: fixed; bottom: 60px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.text .wrap li{
+    height: 60px; box-sizing: border-box; color: #000;
+    width: 100%; overflow: hidden; padding: 10px 0;
+}
+
+.text .wrap .color{position: relative;}
+.text .wrap .color label{
+    margin: 5px;
+    display: inline-block;
+    width: 30px; height: 30px; border: 1px solid #000;
+    box-sizing: border-box; border-radius: 50%; opacity: 0.7;
+}
+.text .wrap .color label.active{opacity: 1;border: 2px solid #000;}
+.text .wrap .color i{margin-right: 10px;}
+
+.text .wrap .t1{position: relative;}
+.text .wrap .t1 i{margin-right: 10px; float: left;}
+.text .wrap .t1 span{
+    position: absolute; display: inline-block;
+    height: 40px; padding: 12px 0; box-sizing: border-box;
+}
+.text .wrap .t1 .icon-prev{
+    position: absolute; right: 120px;
+}
+.text .wrap .t1 div{
+    width: 60px; display: inline-block; text-align: center;
+    overflow: hidden; position: absolute; right: 50px; top: 0;
+}
+.text .wrap .t1 ul{width: 180px;}
+.text .wrap .t1 li{
+    float: left; line-height: 40px;
+    width: 60px;
+}
+.text .wrap .t1 .icon-next{position: absolute; right: 0;}
+
+.text .wrap .t2{position: relative;}
+.text .wrap .t2 i{margin-right: 10px; float: left;}
+.text .wrap .t2 span{
+    position: absolute; display: inline-block;
+    height: 40px; padding: 12px 0; box-sizing: border-box;
+}
+.text .wrap .t2 .icon-prev{position: absolute; right: 120px;}
+.text .wrap .t2 div{
+    width: 60px; display: inline-block; text-align: center;
+    overflow: hidden; position: absolute; right: 50px; top: 0;
+}
+.text .wrap .t2 ul{width: 310px;}
+.text .wrap .t2 li{float: left; line-height: 40px; width: 60px;}
+.text .wrap .t2 .icon-next{position: absolute; right: 0; top: 10px;}
+
+
+
+
+.set{
+    display: none;
+    position: absolute; width: 100%; height: 100%;
+    top: -60px; z-index: 1;
+}
+.set .wrap{
+    box-shadow: 0px -4px 13px -5px; 
+    color: gray;
+    background: #fff; width: 100%; height: auto;
+    position: fixed; bottom: 60px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.set .wrap hr{margin: 5px 0;}
+.set .wrap strong{color: #000; padding: 10px 0;display: block;}
+.set .wrap li{position: relative;}
+.set .wrap li label{
+    display: block; padding: 10px 0;
+    color: #000; height: 40px; box-sizing: border-box;
+}
+.set .wrap li label i{
+    position: absolute; right: 0;
+}
+.set .wrap li label button{
+    position: absolute; right: 10px;
+}
+.set .wrap .box{
+    display: none;
+    position: absolute; background: #fff;
+    color: #000; border: 2px solid #BFBFC2;
+    right: 20px; top: 260px;
+}
+.set .wrap .box li{
+    padding: 10px;
+}
+
+input[type="radio"] + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -480px -20px;
+    margin-right: 10px;
+}
+input[type="radio"]:checked + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -500px -20px;
+}
+
+input[type="checkbox"] + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -480px -20px;
+    margin-right: 10px;
+}
+input[type="checkbox"]:checked + label i{
+    background-image:url(../sprite.png); display: inline-block;
+    background-size: 1000px 1000px;
+    width: 20px; height: 20px; background-position: -500px -20px;
+}
+
+
+
+
+
+
+
