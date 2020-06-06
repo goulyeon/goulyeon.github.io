@@ -1,0 +1,175 @@
+.pc{display: none;}
+.mo{display: block;}
+
+
+/* ==================== 헤더 ===================== */
+/* 로고 */
+header{z-index: 5;}
+header h1{margin: 0; height: 60px;}
+header h1 a .mo{width: 120px;}
+
+
+/* 메뉴 버튼 */
+nav{
+    position: fixed; box-sizing: border-box;
+    top:0; transition: 0.5s;
+    width: 70%; height: 100%;
+    left:-70%;
+    background: #ffefdc; padding-top: 60px;
+}
+.btn-menu{
+    /* 부모영역(header)을 기준으로 움직이기 */
+    position: absolute;
+    top:20px; left:20px;
+    width: 25px; height: 25px;
+    /* .title, nav보다 위쪽에 있도록 처리 */
+    z-index: 3;
+}
+.btn-menu span{
+    position: absolute;
+    width: 25px; height: 2px;
+    background: #666;       
+    transition: 0.5s;
+    transform-origin: 2px 1px;
+}
+.btn-menu span:nth-child(1){top:4px;}
+.btn-menu span:nth-child(2){top:50%;transform: translateY(-50%);}
+.btn-menu span:nth-child(3){bottom:4px;}
+
+#btn-menu:checked + label span:nth-child(1){transform: rotate(45deg);}
+#btn-menu:checked + label span:nth-child(2){opacity: 0;}
+#btn-menu:checked + label span:nth-child(3){transform: rotate(-45deg);}
+
+#btn-menu:checked ~ nav{left:0;}
+
+/* 메뉴 */
+.gnb{width: auto;}
+.gnb>li{
+    float: none; padding: 0 20px;
+    box-sizing: border-box;
+}
+.gnb>li>a{font-size: 22px;line-height: 50px;}
+.gnb ul{position: inherit;}
+.gnb ul li a{font-size: 16px}
+
+/* 서브메뉴 */
+.sub-menu{
+    bottom: 20px;top: unset; right: unset;
+    text-align: center; padding: 0 20px;
+}
+.sub-menu li a{padding: 0 3px; font-size:14px;}
+
+/* 메뉴배경 */
+.nav-m-bg{
+    width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    position: fixed; z-index: 4;
+    display: none;
+    transition: 0.5s;
+}
+
+
+/* ==================== 섹션 ===================== */
+section{margin-top: 0px;}
+
+/* 메인슬라이드 */
+.main-slide .swiper-container .swiper-slide img{width: 100%;}
+
+/* 메뉴보기 */
+.menu .box{
+    position: unset;
+    top: unset; left: unset; transform: unset;
+}
+.menu .text-box{height: auto; width: 100%;}
+.menu .text-box h2{padding: 20px 0; font-size: 40px;}
+.menu .text-box h3{padding: 20px 0; font-size: 18px;}
+
+.menu .show-img{
+    display: inline-block; width: 80%; height: auto; position: relative;
+}
+.menu .show-img img{
+    left: unset; margin: 16px 0; max-width: 400px;
+    top: unset; transform: unset ;position: relative;
+}
+
+/* 925소개 */
+.introduce .text-box{ height: auto; width: 100%; text-align: center;}
+.introduce .text-box h2{font-size: 40px; margin-top: 20px; padding-left: 0;}
+.introduce .text-box h3{font-size: 18px; font-weight: 400; margin-top: 20px; padding-left: 0;}
+
+.introduce .wrap{width: 100%; margin-left: 0;}
+
+.introduce .wrap .rotate{width: 70%;}
+.introduce .wrap .rotate img{max-width: 300px;}
+.introduce .wrap .rotate .back a{padding: 6px 18px; font-size: 12px;}
+
+/* 매장찾기 */
+.store{height: 400px;}
+.store .box{width: 80%; height: 280px;}
+.store .box .wrap h2{font-size: 28px;}
+.store .box .wrap h3{font-size: 16px; margin-bottom: 40px;}
+.store .box .wrap div{width: 80%;}
+.store .box .wrap div input{height: 40px; border: 1.5px solid #333;}
+.store .box .wrap div button img{width: 20px;}
+
+/* 카드메뉴 */
+.card{padding: 4%;}
+.card .left-box{width: 100%;}
+.card .left-box .box1{height: 280px; padding: 20px;}
+.card .left-box .box1 h2{font-size: 20px;}
+.card .left-box .box1 p{font-size: 14px;}
+.card .left-box .box1 img{width: 50%; max-width: 140px; right: 20px; bottom: 20px;}
+
+.card .right-box{width: 100%; margin-left: 0; margin-top: 4%;}
+.card .right-box img{max-width: 80px; width: 100%;}
+.card .right-box h2{font-size: 18px;}
+
+.card .right-box .box2{height: 210px;}
+.card .right-box .box3{height: 210px;}
+.card .right-box .box4{height: 210px;}
+.card .right-box .box5{height: 210px;}
+
+.card .right-box .box2, .box3, .box4, .box5{padding: 20px;}
+
+
+/* 공지사항, 보도자료 */
+.bar{
+    overflow: hidden;
+    height: 100px;
+}
+
+.bar .bar-left, .bar .bar-right{
+    height: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bar .inner h2{padding: 12px;font-size: 18px;}
+
+.bar .inner h2 span:nth-of-type(1){display: none;}
+.bar .inner .wrap{line-height: 50px; height: 50px; margin: 0 50px 0 96px;}
+.bar .inner .wrap ul{height: 50px;}
+
+.bar .on .inner .wrap li span{ position: relative; right: 0; }
+.bar .inner .wrap li span{float: right; margin-right: 10px;}
+.bar .inner .wrap li>a{float: left; width: 210px !important; font-weight: 300; font-size: 14px;}
+.bar .inner .wrap+a{right: 16px; top: 16px;} 
+
+/* =================풋터====================== */
+footer{padding: 30px 0;}
+/* 로고 */
+.logo h1 a img{width: 120px;}
+
+/* 링크 */
+.link{margin-top: 10px;}
+.link ul li:nth-child(1){display: none;}
+.link ul li:nth-child(5){display: none;}
+.link ul li:nth-child(6){display: none;}
+.link ul li:nth-child(7){display: none;}
+
+.link ul li a,.company p{font-size: 12px;}
+
+/* 위로가기 */
+.mo-top-btn{display: block; position: fixed; bottom: 10px; right: 10px;}
+.quick img{width: 40px;}
+.pc-top-btn{display: none;}
