@@ -41,9 +41,9 @@ nav{
 #btn-menu:checked ~ nav{left:0;}
 
 /* 메뉴 */
-.gnb{width: auto;}
+.gnb{width: auto; height: 90%; overflow: scroll;}
 .gnb>li{
-    float: none; padding: 0 20px;
+    float: none; padding-left: 20px;
     box-sizing: border-box;
 }
 .gnb>li>a{font-size: 22px;line-height: 50px;}
@@ -52,8 +52,8 @@ nav{
 
 /* 서브메뉴 */
 .sub-menu{
-    bottom: 20px;top: unset; right: unset;
-    text-align: center; padding: 0 20px;
+    bottom: 14px;top: unset; right: unset;
+    text-align: center; padding: 0 20px; width: 100%;
 }
 .sub-menu li a{padding: 0 3px; font-size:14px; color: #666;}
 
