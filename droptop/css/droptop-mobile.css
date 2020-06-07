@@ -42,6 +42,9 @@ nav{
 
 /* 메뉴 */
 .gnb{width: auto; height: 90%; overflow: scroll;}
+.gnb::-webkit-scrollbar {
+    display: none;
+}
 .gnb>li{
     float: none; padding-left: 20px;
     box-sizing: border-box;
