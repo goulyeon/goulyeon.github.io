@@ -1,10 +1,10 @@
 .pc{display: none;}
 .mo{display: block;}
-
+body{padding-top: 60px;}
 
 /* ==================== 헤더 ===================== */
 /* 로고 */
-header{z-index: 5;}
+header{z-index: 3;position: fixed;top: 0;width: 100%;background-color: #fff;}
 header h1{margin: 0; height: 60px;}
 header h1 a .mo{width: 120px;}
 
@@ -14,16 +14,14 @@ nav{
     position: fixed; box-sizing: border-box;
     top:0; transition: 0.5s;
     width: 70%; height: 100%;
-    left:-70%;
+    left:-70%; z-index: 5;
     background: #ffefdc; padding-top: 60px;
 }
 .btn-menu{
-    /* 부모영역(header)을 기준으로 움직이기 */
     position: absolute;
     top:20px; left:20px;
     width: 25px; height: 25px;
-    /* .title, nav보다 위쪽에 있도록 처리 */
-    z-index: 3;
+    z-index: 7;
 }
 .btn-menu span{
     position: absolute;
@@ -50,14 +48,14 @@ nav{
 }
 .gnb>li>a{font-size: 22px;line-height: 50px;}
 .gnb ul{position: inherit;}
-.gnb ul li a{font-size: 16px}
+.gnb ul li a{font-size: 14px; padding-left: 10px;}
 
 /* 서브메뉴 */
 .sub-menu{
     bottom: 20px;top: unset; right: unset;
     text-align: center; padding: 0 20px;
 }
-.sub-menu li a{padding: 0 3px; font-size:14px;}
+.sub-menu li a{padding: 0 3px; font-size:14px; color: #666;}
 
 /* 메뉴배경 */
 .nav-m-bg{
@@ -65,7 +63,7 @@ nav{
     background: rgba(0, 0, 0, 0.5); 
     position: fixed; z-index: 4;
     display: none;
-    transition: 0.5s;
+    transition: 0.5s; top: 0;
 }
 
 

@@ -1,4 +1,14 @@
 $(function(){
+
+    $(window).resize(function(){
+        var windowW=$(window).width();
+        if(windowW<768){
+            $('header').removeClass('center');
+        }else{
+            $('header').addClass('center');
+        }
+    }).resize();
+
     //메뉴 네비게이션 드롭다운
     $(window).resize(function(){
         var windowW=$(window).width();
@@ -8,7 +18,7 @@ $(function(){
         $('.gnb > li > a').off('active');
         $('.gnb').off('mouseleave');
 
-        if(windowW>930){
+        if(windowW>768){
             console.log('pc');
             $('.gnb > li').on('mouseenter',function(){
                 $('.gnb > li > a').removeClass('active');
@@ -91,6 +101,7 @@ $(function(){
             })
         }
     }).resize();    
+
 
     // 위로가기
     $(window).scroll(function(){
