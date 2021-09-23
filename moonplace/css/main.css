@@ -13,7 +13,7 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 }
 #header h1{float: left;}
 #header h1 img{width: 100px; display: block;}
-#header ul{float: left;position: absolute; left: 50%; transform: translateX(-50%);}
+#header ul{float: left;position: absolute; left: 50%; transform: translateX(-50%); width: 632px;}
 #header ul li{float: left; line-height: 60px;}
 #header ul li:hover a{color: #fffad4;}
 #header ul li a{color: #fff; font-size: 18px; margin: 0 30px; transition: all 0.4s;}
