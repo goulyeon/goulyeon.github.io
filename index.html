@@ -1,29 +1,501 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>포트폴리오_정승연</title>
+    <title>정승연 포트폴리오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-animate-css-rotate-scale.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="icon" href="img/favi.png">
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".section";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
 </head>
 <body>
-    <script>
-    </script>
-    <div>
-        <a href="/shuuemura/index.html">슈에무라</a>
-        <p>- 리뉴얼 웹사이트(메인페이지)</p>
+    <div id="header" class="pc ta pt_h">
+        <div class="top">
+            <h1><a href="#index.html"><img src="img/logo.png" alt="로고" class="logo"></a></h1>
+            <h1><a href="#index.html"><img src="img/logo_h.png" alt="로고" class="logo_h"></a></h1>
+        </div>
+        <div class="left">
+            <button class="menu">
+                <div class="wrap">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <p>MENU</p>
+            </button>
+            <div class="nav">
+                <div class="l_box">
+                    <img src="img/mu.png" alt="도형" class="figure">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#design">DESING</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="r_box"></div>
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="https://github.com/goulyeon" target='_blank'>
+                    <i class="fab fa-github"></i>
+                    <p>github</p>
+                </a></li>
+                <li><a href="https://www.instagram.com/zzigoul_yeon/" target='_blank'>
+                    <i class="fab fa-instagram"></i>
+                    <p>instagram</p>
+                </a></li>
+                <li><a href="mailto:jsydus97@naver.com" target='_blank'>
+                    <i class="far fa-envelope"></i>
+                    <p>mail</p>
+                </a></li>
+            </ul>
+            <button class="top_btn">
+                <i class="fas fa-caret-up"></i>
+                <p>top</p>
+            </button>
+        </div>
+        <div class="bottom">
+            <p>ⓒ2021 JEONG SEUNGYEON ALL RIGHTS RESERVED.</p>
+        </div>
+        
     </div>
-    <div>
-        <a href="/todaybook/intro.html">투데이북</a>
-        <p>- 독서어플 제작, 팀 프로젝트 (서재,독서노트 파트 제작)</p>
+    <div id="header" class="mo">
+        <h1><a href="#index.html"><img src="img/logo.png" alt="로고" class="logo"></a></h1>
+        <h1><a href="#index.html"><img src="img/logo_h.png" alt="로고" class="logo_h"></a></h1>
+        <button class="menu">
+            <div class="wrap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+        <div class="nav">
+            <div class="l_box">
+                <img src="img/mu.png" alt="도형" class="figure">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#design">DESING</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="r_box"></div>
+        </div>
+        <div class="icon">
+            <ul>
+                <li><a href="https://github.com/goulyeon">
+                    <i class="fab fa-github"></i>
+                </a></li>
+                <li><a href="https://www.instagram.com/zzigoul_yeon/">
+                    <i class="fab fa-instagram"></i>
+                </a></li>
+                <li><a href="mailto:jsydus97@naver.com">
+                    <i class="far fa-envelope"></i>
+                </a></li>
+            </ul>
+            <button class="top_btn">
+                <i class="fas fa-caret-up"></i>
+                <p>top</p>
+            </button>
+        </div>
     </div>
-    <div></div>
-        <a href="/dongsuh_food/index.html">동서식품</a>
-        <p>- 데모 웹사이트</p>
-    </div>
-    <div>
-        <a href="/droptop/index.html">카페 드롭탑</a>
-        <p>- 리뉴얼 웹사이트(메인페이지)</p>
+    
+    <!-- container -->
+    <div id="container">
+        <!-- home -->
+        <div id="home" class="section">
+            <!-- 피씨 -->
+            <div class="pc">
+                <!-- 왼쪽 박스 -->
+                <div class="l_box">
+                    <P>
+                        한걸음, 한발짝 <span>멈추지 않고 나아가는</span><br>
+                        웹퍼블리셔 정승연입니다.
+                    </P>
+                </div>
+                <!-- 오른쪽 박스 -->
+                <div class="r_box">
+                    <img src="img/h1.png" alt="책 일러스트" class="h1">
+                    <img src="img/h2.png" alt="태그 일러스트" class="h2">
+                    <img src="img/h3.png" alt="인물 일러스트" class="h3">
+                </div>
+                <!-- 이름 -->
+                <h2>JEONG<br>SEUNG<br>YEON</h2>
+                <img src="img/cursor.png" alt="마우스" class="cursor">
+            </div>
+            <!-- 태블릿 -->
+            <div class="ta">
+                <!-- 왼쪽 박스 -->
+                <div class="l_box">
+                    <P>
+                        한걸음, 한발짝 <span>멈추지 않고 나아가는</span><br>
+                        웹퍼블리셔 정승연입니다.
+                    </P>
+                </div>
+                <!-- 오른쪽 박스 -->
+                <div class="r_box">
+                    <img src="img/h1.png" alt="책 일러스트" class="h1">
+                    <img src="img/h2.png" alt="태그 일러스트" class="h2">
+                    <img src="img/h3.png" alt="인물 일러스트" class="h3">
+                    <h2>JEONG<br>SEUNG<br>YEON</h2>
+                </div>
+                <!-- 이름 -->
+                <img src="img/cursor.png" alt="마우스" class="cursor">
+            </div>
+            <!-- 모바일 -->
+            <div class="mo">
+                <!-- 왼쪽 박스 -->
+                <div class="l_box">
+                    <P>
+                        한걸음, 한발짝 <span>멈추지 않고 나아가는</span><br>
+                        웹퍼블리셔 정승연입니다.
+                    </P>
+                </div>
+                <!-- 오른쪽 박스 -->
+                <div class="r_box">
+                    <img src="img/h1.png" alt="책 일러스트" class="h1">
+                    <img src="img/h2.png" alt="태그 일러스트" class="h2">
+                    <img src="img/h3.png" alt="인물 일러스트" class="h3">
+                    <h2>JEONG<br>SEUNG<br>YEON</h2>
+                </div>
+                <!-- 이름 -->
+                <img src="img/cursor.png" alt="마우스" class="cursor">
+            </div>
+        </div>
+        
+        <!-- about -->
+        <div id="about" class="section">
+            <h2>ABOUT</h2>
+            <div class="wrap">
+                <div class="l_box pc ta">
+                    <img src="img/ab2.png" alt="도형" class="ab2">
+                    <img src="img/ab1.png" alt="사진" class="ab1">
+                    <img src="img/ab3.png" alt="도형" class="ab3">
+                </div>
+                <div class="me mo">
+                </div>
+                <div class="r_box">
+                    <div class="top">
+                        <div class="pro">
+                            <h3>PROFILE</h3>
+                            <ul>
+                                <li><span>이름</span>정승연</li>
+                                <li><span>생년월일</span>1997.11.15</li>
+                                <li><span>이메일</span>jsydus97@naver.com</li>
+                            </ul>
+                        </div>
+                        <div class="edu">
+                            <h3>EDUCATION</h3>
+                            <ul>
+                                <li>
+                                    <span>2021 - 05 ~ 2021 - 09</span>
+                                    <p>
+                                        스마트웹콘텝츠개발 UI/UX &<br>
+                                        웹디자인 웹퍼블리셔 과정 수료
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>2013 - 03 ~ 2016 - 02</span>
+                                    <p>인천 생활과학고등학교 졸업</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sk">
+                        <h3>SKILL</h3>
+                        <ul>
+                            <li>
+                                <p>HTML</p>
+                                <div class="bar">
+                                    <div class="b"></div>
+                                    <div class="a a_h"></div>
+                                </div>
+                                <span>90%</span>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                                <div class="bar">
+                                    <div class="b"></div>
+                                    <div class="a a_c"></div>
+                                </div>
+                                <span>80%</span>
+                            </li>
+                            <li>
+                                <p>JS</p>
+                                <div class="bar">
+                                    <div class="b"></div>
+                                    <div class="a a_js"></div>
+                                </div>
+                                <span>70%</span>
+                            </li>
+                            <li>
+                                <p>PS/AI</p>
+                                <div class="bar">
+                                    <div class="b"></div>
+                                    <div class="a a_pa"></div>
+                                </div>
+                                <span>90%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- portfolio -->
+        <div id="portfolio" class="section">
+            <h2>PORTFOLIO</h2>
+            <div class="wrap">
+                <div class="l_box"></div>
+                <div class="r_box">
+                    <ul class="list">
+                        <li>
+                            <span>Creative site</span>
+                            <h3>문화공간</h3>
+                            <p>전시회 소개 사이트</p>
+                            <div class="btn">
+                                <button class="mon_more">More</button>
+                                <button><a href="#">Site</a></button>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Creative site</span>
+                            <h3>문화공간</h3>
+                            <p>전시회 소개 사이트</p>
+                            <div class="btn">
+                                <button>More</button>
+                                <button>Site</button>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Creative site</span>
+                            <h3>문화공간</h3>
+                            <p>전시회 소개 사이트</p>
+                            <div class="btn">
+                                <button>More</button>
+                                <button>Site</button>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Creative site</span>
+                            <h3>문화공간</h3>
+                            <p>전시회 소개 사이트</p>
+                            <div class="btn">
+                                <button class="btn1">More</button>
+                                <button><a href="#">Site</a></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="page">
+                        <li class="on"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop mon">
+                <div class="box">
+                    <img src="img/mon.jpg" alt="" class="more">
+                    <img src="img/close.png" alt="" class="close">
+                </div>    
+            </div>
+        </div>
+
+        <!-- design -->
+        <div id="design" class="section">
+            <h2>DESIGN</h2>
+            <div class="con">
+                <ul class="wrap pc ta">
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal1">
+                                <div class="bg"><p>코카콜라 레트로 포스터</p></div>
+                                <a href="img/g1.jpg"></a>
+                            </li>
+                            <li class="gal2">
+                                <div class="bg"><p>코로나 카드뉴스</p></div>
+                                <a href="img/g2.jpg"></a>
+                            </li>
+                            <li class="gal3">
+                                <div class="bg"><p>명함 디자인</p></div>
+                                <a href="img/g3.jpg"></a>
+                            </li>
+                            <li class="gal4">
+                                <div class="bg"><p>플라워페스티벌 일러스트</p></div>
+                                <a href="img/g4.jpg"></a>
+                            </li>
+                            <li class="gal5">
+                                <div class="bg"><p>온라인 쇼핑 배너</p></div>
+                                <a href="img/g5.jpg"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal6">
+                                <div class="bg"><p>북커버 디자인</p></div>
+                                <a href="img/g6.jpg"></a>
+                            </li>
+                            <li class="gal7">
+                                <div class="bg"><p>우유 패키지 디자인</p></div>
+                                <a href="img/g7.jpg"></a>
+                            </li>
+                            <li class="gal8">
+                                <div class="bg"><p>추석배송 팝업창</p></div>
+                                <a href="img/g8.jpg"></a>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="wrap mo">
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal1">
+                                <div class="bg"><p>코카콜라 레트로 포스터</p></div>
+                                <a href="img/g1.jpg"></a>
+                            </li>
+                            <li class="gal2">
+                                <div class="bg"><p>코로나 카드뉴스</p></div>
+                                <a href="img/g2.jpg"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal3">
+                                <div class="bg"><p>명함 디자인</p></div>
+                                <a href="img/g3.jpg"></a>
+                            </li>
+                            <li class="gal4">
+                                <div class="bg"><p>플라워페스티벌 일러스트</p></div>
+                                <a href="img/g4.jpg"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal5">
+                                <div class="bg"><p>온라인 쇼핑 배너</p></div>
+                                <a href="img/g5.jpg"></a>
+                            </li>
+                            <li class="gal6">
+                                <div class="bg"><p>북커버 디자인</p></div>
+                                <a href="img/g6.jpg"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gallery">
+                        <ul>
+                            <li class="gal7">
+                                <div class="bg"><p>우유 패키지 디자인</p></div>
+                                <a href="img/g7.jpg"></a>
+                            </li>
+                            <li class="gal8">
+                                <div class="bg"><p>추석배송 팝업창</p></div>
+                                <a href="img/g8.jpg"></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="prev"><img src="img/prev.png" alt="이전"></button>
+            <button class="next"><img src="img/next.png" alt="다음"></button>
+            <div class="pop">
+                <div class="box">
+                    <div class="g_box"></div>
+                    <img src="img/close.png" alt="" class="close">
+                </div>    
+            </div>
+
+        </div>
+        <!-- contact -->
+        <div id="contact" class="section">  
+            <div class="pc">
+                <img src="img/ct1.png" alt="도형1" class="figure1">
+                <img src="img/ct2.png" alt="도형2" class="figure2">
+                <img src="img/ct3.png" alt="도형3" class="figure3">
+                <img src="img/ct4.png" alt="도형4" class="figure4">
+            </div>
+            <div class="ta">
+                <img src="img/ct1.png" alt="도형1" class="figure1">
+                <img src="img/ct2.png" alt="도형2" class="figure2">
+                <img src="img/ct3.png" alt="도형3" class="figure3">
+                <img src="img/ct4.png" alt="도형4" class="figure4">
+            </div>
+            <div class="mo">
+                <img src="img/ct1.png" alt="도형1" class="figure1">
+                <img src="img/ct2.png" alt="도형2" class="figure2">
+                <img src="img/ct3.png" alt="도형3" class="figure3">
+                <img src="img/ct4.png" alt="도형4" class="figure4">
+            </div>
+            <h2>CONTACT</h2>
+            <ul>
+                <li>
+                    <h4>이메일</h4>
+                    <p>jsydus97@naver.com</p>
+                </li>
+                <li>
+                    <h4>오픈카톡</h4>
+                    <img src="img/qr.jpg" alt="qr코드">
+                </li>
+            </ul>
+            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용으로 제작되었습니다.</p>
+        </div>
     </div>
 </body>
 </html>

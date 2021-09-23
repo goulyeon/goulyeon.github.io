@@ -1,0 +1,731 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+body, button{font-family: 'Noto Sans KR', sans-serif; color: #222;}
+body, html{width: 100%; height: 100%; overflow: hidden;}
+
+
+.mo{display: none;}
+.ta{display: none;}
+.pc{display: block;}
+/* header */
+
+/* header - top */
+#header .top{
+    width: 100%; height: 50px; background: #fafafa; 
+    position: fixed; top: 0; left: 0; z-index: 5;
+}
+#header .top h1{width: 70px; margin: 10px 60px;}
+#header .top h1 img{width: 100%; display: block;}
+#header .top h1 .logo_h{display: none;}
+
+/* header - left */
+#header .left{
+    width: 50px; height: 100%; background: #fafafa; 
+    position: fixed; top: 0; left: 0; z-index: 6;
+}
+#header .left .menu{
+    width: 70px; background: none; border: none; cursor: pointer; z-index: 10;
+    position: absolute; top: 50%; left: 130%; transform: translate(-50%,-50%);
+}
+#header .left .menu .wrap{float: left; position: relative; width: 30px; height: 26px;}
+#header .left .menu .wrap div{
+    width: 30px; height: 2px; background: #222;
+    position: absolute; left: 0; transition: all 0.5s;
+}
+#header .left .menu .wrap .bar1{top: 0;}
+#header .left .menu .wrap .bar2{
+    width: 20px; transition: all 0.3s; 
+    transform: translate(-50%,-50%); top: 50%; left: 50%;
+}
+#header .left .menu .wrap .bar3{bottom: 0;}
+#header .left .menu p{
+    position: absolute; right: 0; top: 50%; transform: translateY(-50%) rotate(-90deg);
+    font-size: 13px; line-height: 38px; letter-spacing: 2px; transition: all 0.3s;
+}
+/* 호버했을때 넓이 변화, p회전 */
+#header .left .menu:hover .bar2{width: 30px;}
+#header .left .menu:hover p{transform: rotate(0) translateY(-50%);letter-spacing: 0; font-size: 12px;}
+
+/* 닫기버튼 */
+#header .left .menu.on p{display: none;}
+#header .left .menu.on .wrap .bar1{top: 50%; transform: translateY(-50%) rotate(-45deg);}
+#header .left .menu.on .wrap .bar2{opacity: 0;}
+#header .left .menu.on .wrap .bar3{top: 50%; transform: translateY(-50%) rotate(45deg);}
+
+/* 메뉴 */
+#header .nav{
+    position: absolute; width: 100vw; height: 100vh; 
+    left: -100vw;transition: all 1s;
+}
+#header .nav.on{left: 0;}
+#header .nav .figure{position: absolute; right: -200px; bottom: -160px;}
+#header .nav .l_box{
+    width: 70%; height: 100%; background: #fff;
+    float: left; overflow: hidden; position: relative;
+}
+#header .nav .l_box ul{position: absolute; left: 16%; top: 50%; transform: translateY(-50%);}
+#header .nav .l_box ul li{margin: 40px 0;}
+#header .nav .l_box ul li a{color: #222; font-size: 50px; font-weight: 500; position: relative;}
+#header .nav .l_box ul li a::after{
+    content: ""; width: 0%; height: 40px; display: inline-block; transition: all 0.5s;
+    background: #f39523; position: absolute; bottom: 0; left: -5%; z-index: -1;
+}
+#header .nav .l_box ul li:hover a::after{width: 110%;}
+#header .nav .r_box{width: 30%; height: 100%; background: #b8cdfb;float: left;}
+
+
+/* header - right */
+#header .right{
+    width: 50px; height: 100%; background: #fafafa; 
+    position: fixed; top: 0; right: 0; z-index: 5;
+}
+#header .right ul{position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 140px; height: 140px;}
+#header .right ul li{width: 140px; height: 40px; background-color: none; border-radius: 20px;}
+#header .right ul li a{display: block; height: 40px; padding: 0 30px 0 20px;}
+#header .right ul li:nth-of-type(1){position: absolute; top: 0; left: 0;}
+#header .right ul li:nth-of-type(2){position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+#header .right ul li:nth-of-type(3){position: absolute; bottom: 0; left: 0;}
+#header .right ul li i{display: block; width: 20px; float: left; color: #222; line-height: 40px; font-size: 20px;}
+#header .right ul li p{float: right; line-height: 40px; color: #fff; font-size: 12px; margin-left: 10px; opacity: 0;}
+
+#header .right button{
+    border: none; background: none; cursor: pointer;
+    position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);
+}
+#header .right button i{font-size: 20px; color: #222}
+#header .right button p{font-size: 12px;}
+
+
+/* header - bottom */
+#header .bottom{
+    width: 100%; height: 50px; background: #fafafa; 
+    position: fixed; bottom: 0; left: 0; z-index: 5;
+}
+#header .bottom p{
+    position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+    font-size: 12px; color: #999;
+}
+
+/* container */
+#container{width: 100%; height: 100%; position: absolute; top: 0;}
+
+
+#home{
+    position: relative; width: 100%; height: 100vh; 
+    padding: 50px; box-sizing: border-box;
+}
+
+/* container - home - pc */
+
+#home .pc{width: 100%; height: 100%;}
+/* 왼쪽 */
+#home .pc .l_box{width: 30%; height: 100%; background: #b8cdfb; position: relative; float: left;}
+#home .pc .l_box p{
+    font-size: 30px; font-weight: 500; width: 70%; opacity: 0;
+    position: absolute; top: 60%; left: 50%; transform: translate(-50%,-50%);
+}
+#home .pc .l_box p span{background: linear-gradient(to top, #f39523 40%, transparent 40%);}
+
+/* 오른쪽 */
+#home .pc .r_box{width: 70%; height: 100%; background: #fff; position: relative; float: left;}
+#home .pc .r_box .h1{width: 300px; position: absolute; top: 14%; left: 16%; transform: rotate(0deg);}
+#home .pc .r_box .h2{width: 350px; position: absolute; top: 0%; left: 36%;}
+#home .pc .r_box .h3{width: 550px; position: absolute; right: 0; bottom: 0;}
+
+#home .pc h2{
+    font-size: 150px; letter-spacing: 4px; line-height: 160px; font-family: 'Do Hyeon', sans-serif;
+    position: absolute; top: 50%; left: 30%; transform: translate(-50%,-50%);
+}
+#home .pc .cursor{position: absolute; bottom: 70px; left: 70px; width: 50px; opacity: 1;}
+
+
+
+
+/* container - about */
+#about{
+    position: relative; width: 100%; height: 100vh;
+    padding: 50px; box-sizing: border-box;
+}
+#about h2{font-size: 40px; text-align: center; margin: 40px 0;}
+#about .wrap{width: 100%; height: 75vh; box-sizing: border-box; position: relative;}
+
+/* 왼쪽 */
+#about .l_box{width: 50%; height: 100%; float: left; position: relative;}
+#about .l_box .ab2{
+    width: 550px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+#about .l_box .ab1{
+    width: 500px;
+    position: absolute; top: 30%; left: 60%; transform: translate(-50%,-50%);
+}
+#about .l_box .ab3{
+    width: 210px;
+    position: absolute; 
+    top: 80%; left: 34%; transform: translate(-50%,-50%);
+}
+
+/* 오른쪽 */
+#about .r_box{
+    width: 50%; float: left; margin-top: 0px;
+    position: absolute; padding: 0 5%; box-sizing: border-box;
+    right: 0; top: 47%; transform: translateY(-50%);
+}
+#about .r_box>div{padding: 30px 0; box-sizing: border-box;}
+#about .r_box div h3{font-size: 24px; font-weight: 500; margin-bottom: 30px;}
+#about .r_box .top::after{clear: both; content: ''; display: block;}
+/* pro */
+#about .r_box .pro{float: left; width: 50%;}
+#about .r_box .pro ul li{line-height: 30px;}
+#about .r_box .pro ul li span{margin-right: 10px; color: #999;}
+/* edu */
+#about .r_box .edu{float: left; width: 50%;}
+#about .r_box .edu li{margin-bottom: 20px;}
+#about .r_box .edu li span{color: #999; letter-spacing: 2px; line-height: 30px;}
+#about .r_box .edu li p{line-height: 30px;}
+/* sk */
+#about .r_box .sk{width: 100%;}
+#about .r_box .sk ul li{line-height: 40px;}
+#about .r_box .sk ul li::after{content: ""; clear: both; display: block;}
+#about .r_box .sk ul li p{float: left; width: 80px;}
+#about .r_box .sk ul li .bar{width: 60%; float: left; position: relative; padding: 10px 0; margin-right: 5%;}
+#about .r_box .sk ul li .bar .b{width: 100%; height: 20px; background: #eee;}
+#about .r_box .sk ul li .bar .a{
+    width: 0%; height: 20px; background: #b8cdfb;
+    position: absolute; top: 10px; left: 0;
+}
+#about .r_box .sk ul li span{float: left;}
+#about .r_box .sk ul li .bar .a_h{width: 0%;}
+
+/* container - portfolio */
+#portfolio{
+    position: relative; width: 100%; height: 100vh;
+    padding: 50px; box-sizing: border-box; 
+}
+#portfolio h2{font-size: 40px; text-align: center; margin: 40px 0;}
+#portfolio .wrap{
+    width: 70%; box-shadow: 0 0 10px rgba(34, 34, 34, 0.2); background: #fff;
+    margin: 0 auto; height: 68vh;
+}
+/* 왼쪽 */
+#portfolio .l_box{
+    width: 70%; height: 100%; background: url(../img/po1.jpg) no-repeat center;
+    background-size: cover; float: left;
+}
+
+/* 오른쪽 */
+#portfolio .r_box{width: 30%; height: 100%; float: left; overflow: hidden; position: relative;}
+#portfolio .r_box .list{width: 400%; height: 100%;}
+#portfolio .r_box .list li{
+    width: 25%; height: 100%; float: left; text-align: right; 
+    padding: 2%; box-sizing: border-box; position: relative;
+}
+/* 글씨 */
+#portfolio .r_box .list li span{color: #ccc; font-size: 14px; margin-bottom: 100px; display: block;}
+#portfolio .r_box .list li h3{font-size: 46px; margin-bottom: 10px;}
+#portfolio .r_box .list li p{color: #666;}
+/* 버튼 */
+#portfolio .r_box .list li .btn{
+    position: absolute; bottom: 200px; right: 8%; width: 194px;
+}
+#portfolio .r_box .list li .btn button{
+    background: none; border: 1px solid #222; width: 85px; height: 30px;
+    font-size: 14px; text-align: center; line-height: 30px; margin: 0 5px;
+    transition: all 0.3s; cursor: pointer;
+}
+#portfolio .r_box .list li .btn button a{color: #222}
+#portfolio .r_box .list li .btn button:hover a{color: #fff;}
+#portfolio .r_box .list li .btn button:hover{background: #b8cdfb; border: 1px solid #b8cdfb; color: #fff;}
+/* 페이지네이션 */
+#portfolio .r_box .page{position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%);}
+#portfolio .r_box .page li{
+    width: 16px; height: 16px; float: left; margin: 5px;
+    background: #ccc; border-radius: 50%;
+}
+#portfolio .r_box .page li.on{background: #b8cdfb;}
+
+/* 팝업 */
+#portfolio .pop{
+    width: 100%; height: 100%; background: rgba(34, 34, 34, 0.5);
+    position: absolute; top: 0; left: 0; z-index: 15; display: none;
+}
+#portfolio .pop .box{
+    width: 70%; position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%,-50%);
+}
+#portfolio .pop .more{display: block; width: 100%;}
+#portfolio .pop .close{width: 40px; position: absolute; top: 0; right: -50px; cursor: pointer;}
+
+/* design */
+#design{
+    position: relative; width: 100%; height: 100vh;
+    padding: 50px; box-sizing: border-box; 
+}
+#design h2{font-size: 40px; text-align: center; margin: 40px 0;}
+#design .con{
+    width: 70%; box-shadow: 0 0 10px rgba(34, 34, 34, 0.2); overflow: hidden;
+    background: #fff; margin: 0 auto; height: 68vh; position: relative;
+}
+#design .con .wrap{
+    width: 200%; height: 100%;
+    position: absolute; left: 0%; top: 0;
+}
+#design .con .wrap::after{clear: both; content: ''; display: block;}
+#design .con .wrap .gallery{width: 50%; height: 100%; float: left;}
+#design .con .wrap .gallery ul{width: 100%; height: 100%;}
+#design .con .wrap .gallery ul li{float: left; width: 33.333%; cursor: pointer;}
+#design .con .wrap .gallery ul li a{display: none;}
+/* 회색 bg */
+#design .con .wrap .gallery ul li .bg{
+    width: 100%; height: 100%; background: rgba(34, 34, 34, 0.5);
+    position: relative; opacity: 0; transition: all 0.5s;
+}
+#design .con .wrap .gallery ul li .bg p{
+    color: #fff; position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%,-50%); width: 100%; text-align: center;
+}
+#design .con .wrap .gallery ul li:hover .bg{opacity: 1;}
+/* 이미지 */
+#design .con .wrap .gallery ul .gal1{
+    background: url(../img/g1.jpg) no-repeat center; 
+    background-size: cover; height: 100%;
+}
+#design .con .wrap .gallery ul .gal2{
+    background: url(../img/g2.jpg) no-repeat center; 
+    background-size: cover; height: 50%;
+}
+#design .con .wrap .gallery ul .gal3{
+    background: url(../img/g3.jpg) no-repeat center; 
+    background-size: cover; height: 50%;
+}
+#design .con .wrap .gallery ul .gal4{
+    background: url(../img/g4.jpg) no-repeat center; 
+    background-size: cover; height: 50%;
+}
+#design .con .wrap .gallery ul .gal5{
+    background: url(../img/g5.jpg) no-repeat center; 
+    background-size: cover; height: 50%;
+}
+#design .con .wrap .gallery ul .gal6{
+    background: url(../img/g6.jpg) no-repeat center; 
+    background-size: cover; height: 100%; width: 50%;
+}
+#design .con .wrap .gallery ul .gal7{
+    background: url(../img/g7.jpg) no-repeat center; 
+    background-size: cover; height: 50%; width: 50%;
+}
+#design .con .wrap .gallery ul .gal8{
+    background: url(../img/g8.jpg) no-repeat center; 
+    background-size: cover; height: 50%; width: 50%;
+}
+/* 버튼 */
+#design button{border: none; background: none; width: 40px; cursor: pointer;}
+#design button img{width: 100%; display: block;}
+#design .prev{
+    position: absolute; top: 50%; left: 14%; 
+    transform: translateY(-50%);
+}
+#design .next{
+    position: absolute; top: 50%; right: 14%; 
+    transform: translateY(-50%);
+}
+/* 팝업 */
+#design .pop{
+    width: 100%; height: 100%; background: rgba(34, 34, 34, 0.5);
+    position: absolute; top: 0; left: 0; z-index: 15; display: none;
+}
+
+#design .pop .box{
+    height: 80%; width: 70%; position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%,-50%);
+}
+#design .pop .box .g_box{
+    width: 100%; height: 100%;
+    background-image: url(../img/g5.jpg); background-position: center center;
+    background-size: contain; background-repeat: no-repeat;
+}
+#design .pop .more{display: block; height: 100%; }
+#design .pop .close{width: 40px; position: absolute; top: 0; right: -50px; cursor: pointer;}
+
+/* contact */
+#contact{
+    position: relative; width: 100%; height: 100vh;
+    padding: 50px; box-sizing: border-box; overflow: hidden;
+}
+#contact>.pc img{position: absolute;}
+#contact .pc .figure1{bottom: -5%; right: -6%; width: 40%; transform: rotate(45deg);}
+#contact .pc .figure2{top: 2%; left: -5%; width: 38%; transform: rotate(-30deg);}
+#contact .pc .figure3{bottom: 20%; right: 14%; width: 19%;}
+#contact .pc .figure4{top: 48%; left: 12%; width: 17%;}
+
+#contact h2{font-size: 40px; text-align: center; margin: 40px 0;}
+
+#contact ul{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+#contact li{float: left; text-align: center; margin: 60px;}
+#contact li h4{margin-bottom: 40px; font-size: 26px;}
+#contact li p{line-height: 100px; font-size: 20px;}
+#contact li img{width: 120px; box-shadow: 0 0 10px rgba(34, 34, 34, 0.3);}
+#contact>p{
+    position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%);
+    color: #ccc; font-size: 12px; text-align: center;
+}
+
+
+/* ---------------------- 태블릿 미디어쿼리 ---------------------- */
+@media (max-width: 1200px) and (min-width: 768px){
+
+.pc{display: none;}
+.ta{display: block;}
+.mo{display: none;}
+
+
+
+/* 메뉴 */
+#header .nav .figure{width: 640px;}
+#header .nav .l_box{width: 80%;}
+#header .nav .l_box ul li a{font-size: 40px;}
+#header .nav .l_box ul li a::after{height: 30px;}
+#header .nav .r_box{width: 20%;}
+
+
+
+
+
+/* container - home - mo */
+#home .ta{width: 100%; height: 100%;}
+/* 왼쪽 */
+#home .ta .l_box{
+    width: 20%; height: 100%; background: #b8cdfb; 
+    position: relative; float: left;
+}
+#home .ta .l_box p{
+    font-size: 20px; font-weight: 500; width: 70%; opacity: 0;
+    position: absolute; top: 60%; left: 50%; transform: translate(-50%,-50%);
+}
+#home .ta .l_box p span{background: linear-gradient(to top, #f39523 40%, transparent 40%);}
+/* 오른쪽 */
+#home .ta .r_box{
+    width: 80%; height: 100%; 
+    background: #fff; position: relative; float: left;
+}
+#home .ta .r_box .h1{width: 200px; position: absolute; top: 8%; left: -5%;}
+#home .ta .r_box .h2{width: 250px; position: absolute; top: -2%; left: 20%;}
+#home .ta .r_box .h3{width: 400px; position: absolute; right: 0; bottom: 0;}
+#home .ta .r_box h2{
+    font-size: 90px; letter-spacing: 4px; line-height: 104px; 
+    font-family: 'Do Hyeon', sans-serif;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+#home .cursor{position: absolute; bottom: 70px; left: 70px; width: 50px; opacity: 1;}
+
+/* container - about */
+
+/* 왼쪽 */
+#about .l_box .ab2{width: 100%; min-width: 400px;}
+#about .l_box .ab1{width: 90%; min-width: 360px;}
+#about .l_box .ab3{width: 40%; min-width: 160px;}
+
+/* 오른쪽 */
+/* #about .r_box{position: absolute; top: 50%; right: 0; transform: translateY(-50%);} */
+#about .r_box .top{padding: 0;}
+#about .r_box>div li{font-size: 14px;}
+#about .r_box div h3{font-size: 22px; margin-bottom: 5px;}
+
+#about .r_box .pro{float: none; width: 100%; height: auto; padding: 12px 0;}
+#about .r_box .pro ul li{line-height: 26px;}
+
+#about .r_box .edu{float: none; width: 100%; height: auto; padding: 12px 0;}
+#about .r_box .edu li{margin-bottom: 0;}
+#about .r_box .edu li span{line-height: 26px;}
+
+#about .r_box .sk{height: auto; padding: 12px 0;}
+#about .r_box .sk ul li p{width: 16%;}
+#about .r_box .sk ul li .bar{width: 67%; margin-right: 3%;}
+#about .r_box .sk ul li span{width: 14%;}
+
+/* container - portfolio */
+#portfolio .wrap{width: 80%;}
+
+/* 왼쪽 */
+#portfolio .l_box{width: 100%; height: 60%; float: none;}
+#portfolio .r_box{width: 100%; height: 40%; float: none;}
+#portfolio .r_box .list li{padding: 1%; text-align: left; }
+/* 글씨 */
+#portfolio .r_box .list li span{font-size: 14px; margin-bottom: 20px;}
+#portfolio .r_box .list li h3{font-size: 40px; margin-bottom: 6px;}
+#portfolio .r_box .list li p{}
+/* 버튼 */
+#portfolio .r_box .list li .btn{
+    position: initial; display: block; width: auto; text-align: right;
+}
+#portfolio .r_box .list li .btn button{
+    width: 70px; height: 26px; line-height: 26px;
+    margin: 0 10px 0 0; font-size: 12px;
+}
+/* 페이지네이션 */
+#portfolio .r_box .page{bottom: 14px;}
+#portfolio .r_box .page li{width: 14px; height: 14px;}
+
+/* 팝업 */
+#portfolio .pop .box{width: 80%;}
+
+
+
+
+/* container - design */
+#design .con{width: 80%;}
+#design .con .wrap .gallery ul .gal1{width: 100%; height: 40%;}
+#design .con .wrap .gallery ul .gal2{width: 50%; height: 30%;}
+#design .con .wrap .gallery ul .gal3{width: 50%; height: 30%;}
+#design .con .wrap .gallery ul .gal4{width: 50%; height: 30%;}
+#design .con .wrap .gallery ul .gal5{width: 50%; height: 30%;}
+
+
+
+
+/* container - contact */
+#contact li{float: none; margin: 30px;}
+#contact li p{line-height: 80px;}
+#contact>.ta img{position: absolute;}
+#contact .ta .figure1{bottom: -5%; right: -6%; width: 40%; transform: rotate(45deg); min-width: 460px;}
+#contact .ta .figure2{top: 2%; left: -5%; width: 38%; transform: rotate(-30deg); min-width: 400px;}
+#contact .ta .figure3{bottom: 22%; right: 24%; width: 19%; min-width: 150px;}
+#contact .ta .figure4{top: 35%; left: 12%; width: 17%; min-width: 140px;}
+
+
+
+
+    
+}
+
+
+@media (max-width: 767px){
+.pc{display: none;}
+.ta{display: none;}
+.mo{display: block;}
+
+
+/* header - mo */
+#header.mo{width: 100%; height: 50px; position: fixed; background: #fafafa00; z-index: 20;}
+#header.mo h1{width: 70px; margin: 10px 20px;}
+#header.mo h1 img{width: 100%; display: block;}
+#header.mo h1 .logo_h{display: none;}
+/* 메뉴 */
+#header.mo .menu{
+    width: 22px; background: none; border: none; cursor: pointer; z-index: 10;
+    position: absolute; top: 50%; right: 20px; transform: translateY(-50%);
+}
+#header.mo .menu .wrap{position: relative; width: 22px; height: 20px;}
+#header.mo .menu .wrap div{
+    width: 22px; height: 2px; background: #222;
+    position: absolute; left: 0; transition: all 0.5s;
+}
+#header.mo .menu .wrap .bar1{top: 0;}
+#header.mo .menu .wrap .bar2{
+    width: 15px; transition: all 0.3s; 
+    transform: translate(-50%,-50%); top: 50%; left: 50%;
+}
+#header.mo .menu .wrap .bar3{bottom: 0;}
+
+/* 호버했을때 넓이 변화 */
+#header.mo .menu:hover .bar2{width: 22px;}
+
+/* 닫기버튼 */
+#header.mo .menu.on p{display: none;}
+#header.mo .menu.on .wrap .bar1{top: 50%; transform: translateY(-50%) rotate(-45deg);}
+#header.mo .menu.on .wrap .bar2{opacity: 0;}
+#header.mo .menu.on .wrap .bar3{top: 50%; transform: translateY(-50%) rotate(45deg);}
+
+/* 메뉴창 */
+#header.mo .nav{
+    position: absolute; width: 100vw; height: 100vh; 
+    transition: all 1s; right: 0%; top: 0; z-index: 5;
+}
+#header.mo .nav .l_box{
+    width: 80%; height: 100%; background: #fff;
+    float: left; overflow: hidden; position: relative;
+}
+#header.mo .nav .l_box .figure{position: absolute; right: -152px; bottom: -160px; width: 400px;}
+#header.mo .nav .l_box ul{position: absolute; left: 16%; top: 50%; transform: translateY(-50%);}
+#header.mo .nav .l_box ul li{margin: 30px 0;}
+#header.mo .nav .l_box ul li a{color: #222; font-size: 30px; font-weight: 500; position: relative;}
+#header.mo .nav .l_box ul li a::after{
+    content: ""; width: 0%; height: 20px; display: inline-block; transition: all 0.5s;
+    background: #f39523; position: absolute; bottom: 0; left: -5%; z-index: -1;
+}
+#header.mo .nav .l_box ul li:hover a::after{width: 110%;}
+
+#header.mo .nav .r_box{width: 20%; height: 100%; background: #b8cdfb;float: left;}
+
+/* 아이콘 */
+#header.mo .icon{position: fixed; right: 10px; bottom: 10px;}
+#header.mo .icon ul{}
+#header.mo .icon ul li{margin: 5px 0;}
+#header.mo .icon ul li a{color: #222; width: 16px; margin: 0 auto; display: block;}
+#header.mo .icon ul li a i{font-size: 16px;}
+#header.mo .icon button{
+    width: 30px;
+    background: none; border: none; cursor: pointer;
+}
+
+/* home */
+#home{padding: 0;}
+#home .mo{width: 100%; height: 100%;}
+
+/* 왼쪽 */
+#home .mo .l_box{
+    width: 20%; height: 100%; background: #b8cdfb; 
+    position: relative; float: left;
+}
+#home .mo .l_box p{
+    font-size: 15px; font-weight: 500; width: 90%; opacity: 0;
+    position: absolute; top: 60%; left: 50%; transform: translate(-50%,-50%);
+}
+#home .mo .l_box p span{background: linear-gradient(to top, #f39523 40%, transparent 40%);}
+/* 오른쪽 */
+#home .mo .r_box{
+    width: 80%; height: 100%; 
+    background: #fff; position: relative; float: left;
+}
+#home .mo .r_box .h1{width: 100px; position: absolute; top: 8%; left: 0%;}
+#home .mo .r_box .h2{width: 150px; position: absolute; top: -2%; left: 20%;}
+#home .mo .r_box .h3{width: 300px; position: absolute; right: 0; bottom: 0;}
+#home .mo .r_box h2{
+    font-size: 50px; letter-spacing: 4px; line-height: 60px; 
+    font-family: 'Do Hyeon', sans-serif;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+#home .mo .cursor{position: absolute; bottom: 2%; left: 4%; width: 50px; opacity: 1;}
+
+
+
+/* about */
+#about{padding: 0;}
+#about h2{padding-top: 50px; margin: 30px 0; font-size: 30px;}
+#about .wrap{height: 80%;}
+#about .me{
+    width: 100%; height: 30%;
+    background: url(../img/ab_m.jpg) no-repeat center;
+    background-size: cover;
+}
+#about .r_box{
+    float: none; height: auto; margin: 0 auto; padding: 5% 0; width: 80%;
+    position: absolute; left: 50%; top: 65%; transform: translate(-50%,-50%); box-sizing: border-box;
+
+}
+#about .r_box>div{padding: 0;}
+#about .r_box div h3{font-size: 16px; margin-bottom: 10px;}
+#about .r_box .pro ul li{font-size: 12px; line-height: 22px;}
+
+#about .r_box .edu ul li{font-size: 12px; margin-bottom: 10px;}
+#about .r_box .edu li span{letter-spacing: 0; line-height: 22px;}
+#about .r_box .edu li p{line-height: 20px;}
+#about .r_box .sk ul li{font-size: 12px; line-height: 22px;}
+#about .r_box .sk ul li .bar{padding: 1% 0;}
+
+#about .r_box .sk ul li .bar .a{top: 15%;}
+
+
+
+/* portfolid */
+#portfolio{padding: 0;}
+#portfolio h2{padding-top: 50px; margin: 30px 0; font-size: 30px;}
+
+#portfolio .wrap{width: 80%; height: 75%;}
+/* 왼쪽 */
+#portfolio .l_box{width: 100%; height: 60%; float: none;}
+#portfolio .r_box{width: 100%; height: 40%; float: none;}
+#portfolio .r_box .list li{padding: 1%; text-align: left; }
+/* 글씨 */
+#portfolio .r_box .list li span{font-size: 12px; margin-bottom: 10px;}
+#portfolio .r_box .list li h3{font-size: 30px; margin-bottom: 0px;}
+#portfolio .r_box .list li p{font-size: 14px; margin-bottom: 20px;}
+/* 버튼 */
+#portfolio .r_box .list li .btn{
+    position: initial; display: block; width: auto; text-align: right;
+}
+#portfolio .r_box .list li .btn button{
+    width: 64px; height: 24px; line-height: 24px;
+    margin: 0 10px 0 0; font-size: 12px;
+}
+/* 페이지네이션 */
+#portfolio .r_box .page{bottom: 14px;}
+#portfolio .r_box .page li{width: 12px; height: 12px;}
+
+/* 팝업 */
+#portfolio .pop .box{width: 80%;}
+
+
+
+
+/* design */
+#design{padding: 0;}
+#design h2{padding-top: 50px; margin: 30px 0; font-size: 30px;}
+#design .con{width: 80%; height: 75%;}
+#design .con .wrap{width: 400%;}
+#design .con .wrap .gallery{width: 25%;}
+#design .con .wrap .gallery ul .gal1{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal2{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal3{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal4{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal5{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal6{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal7{width: 100%; height: 50%;}
+#design .con .wrap .gallery ul .gal8{width: 100%; height: 50%;}
+
+
+
+/* contact */
+#contact{padding: 0;}
+#contact h2{padding-top: 50px; margin: 0; font-size: 30px;}
+#contact li{margin: 30px; float: none;}
+#contact li h4{margin-bottom: 20px; font-size: 24px;}
+#contact li p{line-height: 50px; font-size: 18px;}
+#contact li img{width: 100px;}
+#contact>p{bottom: 50px; color: #999; font-size: 10px;}
+
+#contact>.mo img{position: absolute; z-index: -1;}
+#contact .mo .figure1{bottom: -12%; right: -31%; width: 40%; transform: rotate(45deg); min-width: 360px;}
+#contact .mo .figure2{top: -3%; left: -26%; width: 38%; transform: rotate(-30deg); min-width: 300px;}
+#contact .mo .figure3{bottom: 18%; right: 24%; width: 19%; min-width: 90px;}
+#contact .mo .figure4{top: 26%; left: 12%; width: 17%; min-width: 90px;}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
