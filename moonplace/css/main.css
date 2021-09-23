@@ -89,7 +89,7 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 .plan .wrap .next{width: 40px; position: absolute; top: 50%; transform: translateY(-50%); right: 0;}
 /* 일정안내 - 리스트이미지 */
 .plan .list1{background: url(../img/p1.jpg) no-repeat center;background-size: cover;}
-.plan .list2{background: url(../img/p2.jpg) no-repeat center;background-size: cover;}
+.plan .list2{background: url(../img/p2.JPG) no-repeat center;background-size: cover;}
 .plan .list3{background: url(../img/p3.jpg) no-repeat center;background-size: cover;}
 .plan .list4{background: url(../img/p4.jpg) no-repeat center;background-size: cover;}
 .plan .list5{background: url(../img/p5.jpg) no-repeat center;background-size: cover;}
@@ -135,9 +135,9 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 .info .bg ul li{width: 100%; height: 700px;}
 /* 시설안내 - 배경 - 이미지 */
 #bg1{background: url(../img/bg1.JPG) no-repeat center; background-size: cover;}
-#bg2{background: url(../img/bg2.JPG) no-repeat center; background-size: cover;}
-#bg3{background: url(../img/bg3.JPG) no-repeat center; background-size: cover;}
-#bg4{background: url(../img/bg4.JPG) no-repeat center; background-size: cover;}
+#bg2{background: url(../img/bg2.jpg) no-repeat center; background-size: cover;}
+#bg3{background: url(../img/bg3.jpg) no-repeat center; background-size: cover;}
+#bg4{background: url(../img/bg4.jpg) no-repeat center; background-size: cover;}
 /* 시설안내 - on 클래스 */
 .info .name li.on p{color: #2d2796; font-size: 32px;}
 .info .name li.on .bar{width: 480px;}
