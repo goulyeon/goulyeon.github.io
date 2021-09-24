@@ -20,8 +20,22 @@ function start(){
 
 // 일정안내 스와이퍼슬라이드
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3.3,
+    autoplay: { 
+        delay: 2000,
+    },
+    slidesPerView: 1.3,
     spaceBetween: 20,
+    
+    breakpoints: {
+        767: {
+            slidesPerView: 2.3,
+            spaceBetween: 20
+        },
+        1200: {
+            slidesPerView: 3.3,
+            spaceBetween: 20
+        },
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -54,22 +68,14 @@ $(".gallery .tab_menu li").on("click",function(){
 });
 
 
-//이용안내
-line = -200;
-pos3 = $(".gallery").offset().top+line;
-pos4 = $(".about").offset().top+line;
+// 메뉴
+$("#header .menu").on("click",function(){
+    $(this).toggleClass("on");
+    $("#header ul").toggleClass("on");
 
-$(window).on("scroll",function(){
-    scroll = $(this).scrollTop();
 
 
 });
-
-
-
-
-
-
 
 
 
