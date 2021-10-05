@@ -83,9 +83,9 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 
 #tab2 .wrap{position: relative; height: 184px; margin-bottom: 50px;}
 #tab2 .search{
-    width: 840px; box-sizing: border-box;
+    width: 100%; box-sizing: border-box;
     display: inline-block; 
-    background: #f3f3f3; padding: 40px 100px;
+    background: #f3f3f3; padding: 40px 280px;
     position: absolute; left: 50%; transform: translateX(-50%); top: 0;
 }
 
@@ -288,7 +288,7 @@ aside .top_bt p{
 #container{margin-bottom: 422px;}
 
 #tab2 .wrap{height: 304px;}
-#tab2 .search{width: 100%;}
+#tab2 .search{width: 100%; padding: 40px 100px;}
 #tab2 .search .searchDate{float: none; margin-right: 0;}
 #tab2 .search .searchDate li{width: 32.6%; margin-right: 1%;}
 #tab2 .search .searchDate li:last-of-type{margin-right: 0%;}
