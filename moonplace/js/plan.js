@@ -89,6 +89,24 @@ $(".page li").on("click",function(){
 });
 
 
+// 위로가기
+$( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 200 ) {
+      $( '.top_bt' ).fadeIn();
+    } else {
+      $( '.top_bt' ).fadeOut();
+    }
+});
+$( '.top_bt' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+    return false;
+});
+
+// 메뉴
+$("#header .menu").on("click",function(){
+    $(this).toggleClass("on");
+    $("#header ul").toggleClass("on");
+});
 
 
 

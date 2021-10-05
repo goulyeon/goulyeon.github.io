@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0;}
 li{list-style: none;}
 a{text-decoration: none; color: #222;}
-body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
+body{font-family: 'Noto Sans KR', sans-serif; color: #222; position: relative;}
 
 .center{width: 1200px; margin: 0 auto;}
 
@@ -238,6 +238,19 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 #footer .sns li img{width: 100%; display: block;}
 #footer p{position: absolute; bottom: 0; right: 0; font-size: 12px; font-weight: 200;}
 
+/* aside */
+aside .top_bt{
+    background: url(../img/up.png) no-repeat #2d2796;
+    background-size: 20px 20px;
+    background-position: center 3px;
+    border-radius: 50%; width: 44px; height: 44px;
+    position: fixed; right: 20px; bottom: 20px;
+    cursor: pointer;
+}
+aside .top_bt p{
+    color: #fff; font-size: 12px; text-align: center;
+    margin-top: 18px;
+}
 
 /* ---------------- 태블릿 ---------------- */
 
@@ -455,7 +468,7 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 #footer .f_t{width: 100%;}
 #footer .f_t li{margin-right: 10px; font-size: 12px; line-height: 24px;}
 
-#footer .sns{position: relative; bottom: auto; right: auto; margin: 20px auto; width: 180px;}
+#footer .sns{position: relative; bottom: auto; right: auto; margin: 20px auto;}
 #footer .sns::after{clear: both; content: ''; display: block;}
 #footer .sns li{width: 30px; margin-left: 20px;}
 #footer .sns li:first-of-type{margin-left: 0;}
@@ -463,9 +476,15 @@ body{font-family: 'Noto Sans KR', sans-serif; color: #222;}
 
 
 
+/* aside */
+aside .top_bt{
+    width: 34px; height: 34px;
+    background-size: 16px 16px;
+    background-position: center 1px;
+    right: 10px; bottom: 10px;
 
-
-
+}
+aside .top_bt p{font-size: 11px; margin-top: 13px;}
 
 
 
