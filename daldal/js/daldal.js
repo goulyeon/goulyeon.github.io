@@ -37,15 +37,23 @@ var swiper = new Swiper(".cardSwiper", {
     effect: "cards",
     grabCursor: true,
     autoplay: {
-        delay: 1500,
+        delay: 2000,
         disableOnInteraction: true,
     }
 });
 
-
-
-
-
+// 위로가기
+$(window).scroll(function(){
+    if($(this).scrollTop() > 200) {
+        $('.top-bt').fadeIn();
+    }else{
+        $('.top-bt').fadeOut();
+    }
+});
+$('.top-bt').click(function(){
+    $('html, body').animate({scrollTop : 0},400);
+    return false;
+});
 
 
 
