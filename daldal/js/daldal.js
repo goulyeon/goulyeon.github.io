@@ -17,9 +17,16 @@ var swiper = new Swiper(".main-Swiper", {
 
 // 메뉴 슬라이드
 var swiper = new Swiper(".menu-Swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
+    breakpoints: {
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+        }
+    },
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -57,12 +64,27 @@ $('.top-bt').click(function(){
 
 
 
+// ---------- 모바일 ----------
 
+// 메뉴 토글
+$('header .mo .open .gnb .depth-1 .name-wrap img').click(function(){
+    $('header .mo .open .gnb .depth-1').removeClass('on');
+    $('header .mo .open .gnb .depth-1 .depth-2').slideUp();
+    $(this).parents('.depth-1').addClass('on');
+    $(this).parents('.name-wrap').siblings('.depth-2').slideDown();
+});
 
+// 메뉴 닫기
+$('header .mo .close').click(function(){
+    $(this).parents('.open').animate({'right':'-100%'});
+    $('.open-bg').fadeOut();
+});
 
-
-
-
+// 메뉴 열기
+$('header .mo .bar').click(function(){
+    $(this).siblings('.open').animate({'right':'0'})
+    $('.open-bg').fadeIn();
+});
 
 
 

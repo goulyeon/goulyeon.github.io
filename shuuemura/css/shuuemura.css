@@ -12,7 +12,7 @@ a{text-decoration: none;}
 button{background: none; border:0;outline: none;}
 .blind{font-size: 0; position: absolute; left:-9999px;}
 .center{width: 1120px; margin: auto;}
-label, span{display: inline-block;`}
+label, span{display: inline-block;}
 #btn-menu{display: none;}
 
 
