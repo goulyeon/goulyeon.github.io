@@ -477,18 +477,18 @@ header .mo .open .gnb .depth-1 .name-wrap{
     border-bottom: 2px solid #ccc;
 }
 header .mo .open .gnb .depth-1 .name-wrap p{
-    font-size: 24px; font-weight: 600;
+    font-size: 20px; font-weight: 600;
     display: block; padding: 10px 0;
 }
 header .mo .open .gnb .depth-1 .name-wrap img{
-    width: 30px; height: 30px;
+    width: 24px; height: 24px;
     cursor: pointer;
 }
 header .mo .open .gnb .depth-1 .depth-2{
     display: none;
 }
 header .mo .open .gnb .depth-1 .depth-2 li a{
-    font-size: 18px; display: block;
+    font-size: 16px; display: block;
     padding: 10px 0;
 }
 /* depth-1에 on 붙었을 때 */
