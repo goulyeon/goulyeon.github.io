@@ -12,7 +12,7 @@ console.log(sel1,sel2,sel3,sel4,sel5);
 $(window).on("scroll",function(){
     scroll = $(this).scrollTop();
     // skill
-    if(scroll >= sel2 && scroll < sel3){
+    if(scroll = sel2 && scroll < sel3){
         $("#about .r_box .sk ul li .bar .a_h").stop().animate({"width":"90%"},800);
         $("#about .r_box .sk ul li .bar .a_c").stop().animate({"width":"80%"},800);
         $("#about .r_box .sk ul li .bar .a_js").stop().animate({"width":"70%"},800);
@@ -163,12 +163,36 @@ $(function aaa(){
 
 
 // portfolio 자세히 보기 닫기
-$("#portfolio .mon_more").on("click",function(){
-    $("#portfolio .mon").fadeIn();
+
+//문화공간
+$("#portfolio .r_box .list li .btn .moon_more").on("click",function(){
+    $("#portfolio .pop.moon").fadeIn();
 });
-$("#portfolio .mon .close").on("click",function(){
-    $("#portfolio .mon").fadeOut();
+$("#portfolio .moon .close").on("click",function(){
+    $("#portfolio .pop.moon").fadeOut();
 });
+//카페달달
+$("#portfolio .r_box .list li .btn .dal_more").on("click",function(){
+    $("#portfolio .pop.dal").fadeIn();
+});
+$("#portfolio .dal .close").on("click",function(){
+    $("#portfolio .pop.dal").fadeOut();
+});
+//문화재청
+$("#portfolio .r_box .list li .btn .cul_more").on("click",function(){
+    $("#portfolio .pop.cul").fadeIn();
+});
+$("#portfolio .cul .close").on("click",function(){
+    $("#portfolio .pop.cul").fadeOut();
+});
+//awas
+$("#portfolio .r_box .list li .btn .awas_more").on("click",function(){
+    $("#portfolio .pop.awas").fadeIn();
+});
+$("#portfolio .awas .close").on("click",function(){
+    $("#portfolio .pop.awas").fadeOut();
+});
+
 
 // design 자세히 보기 닫기
 $("#design .gallery li").on("click",function(){
@@ -254,6 +278,28 @@ $(function aaa(){
         $("#contact .mo .figure4").stop().animate({"top":"27%","left":"12%"},1000,aaa);
     });
 });
+
+// portfolio 슬라이드
+$('#portfolio .r_box .page li').click(function(){
+    i = $(this).index();
+    j = i*-100+'%';
+
+    $('#portfolio .r_box .list').animate({'left':j});
+    $('#portfolio .r_box .page li').removeClass('on');
+    $(this).addClass('on');
+
+    $('#portfolio .l_box ul li').fadeOut();
+    $('#portfolio .l_box ul li').eq(i).fadeIn();
+
+
+});
+
+
+
+
+
+
+
 
 
 });
