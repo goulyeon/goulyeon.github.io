@@ -747,19 +747,15 @@ body, html{overflow: auto;}
 
 }
 #about .r_box>div{padding: 0;}
-#about .r_box div h3{font-size: 18px; margin-bottom: 10px;}
-
-#about .r_box .top{display: block;}
-#about .r_box .pro{width: 100%; margin-bottom: 20px;}
-#about .r_box .edu{width: 100%; margin-bottom: 20px;}
+#about .r_box div h3{font-size: 16px; margin-bottom: 10px;}
 
 
-#about .r_box .pro ul li{font-size: 14px; line-height: 22px;}
+#about .r_box .pro ul li{font-size: 12px; line-height: 22px;}
 
-#about .r_box .edu ul li{font-size: 14px; margin-bottom: 10px;}
+#about .r_box .edu ul li{font-size: 12px; margin-bottom: 10px;}
 #about .r_box .edu li span{letter-spacing: 0; line-height: 22px;}
 #about .r_box .edu li p{line-height: 20px;}
-#about .r_box .sk ul li{font-size: 14px; line-height: 22px;}
+#about .r_box .sk ul li{font-size: 12px; line-height: 22px;}
 #about .r_box .sk ul li .bar{padding: 1% 0;}
 
 #about .r_box .sk ul li .bar .a{top: 15%;}
