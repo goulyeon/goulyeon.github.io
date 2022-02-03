@@ -1,0 +1,96 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+
+
+/* 검색창 */
+.search-box{width: 100%; height: 50px;}
+.wrap{
+    background-color: #333;
+    height: 50px; line-height: 50px; font-size: 14px;
+    padding: 0 60px;
+}
+/* 로그검색 */
+.log-wrap{display: inline-block;}
+.log-wrap .log{width: 160px; height: 26px;}
+.log-wrap label{padding-right: 20px;}
+/* 날짜 */
+.days-wrap{display: inline-block; margin-left: 60px;}
+.days-wrap input{width: 160px; height: 26px;box-sizing: border-box;}
+.days-wrap label{padding: 0 20px;}
+
+/* 달력 */
+.ui-datepicker{padding: 0;}
+.ui-datepicker table{margin: 0;}
+.ui-widget-header {
+    background: #000000;
+    color: #ffffff;
+} 
+.ui-datepicker-week-end{color:#ff5722;}
+.ui-datepicker-week-end:last-child {color: #2196f3;}
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default, .ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active{
+    background: none; border:0;
+    text-align: center;
+}
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight{
+    background: #000 !important;
+    color:#fff !important; 
+}
+.ui-datepicker td span, .ui-datepicker td a{
+    padding: 0;
+    line-height: 37px;
+    border-radius: 50%;
+}
+.ui-datepicker td:nth-child(1) a{color:#ff5722;}
+.ui-datepicker td:nth-child(7) a{color:#2196f3;}
+
+.ui-state-active, .ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, a.ui-button:active, 
+.ui-button:active, .ui-button.ui-state-active:hover{
+    border:0;
+    background: #007fff !important;
+}
+
+
+/* 검색 버튼 */
+button{
+    border: none; background-color: #4AD3FF;
+    padding: 4px 26px; margin-top: 14px;
+    font-size: 14px; float: right; cursor: pointer;
+}
+
+/* 리스트 */
+.search-list{
+    border-top: 2px solid #4AD3FF; 
+    margin: 20px 0; height: 660px; position: relative;
+}
+table{
+    width: 100%; text-align: center; font-size: 14px;
+}
+tr{height: 52px;}
+td{background-color: #222;}
+th{background-color: #333;width: 325px;}
+.first .number{width: 61px;}
+.first .error{width: 610px;}
+
+/* 페이지네이션 */
+.pagination{
+    position: absolute; bottom: 0; width: 100%;
+    font-size: 14px; text-align: center;
+}
+.pagination a{padding: 0 6px;}
+.pagination .active{color: #4AD3FF;}
+
+
+
+
+
+
+

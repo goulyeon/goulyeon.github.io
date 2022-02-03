@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search_event</title>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search_event.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/datepicker.js"></script>
+</head>
+<body>
+    <!-- 공통 헤더 -->
+    <header class="center">
+        <h1><img src="img/logo.png" alt=""></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="live.html">LIVE</a></li>
+                <li>
+                    <span>검색</span>
+                    <ul>
+                        <li><a href="search_event.html">이벤트 검색</a></li>
+                        <li><a href="search_log.html">로그 검색</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>설정</span>
+                    <ul>
+                        <li><a href="setting_password.html">비밀번호 변경</a></li>
+                        <li><a href="setting_video.html">영상 분석</a></li>
+                        <li><a href="setting_camera.html">카메라</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sub">
+                <span>스탠스 님</span>
+                <a href="login.html" class="logout">로그아웃</a>
+            </div>
+        </nav>
+    </header>
+    <section class="center">
+        <!-- 검색창 -->
+        <article class="search-box">
+            <div class="wrap">
+                <div class="device-wrap">
+                    <label for="device">장치</label>
+                    <select class="device" id="device">
+                        <option value="device">전체</option>
+                        <option value="device1">장치1</option>
+                        <option value="device2">장치2</option>
+                        <option value="device3">장치3</option>
+                    </select>
+                </div>
+                <div class="event-wrap">
+                    <label type="text" for="event">이벤트</label>
+                    <select class="event" id="event">
+                        <option value="event">전체</option>
+                        <option value="event1">이벤트1</option>
+                        <option value="event2">이벤트2</option>
+                        <option value="event3">이벤트3</option>
+                    </select>
+                </div>
+                <div class="days-wrap">
+                    <label for="from">날짜</label>
+                    <input type="text" id="from" name="from">
+                    <label for="to">~</label>
+                    <input type="text" id="to" name="to">   
+                </div>
+                <button>검색</button>
+            </div>
+        </article>
+        <!-- 리스트 -->
+        <article class="search-list">
+            <table>
+                <tr class="first">
+                    <th class="number">NO</th>
+                    <th>장치</th>
+                    <th>IP</th>
+                    <th>이벤트</th>
+                    <th>시간</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>IPOO - 001</td>
+                    <td>192.168.1.100</td>
+                    <td>헬멧</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>IPOO - 001</td>
+                    <td>192.168.1.100</td>
+                    <td>조끼</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>IPOO - 001</td>
+                    <td>192.168.1.100</td>
+                    <td>안전대</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>IPOO - 001</td>
+                    <td>192.168.1.100</td>
+                    <td>헬멧</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>IPOO - 001</td>
+                    <td>192.168.1.100</td>
+                    <td>안전대</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>IPOO - 002</td>
+                    <td>192.168.1.100</td>
+                    <td>헬멧</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>IPOO - 002</td>
+                    <td>192.168.1.100</td>
+                    <td>조끼</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>IPOO - 003</td>
+                    <td>192.168.1.100</td>
+                    <td>안전대</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>IPOO - 003</td>
+                    <td>192.168.1.100</td>
+                    <td>헬멧</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>IPOO - 003</td>
+                    <td>192.168.1.100</td>
+                    <td>안전대</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+            </table>
+            <div class="pagination">
+                <a href="#">이전</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">다음</a>
+            </div>
+        </article>
+    </section>
+
+
+</body>
+</html>

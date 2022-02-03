@@ -1,0 +1,169 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+section{
+    min-width: 1366px; margin: 0 auto; padding: 10px 40px; box-sizing: border-box;
+}
+.name{
+    font-size: 16px; margin: 20px 0; font-weight: bold;
+}
+
+.ppe{width: 700px; margin-bottom: 20px;}
+.ppe h2{
+    display: inline-block; padding: 8px 16px;
+    font-size: 14px; font-weight: unset;
+    margin: 10px 0; background-color: #4AD3FF; color: #000;
+}
+.ppe ul li{
+    background-color:#222;
+    font-size: 14px; line-height: 54px;
+    border-bottom: 2px solid #000;
+}
+.ppe ul li span{
+    background-color:#333;
+    width: 230px;
+    display: inline-block;
+    text-align: center;
+    border-right: 2px solid #000;
+}
+.ppe label{padding-left: 150px;}
+
+
+.event{width: 875px;}
+.event h2{
+    display: inline-block; padding: 8px 16px;
+    font-size: 14px; font-weight: unset;
+    margin: 10px 0; background-color: #4AD3FF; color: #000;
+}
+.event .live-view{border-bottom: 2px solid #000;}
+.event .live-view div{
+    width: 20%; height: 110px; background-color: #333; float: left;
+    display: inline-block; line-height: 110px; text-align: center; font-size: 14px;
+    border-right: 2px solid #000; box-sizing: border-box;
+}
+.event .live-view ul li{
+    background-color: #222; display: inline-block; 
+    width: 700px; height: 54px; line-height: 54px; font-size: 14px;
+}
+.event .live-view ul li span{
+    width: 230px;
+    display: inline-block;
+    text-align: center;
+    background: #333;
+}
+.first{border-bottom: 2px solid #000;}
+
+
+.event .dashborsd-view div{
+    width: 20%; height: 110px; background-color: #333; float: left;
+    display: inline-block; line-height: 110px; text-align: center; font-size: 14px;
+    border-right: 2px solid #000; box-sizing: border-box;
+}
+.event .dashborsd-view ul li{
+    background-color: #222; display: inline-block;
+    width: 700px; height: 54px; line-height: 54px; font-size: 14px;
+}
+.event .dashborsd-view ul li span{
+    width: 230px;
+    display: inline-block;
+    text-align: center;
+    background: #333;
+}
+.event label{padding-left: 150px;}
+
+.btn{
+    text-align: center; margin: 40px 0;
+}
+.btn button{
+    background-color: #4AD3FF; border: 0;
+    font-size: 14px; padding: 8px 26px; margin: 0 30px;
+}
+
+
+
+/* 라디오버튼 */
+
+li {position: relative;}
+li input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+li input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+li input[type="radio"] + label:active:before,
+li input[type="radio"]:checked + label:active:before  {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+li input[type="radio"]:checked + label:before {
+  background: #E9ECEE;
+  border-color: #adb8c0;
+}
+
+
+.ppe input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+}
+
+
+.ppe input[type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    width: 13px;
+    height: 13px;
+    background: #4AD3FF;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.event input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+}
+
+
+.event input[type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    width: 13px;
+    height: 13px;
+    background: #4AD3FF;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}

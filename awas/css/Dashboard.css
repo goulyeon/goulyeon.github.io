@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+
+/* 영상 */
+.video{display: inline-block; width: 22%; height: 560px;overflow-x: hidden; float: left;}
+.video .box{
+    height: 184px; color: #000;
+    background-color: #555; margin: 2px auto;
+}
+
+/* 위치 */
+.main{
+    display: inline-block; float: left;
+    width: 55.7%; height: 556px; background-color: #555;
+    margin: 2px;
+}
+
+/* 그래프 */
+.graph{display: inline-block;width: 22%; }
+.graph div{
+    height: 184px; color: #000;
+    background-color: #555; margin: 2px auto;
+}
+
+/* 목록 */
+.fixed-table-container {
+    height: 147px;
+    position: relative;
+    padding-top: 48px; margin-top: 1px;
+}
+.header-bg {
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #333;
+}
+.table-wrapper {
+    overflow-x: hidden;
+    height: 100%; margin-top: 1px;
+}
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+td {
+    height: 48px;
+    background-color: #222;
+    border-bottom: 1px solid #000;
+}
+td + td {border-left: 1px solid #000;}
+th {
+    padding: 0px; font-weight: normal;
+    width: 444px; 
+    box-sizing: border-box;
+    background-color: #333;
+}
+.th-text {
+    position: absolute; font-size: 16px;
+    top: 0;
+    width: 33%;
+    line-height: 48px;
+    border-left: 1px solid #000;
+}
+th:first-child .th-text {
+    border: none;
+}
+
+/* 스크롤바 디자인 */
+.video::-webkit-scrollbar {
+    width: 12px;
+  }
+.video::-webkit-scrollbar-thumb {
+    background-color: #444;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.video::-webkit-scrollbar-track {
+    background-color: #222;
+}
+.table-wrapper::-webkit-scrollbar {
+    width: 12px;
+  }
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #444;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.table-wrapper::-webkit-scrollbar-track {
+    background-color: #222;
+}

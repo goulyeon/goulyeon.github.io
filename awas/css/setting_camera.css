@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+/* 검색 버튼 */
+.search-btn{
+    width: 90%; height: 50px; margin: 10px auto; 
+    padding: 4px; box-sizing: border-box;
+}
+.search-btn button{
+    border: none; background-color: #4AD3FF;
+    padding: 8px 24px; margin-top: 8px;
+    font-size: 14px; float: right;
+}
+/* 리스트 */
+table{
+    width: 90%; margin: 0 auto; text-align: center; font-size: 14px;
+    
+}
+tr{height: 52px;}
+td{background-color: #222;}
+th{background-color: #333;}
+td a{border-bottom: 1px solid #fff; padding-bottom: 2px;}
+
+/* 버튼 */
+.btn{
+    position: relative;
+    text-align: right;
+    width: 90%;
+    height: 50px;
+    margin: 10px auto;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.btn button{
+    border: none;
+    background-color: #4AD3FF;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-left: 14px;
+}

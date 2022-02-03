@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camera_manual</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/camera_manual.css">
+</head>
+<body>
+    <!-- 공통 헤더 -->
+    <header class="center">
+        <h1><img src="img/logo.png" alt=""></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="live.html">LIVE</a></li>
+                <li>
+                    <span>검색</span>
+                    <ul>
+                        <li><a href="search_event.html">이벤트 검색</a></li>
+                        <li><a href="search_log.html">로그 검색</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>설정</span>
+                    <ul>
+                        <li><a href="setting_password.html">비밀번호 변경</a></li>
+                        <li><a href="setting_video.html">영상 분석</a></li>
+                        <li><a href="setting_camera.html">카메라</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sub">
+                <span>스탠스 님</span>
+                <a href="login.html" class="logout">로그아웃</a>
+            </div>
+        </nav>
+    </header>
+    <section class="center">
+        <article>
+            <div class="wrap">
+                <form action="">
+                    <ul>
+                        <li><span>장치 이름</span><input type="text"></li>
+                        <li><span>IP</span><input type="text"></li>
+                        <li><span>Port</span><input type="text"></li>
+                        <li><span>RTSP URL</span><input type="text"></li>
+                        <li><span>ID</span><input type="text"></li>
+                        <li><span>PW</span><input type="text"></li>
+                        <li><span>버전</span><input type="text"></li>
+                        <li><span>우선 순위</span><input type="text"></li>
+                    </ul>
+                </form>
+                <div class="btn">
+                    <button>연결 테스트</button>
+                    <a href="setting_camera.html"><button>등록</button></a>
+                </div>
+            </div>
+            
+        </article>
+    </section>
+</body>
+</html>

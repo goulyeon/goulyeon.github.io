@@ -1,0 +1,161 @@
+@charset 'UTF-8';
+@font-face{
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+
+
+/* 목록 */
+.left-box{
+    position: relative;
+    width: 14%;
+    float: left;
+    display: none;
+}
+.open{display: inline-block;}
+
+/* 장치 목록 */
+.cctv div h2{
+    font-weight: normal;font-size: 14px;
+    height: 40px; line-height: 40px; padding: 0 14px;
+    background-color: #444;
+    letter-spacing: 6px;
+}
+
+.cctv div ul{
+    height: 310px; overflow-x: hidden; padding: 0 10px;
+    background-color: #222;
+    box-sizing: border-box;
+}
+.cctv div ul li{
+    height: 31px; font-size: 12px; line-height: 31px;
+}
+.cctv div ul li img{
+    width: 26px;float: left;
+    margin-right: 20px; padding: 2px 0;
+}
+
+/* 이벤트 목록 */
+.event h2{
+    font-weight: normal;font-size: 14px;
+    height: 40px; line-height: 40px; padding: 0 14px;
+    background-color: #444;
+    letter-spacing: 6px;
+}
+.fixed-table-container{
+    position: relative;
+    padding-top: 30px;
+    height: 310px;
+}
+.header-bg{
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #333;
+}
+.table-wrapper{
+    overflow-x: hidden;
+    height: 100%; margin-top: 2px;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 10px;
+}
+td{
+    height: 30px;
+    background-color: #222;
+    border-bottom: 1px solid #000;
+}
+td + td {border-left: 1px solid #000;}
+th{
+    padding: 0px; font-weight: normal;
+    width: 76px;
+    box-sizing: border-box;
+    background-color: #444;
+}
+.th-text{
+    position: absolute;
+    top: 0;
+    width: 28%;
+    line-height: 30px; font-size: 12px;
+    border-left: 1px solid #000;
+}
+th:first-child .th-text{border: none;}
+
+/* 영상 화면 */
+.live{
+    min-width: 1330px; max-width: 1920px;
+    max-width: 100%; 
+    margin-left: 40px; position: relative;
+    
+}
+.active{
+    display: inline-block; min-width: 83%;
+}
+.live-wrap div{
+    display: inline-block;
+    background-color: #555;
+    width: 24.67%; height: 184px; float: left;
+    border: 1px solid #000;
+}
+
+/* 메뉴 버튼 */
+.open-btn{
+    width: 40px; height: 40px; padding: 6px 0; box-sizing: border-box;
+    position: absolute; top: 0; left: -40px; cursor: pointer;
+}
+.open-btn span{
+    width: 26px; height: 1.5px; background-color: #fff;
+    display: block; margin: 6px;
+}
+
+/* 팝업 */
+.popup{
+    width: 100%; height: 100%; top: 0; z-index: 3;
+    position: fixed; background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.popup-box{
+    width: 400px; height: 400px; background-color: #fff;
+    display: inline-block; position: relative;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.popup-box .close{
+    width: 40px; height: 40px; font-size: 16px; line-height: 40px; cursor: pointer;
+    background-color: #4AD3FF; color: #fff; border-radius: 50%;
+    position: absolute; right: 10px; top: 10px; border: 0;
+}
+.popup-content{position: absolute;top: 50%;; left: 50%; transform: translate(-50%,-50%);}
+.popup-content img{width: 130px; margin-bottom: 20px;}
+.popup-content ul li{color: #000;font-size: 20px;padding: 6px 0;}
+
+
+/* 스크롤바 디자인 */
+.cctv ul::-webkit-scrollbar {
+    width: 12px;
+  }
+.cctv ul::-webkit-scrollbar-thumb {
+    background-color: #444;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.cctv ul::-webkit-scrollbar-track {
+    background-color: #222;
+}
+.table-wrapper::-webkit-scrollbar {
+    width: 12px;
+  }
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #444;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.table-wrapper::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+

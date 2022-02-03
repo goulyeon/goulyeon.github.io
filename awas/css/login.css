@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+
+*{margin: 0; padding: 0;}
+
+html { 
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body,input,button{font-family: 'KoPubDotum', sans-serif;color: #fff;}
+.login-form{
+    width: 450px; height: 580px;
+    background-color: rgba( 0, 0, 0, 0.4 );
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    text-align: center;
+}
+.wrap{
+    width: 80%;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+p{font-size: 16px;margin-top: 26px;}
+h1{margin-bottom: 50px;}
+input{
+    width: 285px; height: 45px; border: 0; margin-bottom: 8px;
+    background-color: rgba( 0, 0, 0, 0.4 ); font-size: 18px;
+    padding: 0 26px; border-radius: 45px; box-sizing: border-box; color: #4AD3FF;
+}
+input::placeholder {
+    color: #4AD3FF;
+}
+input:focus{
+    background-color: rgba( 0, 0, 0, 0.4 ); color: #4AD3FF;
+    border: 0; outline:none;
+}
+#password{margin-bottom: 0px;}
+button{
+    display: inline-block; width: 285px; height: 55px; margin-top: 26px;
+    background-image: url(../img/login_bnt.png); border: 0; border-radius: 55px;
+    font-size: 18px; color: #fff; outline: none; cursor: pointer;
+}
+
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search_log</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search_log.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/datepicker.js"></script>
+</head>
+<body>
+    <!-- 공통 헤더 -->
+    <header class="center">
+        <h1><img src="img/logo.png" alt=""></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="live.html">LIVE</a></li>
+                <li>
+                    <span>검색</span>
+                    <ul>
+                        <li><a href="search_event.html">이벤트 검색</a></li>
+                        <li><a href="search_log.html">로그 검색</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>설정</span>
+                    <ul>
+                        <li><a href="setting_password.html">비밀번호 변경</a></li>
+                        <li><a href="setting_video.html">영상 분석</a></li>
+                        <li><a href="setting_camera.html">카메라</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sub">
+                <span>스탠스 님</span>
+                <a href="login.html" class="logout">로그아웃</a>
+            </div>
+        </nav>
+    </header>
+    <section class="center">
+        <!-- 검색창 -->
+        <article class="search-log">
+            <div class="wrap">
+                <div class="log-wrap">
+                    <label for="log">로그종류</label>
+                    <select class="log" id="log">
+                        <option value="log">전체</option>
+                        <option value="log1">로그종류</option>
+                        <option value="log2">로그종류</option>
+                        <option value="log3">로그종류</option>
+                    </select>
+                </div>
+                <div class="days-wrap">
+                    <label for="from">날짜</label>
+                    <input type="text" id="from" name="from">
+                    <label for="to">~</label>
+                    <input type="text" id="to" name="to">   
+                </div>
+                <button>검색</button>
+            </div>
+        </article>
+        <!-- 리스트 -->
+        <article class="search-list">
+            <table>
+                <tr class="first">
+                    <th class="number">NO</th>
+                    <th>로그종류</th>
+                    <th class="error">내역</th>
+                    <th>시간</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>system</td>
+                    <td>분석서버와 연결실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>device</td>
+                    <td>CCTV-001 연결실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>user</td>
+                    <td>admin 사용자와 로그인실패</td>
+                    <td>2020/06/21 10:30:30</td>
+                </tr>
+            </table>
+            <div class="pagination">
+                <a href="#">이전</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">다음</a>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

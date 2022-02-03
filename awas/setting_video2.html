@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting_video2</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/setting_video2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/setting_video2.js"></script>
+</head>
+<body>
+    <!-- 공통 헤더 -->
+    <header class="center">
+        <h1><img src="img/logo.png" alt=""></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="live.html">LIVE</a></li>
+                <li>
+                    <span>검색</span>
+                    <ul>
+                        <li><a href="search_event.html">이벤트 검색</a></li>
+                        <li><a href="search_log.html">로그 검색</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>설정</span>
+                    <ul>
+                        <li><a href="setting_password.html">비밀번호 변경</a></li>
+                        <li><a href="setting_video.html">영상 분석</a></li>
+                        <li><a href="setting_camera.html">카메라</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sub">
+                <span>스탠스 님</span>
+                <a href="login.html" class="logout">로그아웃</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="name">
+            <p>카메라명 : CCTV-001</p>
+        </div>
+        <article class="ppe">
+            <div>
+                <h2>PPE</h2>
+                <ul>
+                    <li class="analysis">
+                        <span>영상분석</span>
+                        <input type="radio" name="analysis" id="start" checked>
+                        <label for="start">시작</label>
+                        <input type="radio" name="analysis" id="end">
+                        <label for="end"> 종료</label>
+                        
+                    </li>
+                    <li class="helmet">
+                        <span>헬멧</span>
+                        <input type="radio" name="helmet" id="apply1" checked>
+                        <label for="apply1">적용</label>
+                        <input type="radio" name="helmet" id="disapply1">
+                        <label for="disapply1">미적용</label>
+                    </li>
+                    <li class="vest">
+                        <span>안전조끼</span>
+                        <input type="radio" name="vest" id="apply2" checked>
+                        <label for="apply2">적용</label>
+                        <input type="radio" name="vest" id="disapply2">
+                        <label for="disapply2">미적용</label>
+                    </li>
+                    <li>
+                        <span>안전대</span>
+                        <input type="radio" name="belt" id="apply3" checked>
+                        <label for="apply3">적용</label>
+                        <input type="radio" name="belt" id="disapply3">
+                        <label for="disapply3">미적용</label>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="event">
+            <div>
+                <h2>이벤트</h2>
+                <div class="live-view">
+                    <div><span>LIVE View</span></div>
+                    <ul>
+                        <li class="first">
+                            <span>화면 팝업</span>
+                            <input type="radio" name="popup" id="apply4" checked>
+                            <label for="apply4">적용</label>
+                            <input type="radio" name="popup" id="disapply4">
+                            <label for="disapply4">미적용</label>
+                        </li>
+                        <li>
+                            <span>화면 box 강조</span>
+                            <input type="radio" name="popup-box" id="apply5" checked>
+                            <label for="apply5">적용</label>
+                            <input type="radio" name="popup-box" id="disapply5">
+                            <label for="disapply5">미적용</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dashborsd-view">
+                    <div><span>Dashborsd View</span></div>
+                    <ul>
+                        <li class="first">
+                            <span>화면 팝업</span>
+                            <input type="radio" name="popup-dash" id="apply6" checked>
+                            <label for="apply6">적용</label>
+                            <input type="radio" name="popup-dash" id="disapply6">
+                            <label for="disapply6">미적용</label>
+                        </li>
+                        <li>
+                            <span>카메라 아이콘 강조</span>
+                            <input type="radio" name="camera" id="apply7" checked>
+                            <label for="apply7">적용</label>
+                            <input type="radio" name="camera" id="disapply7">
+                            <label for="disapply7">미적용</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <div class="btn">
+            <button class="save">저장</button>
+            <button class="back">목록</button>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

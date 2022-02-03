@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+/* 검색 버튼 */
+.search-btn{
+    width: 70%; height: 50px; margin: 10px auto; 
+    padding: 4px; box-sizing: border-box;
+}
+.search-btn button{
+    border: none; background-color: #4AD3FF;
+    padding: 10px 20px; margin-top: 8px;
+    font-size: 14px; float: right;
+}
+/* 리스트 */
+table{
+    width: 70%; margin: 0 auto; text-align: center; font-size: 14px;
+    
+}
+tr{height: 52px;}
+td{background-color: #222;}
+th{background-color: #333}
+td a{border-bottom: 1px solid #fff; padding-bottom: 2px;}
+
+/* 버튼 */
+.btn button{
+    background-color: #4AD3FF; color: #000; border: 0; width: 80px; height: 40px;
+    font-size: 14px; display: block; margin: 20px auto;
+}
+
+
+/* 체크박스 */
+
+input[type=checkbox] {  
+    display: none;  
+}
+input[type=checkbox] + label{
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;
+}
+input[type=checkbox]+ label:before {   
+    content: "";  
+    display: inline-block;  
+    width: 18px;  
+    height: 18px;
+    left: 0;  
+    bottom: 1px;  
+    background-color: #fff;
+    margin: 0 10px;
+}
+input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); 
+    font-weight:800; 
+    color: #fff;  
+    background-color: #4AD3FF;
+    text-align: center;  
+    line-height: 18px; 
+} 

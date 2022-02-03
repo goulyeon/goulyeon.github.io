@@ -1,0 +1,69 @@
+@charset 'UTF-8';
+@font-face{
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+
+/* 리셋,공통 */
+*{margin: 0; padding: 0;}
+html { 
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body{font-family: 'KoPubDotum', sans-serif; color: #fff; }
+button,option,select{font-family: 'KoPubDotum', sans-serif;}
+li{list-style: none;}
+a{text-decoration: none;color: #fff;}
+.center{min-width: 1366px; margin: auto; position: relative;}
+
+/* 헤더 */
+header{border-bottom: 2px solid #4AD3FF; padding: 20px;}
+header h1{
+    display: inline-block; width: 12%; height: 60px; 
+     margin-right: 20px;
+}
+header h1 img{width: 140px;}
+
+nav{
+    position: relative; z-index: 1;
+    display: inline-block; width: 86%;
+}
+nav .gnb{height: 60px;}
+nav .gnb>li{
+    float: left; width: 200px; height: 60px; box-sizing: border-box;
+    font-size: 16px; line-height: 59px;
+}
+nav .gnb>li>a{
+    color: #4AD3FF;padding-left: 10px;
+    display: inline-block; height: 60px; line-height: 110px;
+}
+nav .gnb>li>span{
+    color: #4AD3FF;padding-left: 10px; cursor: default;
+    display: inline-block; height: 60px; line-height: 110px;
+}
+nav .gnb>li:hover>a{color: #fff;}
+
+nav .gnb li ul{display: none;}
+nav .gnb li:hover ul{display: block;}
+nav .gnb li ul li{
+    background-color: rgba(255, 255, 255, 0.7); height: 44px; line-height: 44px;
+    padding-left: 10px; box-sizing: border-box; font-size: 16px;
+}
+nav .gnb li ul li>a{
+    color: #000; padding: 0; font-size: 14px;
+    display: inline-block; width: 190px;
+}
+nav .gnb li ul li:hover{background-color: rgba(0, 0, 0, 0.7);}
+nav .gnb li ul li:hover>a{color: #fff;}
+
+nav .sub{position: absolute; right: 0px; bottom: 0px;}
+nav .sub span, nav .sub a{
+    color: #4AD3FF; padding-left: 20px;
+    font-size: 14px;
+}
+
+
+section{padding: 10px;}

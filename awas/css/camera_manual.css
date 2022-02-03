@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotum_Pro_Medium.otf')
+}
+article{
+    position: relative;
+}
+.wrap{
+    width: 523px;
+    margin: 80px auto;
+}
+.wrap li{
+    background-color: #222;
+    height: 50px; border-bottom: 2px solid #000;
+}
+.wrap li span{
+    font-size: 14px; height: 50px; line-height: 50px;
+    display: inline-block; width: 30%; text-align: center;
+    background-color: #333; border-right: 2px solid #000;
+}
+.wrap li input[type=text]{
+    width: 260px; height: 24px; margin: 0 50px;
+    font-size: 14px; border: 0;
+}
+/* 버튼 */
+.btn{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.btn a{float: right;}
+.btn button{
+    border: none; float: left;
+    background-color: #4AD3FF;
+    padding: 8px 20px;
+    font-size: 14px;
+}
