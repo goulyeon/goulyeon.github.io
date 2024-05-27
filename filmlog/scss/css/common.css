@@ -1,0 +1,132 @@
+:root {
+  font-size: 62.5%;
+  --font: "Pretendard", sans-serif;
+  --font-title: "MontserratB", sans-serif;
+  --button-color:#FC5B54;
+  --point-color:#F2CB05;
+  --navy-color:#28284f;
+  --white-color: #F2F2F2;
+  --background-color: #1B1B1B;
+  --text-color: #F2F2F2;
+  --text-gray-color: #404040;
+  --border-gray-color: #727272;
+}
+
+html {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  scroll-behavior: smooth;
+  word-break: keep-all;
+}
+
+.center {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-st {
+  border: 0.2rem solid var(--point-color);
+  border-radius: 3rem;
+  color: var(--point-color);
+  transition: 0.3s;
+  font-weight: 600;
+}
+.btn-st:hover {
+  color: var(--background-color);
+  background-color: var(--point-color);
+}
+
+header {
+  padding: 6rem 0;
+}
+header .logo {
+  margin-bottom: 1rem;
+}
+header .logo a {
+  width: 20rem;
+}
+header .logo a img {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .gnb ul {
+  display: flex;
+}
+header .gnb ul li {
+  padding-right: 4rem;
+}
+header .gnb ul li a {
+  font-size: 2rem;
+}
+header .gnb ul li a .line {
+  height: 0.4rem;
+  width: 0%;
+  transition: width 0.3s;
+}
+header .gnb ul li a:hover .line {
+  width: 100%;
+  background-color: var(--point-color);
+}
+header .sub a {
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+}
+
+footer {
+  margin-top: 20rem;
+  border-top: 1px solid var(--border-gray-color);
+  font-weight: 200;
+}
+footer > div {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+footer > div ul li {
+  font-size: 1.4rem;
+}
+footer > div ul li p {
+  margin-bottom: 1rem;
+}
+footer > div ul :first-child {
+  display: flex;
+}
+footer > div ul :first-child a {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+footer > div .icon {
+  display: flex;
+}
+footer > div .icon a {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+}
+footer > div .icon a .gray-icon {
+  opacity: 1;
+}
+footer > div .icon a .color-icon {
+  opacity: 0;
+  transition: 0.3s;
+}
+footer > div .icon a:hover .color-icon {
+  opacity: 1;
+}
+footer > div .icon a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
