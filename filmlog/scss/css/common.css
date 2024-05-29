@@ -23,7 +23,7 @@ html {
 }
 
 .center {
-  max-width: 1200px;
+  max-width: 140rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -41,44 +41,51 @@ html {
 }
 
 header {
-  padding: 6rem 0;
-}
-header .logo {
-  margin-bottom: 1rem;
-}
-header .logo a {
-  width: 20rem;
-}
-header .logo a img {
+  position: fixed;
+  padding: 2rem 0;
+  background: var(--background-color);
+  z-index: 1;
   width: 100%;
+  top: 0;
+  left: 0;
 }
-header nav {
+header .hd2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header .hd2 .gnb {
+  display: flex;
+  align-items: center;
+}
+header .hd2 .gnb .logo a {
+  width: 12rem;
+}
+header .hd2 .gnb .logo a img {
   width: 100%;
 }
-header .gnb ul {
+header .hd2 .gnb ul {
   display: flex;
+  margin-left: 4rem;
 }
-header .gnb ul li {
+header .hd2 .gnb ul li {
   padding-right: 4rem;
 }
-header .gnb ul li a {
-  font-size: 2rem;
-}
-header .gnb ul li a .line {
+header .hd2 .gnb ul li .line {
   height: 0.4rem;
   width: 0%;
   transition: width 0.3s;
 }
-header .gnb ul li a:hover .line {
+header .hd2 .gnb ul li a {
+  font-size: 1.8rem;
+}
+header .hd2 .gnb ul li:hover .line {
   width: 100%;
   background-color: var(--point-color);
 }
-header .sub a {
+header .hd2 .sub a {
   font-size: 1.6rem;
-  padding: 1rem 3rem;
+  padding: 0.8rem 2.6rem;
 }
 
 footer {
