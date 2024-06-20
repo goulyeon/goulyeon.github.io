@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmlog</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="scss/css/common.css">
+    <link rel="stylesheet" href="scss/css/customer.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="js/incloude.js"></script>
+    <script src="js/customer.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="title center">
+            <h2>Customer</h2>
+        </section>
+        <section class="cus-con center">
+            <ul class="tab-menu">
+                <li class="active">FAQ</li>
+                <li>위치안내</li>
+            </ul>
+            <div class="tab-con faq on">
+                <ul>
+                    <li>
+                        <h4>택배 접수 방법을 알고 싶어요.
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                현상소에 방문이 어려운 분들을 위해, 택배로 접수를 받고 있습니다.<br>
+                                <br>
+                                1. 로그인 > 필름접수 > 온라인 접수서(구글폼) 작성<br>
+                                (현상,스캔 후 작업 완료된 디지털 파일은 가입하신 계정의 My Film으로 업로드 됩니다.)<br>
+                                <br>
+                                2. 접수서 작성 이후 택배 박스에 필름을 잘 넣어 택배 발송(선불)<br>
+                                (본인 확인을 위해 접수하시는 분의 (이름), (연락처) 작성한 메모지를 꼭 동봉 부탁드립니다.)<br>
+                                <br>
+                                * 주소 : 서울시 중구 퇴계로53길 6-17, 1층 (쌍림동, 동우빌딩)<br>
+                                (분실 사고 방지를 위해 우편이나 등기가 아닌 택배로 발송 부탁 드립니다.)<br>
+                                <br>
+                                3. 택배가 도착하면 작성하신 온라인접수서를 토대로 입금 안내 문자를 드립니다.<br>
+                                (상세한 가격은 가격 안내에서 확인하실 수 있습니다.)<br>
+                                <br>
+                                4. 매일 오전 입금을 확인, 입금 완료되면 작업을 진행합니다.<br>
+                                (작업이 완료되어 디지털 파일이 My Film으로 업로드되면 자동으로 문자가 발송됩니다.)<br>
+                                <br>
+                                5. 사진을 PC 또는 모바일에서 확인하고, 원본을 다운로드 받을 수 있습니다.<br>
+                                <br>
+                                6. 만약, 접수 내용을 변경하고 싶으시다면 홈페이지 하단의 채널톡을 통해 문의해 주세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>자판기 무인접수 방법을 알고 싶어요.
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                [ 필름박스 무인접수 방법 ]<br>
+                                <br>
+                                1. 자판기에 있는 필름박스 내에 지퍼백과 접수서가 있습니다.<br>
+                                <br>
+                                2. 준비된 종이 접수서에 먼저 (이름), (연락처), (맡기는 물품의 수량)을 기재합니다.<br>
+                                <br>
+                                3. 종이 접수서에 있는 QR코드를 스캔하여 각 항목별 내용을 작성합니다.<br>
+                                <br>
+                                4. 종이 접수서와 QR코드 모두 작성이 완료되면, 지퍼백 안에 종이 접수서와 맡겨주실 필름 또는 카메라를 필름박스에 넣어주세요.<br>
+                                <br>
+                                5. 전국 필름로그 드롭포인트에서는 주 1회 필름로그 현상소(서울)로 보내집니다.<br>
+                                <br>
+                                본사에 도착하면 접수가 진행되고, 입금 및 업로드 안내를 문자로 해 드리고 있습니다.<br>
+                                문자 수신 후 안내에 따라 입금해 주시면 작업이 진행됩니다.<br>
+                                필름로그 고객센터 전화번호가 스팸메시지로 분류되는 경우가 있으니 확인 부탁드립니다.<br>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>수령하지 않은 현상필름은 어떻게 처리되나요?
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                1. 접수시 현상필름 "수령안함" 으로 접수하신 경우<br>
+                                - My Film에 업로드 이후 폐기 됩니다.<br>
+                                <br>
+                                2. 접수시 현상필름 "수령" 으로 접수하신 경우<br>
+                                - 방문수령하시는 경우 이미지 업로드일 기준 1달간 보관해드리며, 보관기간이 지나면 폐기됩니다.<br>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>"미노광"과 "탄필름" 무슨 뜻인가요?
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                "필름이 미노광 되었다", "탄필름이라고 합니다." 등 이런 얘기를 간혹 들으셨을텐데요.<br>
+                                <br>
+                                * 미노광<br>
+                                미노광(未露光) 필름이란 빛에 노출되지 않은 필름을 뜻합니다.<br>
+                                즉, 필름에 사진이 찍히지 않아 스캔할 수 없는 경우를 말합니다.<br>
+                                <br>
+                                필름이 미노광 되는 이유<br>
+                                1. 필름을 제대로 끼우지 못한 경우<br>
+                                2. 카메라 고장인 경우 (미러, 셔터 또는 리와인드 장치 등)<br>
+                                3. 필름 유통기한이 오래 지난 경우 (감광제가 오래되어 빛에 반응하지 못하는 경우)<br>
+                                <br>
+                                * 탄필름<br>
+                                탄필름 이란 필름이 빛에 완전히 노출되어 스캔할 수 없는 필름을 뜻합니다.<br>
+                                즉, 필름이 빛에 노출되어 타버린 필름을 말합니다.<br>
+                                <br>
+                                탄필름이 되는 이유<br>
+                                1. 직접적으로 빛에 노출되었을 때<br>
+                                2. 필름 보관 상태가 좋지 않을 경우<br>
+                                3. 필름 유통기한이 오래 지난 경우<br>
+                                <br>
+                                필름로그는 고객님의 필름을 현상한 후,<br>
+                                미노광 또는 탄필름이라면 일정 작업비용을 제외한 나머지 비용을 적립해드리고 있습니다.<br>
+                                적립금은 오프라인 쇼룸, 필름 접수시에 사용가능합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>사진 원본은 어떻게 다운로드 하나요?
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                1. 개별 사진 <br>
+                                - My film > 필름 매거진 클릭  > 개별 사진 클릭 > 사진 하단의 Download 클릭<br>
+                                <br>
+                                2. 필름 한롤 <br>
+                                - My film > 필름 매거진 클릭  > 사진 전체 다운로드 클릭<br>
+                                <br>
+                                * 전체다운로드 화면이 보이지 않을 경우,<br>
+                                - 크롬 사용 시, Ctrl + Shift + R - 강력 새로고침 설정<br>
+                                - 익스플로어 사용 시, Ctrl + Shift + DEL 혹은 인터넷 옵션에서 임시 파일 삭제<br>
+                                <br>
+                                *사진 다운로드(MO)<br>
+                                - 모바일웹에서는 사진을 길게 터치하여 개별 사진 다운로드만 가능합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>사진을 공개하고 싶어요.
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                필름로그는 필름 카메라 사용자들 사진 보관은 물론, 필름 전용 사진 소통 공간을 제공합니다.<br>
+                                <br>
+                                본인 계정(My Film)에 업로드 된 사진들 중, <br>
+                                다른 사용자들과 공유하고 싶은 사진이 있다면 "OPEN" 버튼을 클릭해주세요.<br>
+                                OPEN된 사진들은 필름로그의 이달의 필름 공모에 참여하실 수 있으며, <br>
+                                갤러리에 공개되어 필름과 카메라를 조합해 원하는 사진을 찾을 수 있도록 합니다.<br>
+                                필름은 접수서를 기반으로 작업자의 확인을 통해 업로드되어 100%의 신뢰도를 갖고 있으며,<br>
+                                카메라는 고객분들께서 직접 등록한 카메라를 바탕으로 합니다.<br>
+                                <br>
+                                개인 계정에 업로드되는 최초의 사진은 모두 비공개 상태(Closed) 입니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>온라인 인화 주문 방법이 궁금해요.
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                [홈페이지 선택 인화]<br>
+                                <br>
+                                1. 홈페이지 My Film에 업로드된 사진 중 원하는 사진을 선택하세요.<br>
+                                <br>
+                                2. PRINT 버튼을 클릭하여 장바구니에 담아주세요.<br>
+                                <br>
+                                3. 장바구니에 담긴 이미지는 기본 4X6인치입니다. 수량 및 사이즈 설정 후 "변경" 버튼을 눌러주세요.<br>
+                                <br>
+                                4. 엽서는 4X6인치, 단면 제작됩니다.(엽서 뒷면 무지)<br>
+                                <br>
+                                5. 주문 수량 및 사이즈 확인 후 전체상품(선택상품) 주문하기를 눌러주세요.<br>
+                                <br>
+                                6. 방문 수령의 경우, 배송 시 요청사항에 수령지점을 남겨주세요.<br>
+                                (방문수령의 경우, 배송비가 자동으로 청구되므로 무통장 입금 선택 후 택배비 제외한 나머지 금액 입금 부탁드립니다.)<br>
+                                <br>
+                                [이메일 인화 주문]<br>
+                                <br>
+                                필름로그에 업로드되지 않은 사진 또는 편집된 사진 신청 시 이용해주세요.<br>
+                                <br>
+                                1. 필름로그 인화신청 이메일 : lab.filmlog@gmail.co.kr 으로 사진을 보내주세요.<br>
+                                <br>
+                                2. 제목은 성함, 인화주문건으로 부탁드립니다.<br>
+                                <br>
+                                3. 이메일에 (성함), (연락처), (사이즈), (수량), (수령 방법) 을 기재해주세요.<br>
+                                <br>
+                                4. 사진은 폴더에 넣어 압축하여 보내주세요. 한 사진을 여러장 인화 원하실 경우, 해당 사진 이름에 숫자로 적어주세요.<br>
+                                <br>
+                                5. 이메일 확인 후 문자로 금액 안내드립니다. 안내 받으신 금액 확인 후 입금 부탁드립니다
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>필름 구매 방법이 궁금합니다.
+                            <span class="material-symbols-rounded">
+                                keyboard_arrow_down
+                            </span>
+                        </h4>
+                        <div>
+                            <p>
+                                필름은 "온라인 스토어" 페이지에서 구매할 수 있습니다.<br>
+                                <br>
+                                1. 고객분들이 OPEN한 사진과 필름 제조사의 작례를 통하여 해당 필름의 느낌을 미리 확인해 볼 수 있습니다.<br>
+                                <br>
+                                2. 사진 인화 서비스와 묶음 배송이 가능합니다.<br>
+                                <br>
+                                3. 필름로그 현상소에 맡겼던 현상필름과 함께 배송받고 싶으시다면, 배송시 요청사항에 "현상필름과 합배송 요청" 내용을 작성해 주세요.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="img-box">
+                    <img src="images/intro2.jpg" alt="">
+                </div>
+            </div>
+            <div class="tab-con map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6114850969843!2d127.00174297640577!3d37.56421632426028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca399279d5cd1%3A0xacb33df9d558eb1b!2z7ZWE66aE66Gc6re4IO2YhOyDgeyGjA!5e0!3m2!1sko!2skr!4v1718440994639!5m2!1sko!2skr" 
+                width="70%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="info">
+                    <h4>필름로그 현상소 본점</h4>
+                    <ul>
+                        <li>
+                            <span class="material-symbols-rounded">
+                                location_on
+                            </span>
+                            서울시 중구 퇴계로53길 6-17 1층 (쌍림동, 동우빌딩)
+                        </li>
+                        <li>
+                            <span class="material-symbols-rounded">
+                                call
+                            </span>
+                            02-2276-1515
+                        </li>
+                        <li>
+                            <span class="material-symbols-rounded">
+                                schedule
+                            </span>
+                            13:00 ~ 18:00 (일요일 휴무)
+                        </li>
+                    </ul>
+                    <a href="https://m.place.naver.com/my/place/detailList/4efbd27be47f429092aa099de109cb5a?close" target="_blank">
+                        전국 필름로그 위치보기
+                        <span class="material-symbols-rounded">
+                            arrow_forward
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

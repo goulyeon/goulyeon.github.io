@@ -5,14 +5,7 @@
                 <img src="images/logoW.png" alt="filmlog">
             </a>
         </div>
-        <ul>
-            <li>
-                <a href="javascript:void(0);">
-                    <div class="line"></div>
-                    <p>Lab</p>
-                    <div class="line"></div>
-                </a>
-            </li>
+        <ul class="nav1">
             <li>
                 <a href="https://smartstore.naver.com/filmlog" target="_blank">
                     <div class="line"></div>
@@ -21,38 +14,96 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0);">
+                <a href="workshop.html">
                     <div class="line"></div>
                     <p>Workshop</p>
                     <div class="line"></div>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0);">
+                <a href="education.html">
                     <div class="line"></div>
-                    <p>Class</p>
+                    <p>Education</p>
                     <div class="line"></div>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0);">
+                <a href="gallery.html">
                     <div class="line"></div>
                     <p>Gallery</p>
                     <div class="line"></div>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0);">
+                <a href="customer.html">
                     <div class="line"></div>
                     <p>Customer</p>
                     <div class="line"></div>
                 </a>
             </li>
         </ul>
+        <div class="nav2">
+            <button>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+            <a href="javascript:void(0)" class="icon-st">
+                <span class="material-symbols-rounded">
+                    person
+                </span>
+            </a>
+            <ul>
+                <li>
+                    <a href="https://smartstore.naver.com/filmlog" target="_blank">
+                        <div class="line"></div>
+                        <p>Store</p>
+                        <div class="line"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="workshop.html">
+                        <div class="line"></div>
+                        <p>Workshop</p>
+                        <div class="line"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <div class="line"></div>
+                        <p>Education</p>
+                        <div class="line"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="gallery.html">
+                        <div class="line"></div>
+                        <p>Gallery</p>
+                        <div class="line"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer.html">
+                        <div class="line"></div>
+                        <p>Customer</p>
+                        <div class="line"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="sub">
         <a href="javascript:void(0)" class="btn-st">
-            Join
+            Login
         </a>
     </div>
 </div>
+<script>
+
+    $(".nav2 button").click(function(){
+        $(".nav2 button").toggleClass("on");
+        $(".nav2 ul").fadeToggle();
+        $("body").toggleClass("scroll")
+    });
+
+</script>

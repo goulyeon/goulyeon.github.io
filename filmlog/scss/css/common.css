@@ -1,12 +1,11 @@
+@charset "UTF-8";
 :root {
   font-size: 62.5%;
   --font: "Pretendard", sans-serif;
   --font-title: "MontserratB", sans-serif;
-  --button-color:#FC5B54;
   --point-color:#F2CB05;
-  --navy-color:#28284f;
   --white-color: #F2F2F2;
-  --background-color: #1B1B1B;
+  --background-color: #0b0b0b;
   --text-color: #F2F2F2;
   --text-gray-color: #404040;
   --border-gray-color: #727272;
@@ -20,6 +19,11 @@ html {
   background-color: var(--background-color);
   scroll-behavior: smooth;
   word-break: keep-all;
+}
+
+body.scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 .center {
@@ -42,17 +46,17 @@ html {
 
 header {
   position: fixed;
-  padding: 2rem 0;
-  background: var(--background-color);
   z-index: 1;
   width: 100%;
   top: 0;
   left: 0;
+  background: var(--background-color);
 }
 header .hd2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 3rem 0;
 }
 header .hd2 .gnb {
   display: flex;
@@ -64,26 +68,29 @@ header .hd2 .gnb .logo a {
 header .hd2 .gnb .logo a img {
   width: 100%;
 }
-header .hd2 .gnb ul {
+header .hd2 .gnb .nav1 {
   display: flex;
   margin-left: 4rem;
 }
-header .hd2 .gnb ul li {
+header .hd2 .gnb .nav1 li {
   padding-right: 4rem;
 }
-header .hd2 .gnb ul li .line {
+header .hd2 .gnb .nav1 li .line {
   height: 0.4rem;
   width: 0%;
   transition: width 0.3s;
 }
-header .hd2 .gnb ul li a {
+header .hd2 .gnb .nav1 li a {
   font-size: 1.8rem;
 }
-header .hd2 .gnb ul li:hover .line {
+header .hd2 .gnb .nav1 li:hover .line {
   width: 100%;
   background-color: var(--point-color);
 }
-header .hd2 .sub a {
+header .hd2 .gnb .nav2 {
+  display: none;
+}
+header .hd2 .sub .btn-st {
   font-size: 1.6rem;
   padding: 0.8rem 2.6rem;
 }
@@ -107,6 +114,7 @@ footer > div ul li p {
 }
 footer > div ul :first-child {
   display: flex;
+  flex-wrap: wrap;
 }
 footer > div ul :first-child a {
   margin-right: 2rem;
@@ -136,4 +144,174 @@ footer > div .icon a img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+@media all and (min-width: 1024px) and (max-width: 1399px) {
+  .center {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .center {
+    width: 96%;
+    margin: 0 auto;
+  }
+  header .hd2 .gnb .logo a {
+    width: 10rem;
+  }
+  header .hd2 .gnb .nav1 {
+    margin-left: 3rem;
+  }
+  header .hd2 .gnb .nav1 li {
+    padding-right: 3rem;
+  }
+  header .hd2 .sub .btn-st {
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+  }
+  footer > div .icon a {
+    margin-left: 1rem;
+  }
+}
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/
+@media all and (max-width: 767px) {
+  .center {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header .hd2 {
+    position: relative;
+  }
+  header .hd2 .gnb {
+    width: 100%;
+    justify-content: space-between;
+  }
+  header .hd2 .gnb .logo a {
+    width: 12rem;
+  }
+  header .hd2 .gnb .nav1 {
+    display: none;
+  }
+  header .hd2 .gnb .nav2 {
+    display: block;
+  }
+  header .hd2 .gnb .nav2 button {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.4rem;
+    height: 2rem;
+  }
+  header .hd2 .gnb .nav2 button:hover div {
+    background: var(--point-color);
+  }
+  header .hd2 .gnb .nav2 button div {
+    width: 2.4rem;
+    height: 0.3rem;
+    background: var(--white-color);
+    border-radius: 0.3rem;
+    position: absolute;
+  }
+  header .hd2 .gnb .nav2 button .bar1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s;
+  }
+  header .hd2 .gnb .nav2 button .bar2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  }
+  header .hd2 .gnb .nav2 button .bar3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s;
+  }
+  header .hd2 .gnb .nav2 button.on .bar1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+  }
+  header .hd2 .gnb .nav2 button.on .bar2 {
+    opacity: 0;
+  }
+  header .hd2 .gnb .nav2 button.on .bar3 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transform: rotate(-45deg);
+  }
+  header .hd2 .gnb .nav2 .icon-st {
+    border-radius: 3rem;
+    color: var(--white-color);
+    width: 2.4rem;
+    height: 2.4rem;
+    position: relative;
+    transition: 0.3s;
+    margin-right: 4rem;
+    z-index: 999;
+  }
+  header .hd2 .gnb .nav2 .icon-st span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+  }
+  header .hd2 .gnb .nav2 .icon-st:hover {
+    color: var(--point-color);
+  }
+  header .hd2 .gnb .nav2 ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--background-color);
+    padding: 10rem 4rem;
+    display: none;
+  }
+  header .hd2 .gnb .nav2 ul li {
+    padding: 1rem 0;
+  }
+  header .hd2 .gnb .nav2 ul li a .line {
+    background: var(--background-color);
+    width: 0%;
+    height: 0.4rem;
+    transition: 0.3s;
+  }
+  header .hd2 .gnb .nav2 ul li a p {
+    font-size: 2.2rem;
+    padding: 0.2rem 0;
+  }
+  header .hd2 .gnb .nav2 ul li a:hover .line {
+    background: var(--point-color);
+    width: 100%;
+  }
+  header .hd2 .sub {
+    display: none;
+  }
+  footer > div {
+    display: block;
+  }
+  footer > div ul li p {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+  }
+  footer > div .icon a {
+    margin: 4rem 2rem 0 0;
+    width: 4rem;
+    height: 4rem;
+  }
 }

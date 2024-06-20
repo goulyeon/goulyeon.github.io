@@ -60,10 +60,5 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
 });
 

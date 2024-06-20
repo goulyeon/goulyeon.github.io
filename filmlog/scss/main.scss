@@ -8,10 +8,34 @@ main{
         overflow: hidden;
 
         .swiper-slide{
-            width: 120rem;
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%;
+            overflow: hidden;
 
-            img{
+            div{
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100%;
+            }
+            .slide1{
+                background: url(../../images/main-img1.png) no-repeat center;
+                background-size: cover;
+            }
+            .slide2{
+                background: url(../../images/main-img2.png) no-repeat center;
+                background-size: cover;
+            }
+            .slide3{
+                background: url(../../images/main-img3.png) no-repeat center;
+                background-size: cover;
+            }
+            .slide4{
+                background: url(../../images/main-img4.png) no-repeat center;
+                background-size: cover;
             }
         }
     }
@@ -21,15 +45,16 @@ main{
 /* 슬라이드 타이틀 */
 .slider .slide_tit {
     display: flex;
+    gap: 2rem;
 }
 
 .slider .slide_tit > li {
     width: 25%;
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     opacity: .7;
     background: var(--background-color);
-    color: var(--font-color);
     height: auto;
+    position: relative;
 
     h4{ 
         font-size: 2.4rem;
@@ -42,12 +67,13 @@ main{
     }
 
     .bar{
-        margin-top: 2rem;
         width: 0%;
         height: .6rem;
         background: var(--point-color);
         display: block;
         transition: width 1.5s;
+        position: absolute;
+        bottom: 0;
     }
 
 }
@@ -74,22 +100,125 @@ main{
 .intro{
     padding: 15rem 0;
 
-    img{
-        width: 40rem;
-        margin: 0 auto;
-    }
-
-    .text-box{
-        padding-top: 10rem;
-        display: flex;
-        justify-content: space-between;
-        
-        p{
-            width: 49%;
-            font-size: 1.8rem;
-            line-height: 3.2rem;
+    .top-box{
+        img{
+            width: 40rem;
+            margin: 0 auto;
+        }
+    
+        .text-box{
+            padding: 10rem 0;
+            margin-top: 16rem;
+            display: flex;
+            justify-content: space-between;
+            
+            img{
+                position: absolute;
+                width: 8rem;
+                &.double1{
+                    top: 0;
+                    left: 0;
+                }
+                &.double2{
+                    bottom: 0;
+                    right: 0;
+                    transform: rotate(180deg);
+                }
+            }
+            p{
+                width: 49%;
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+            }
         }
     }
+
+    .bottom-box{
+        padding-top: 8rem;
+        ul{
+            li{
+                display: flex;
+                margin-top: 12rem;
+                >div{
+                    width: 50%;
+                }
+                .img-box{
+                    height: 40rem;
+                }
+
+                div.img1{
+                    background: url(../../images/intro1.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                div.img2{
+                    background: url(../../images/intro2.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                div.img3{
+                    background: url(../../images/intro3.jpg) no-repeat center;
+                    background-size: cover;
+                }
+
+                .text{
+                    padding: 0 6rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    h4{
+                        color: var(--background-color);
+                        text-shadow: -1px 0px var(--text-color), 0px 1px var(--text-color),
+                         1px 0px var(--text-color), 0px -1px var(--text-color);
+                        font-size: 5rem;
+
+                        span{
+                            color: var(--text-color);
+                            text-shadow: none;
+                        }
+                    }
+                    p{
+                        font-size: 1.6rem;
+                        line-height: 2.6rem;
+                    }
+                    a{
+                        .wrap{
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            opacity: .7;
+                            transition: opacity .3s;
+                        }
+
+                        .line{
+                            width: 0%;
+                            height: .4rem;
+                            background-color: var(--point-color);
+                            transition: width .3s;
+                            margin-top: .4rem;
+                        }
+                        
+                        &:hover{
+                            .wrap{
+                                opacity: 1;
+                            }
+                            
+                            .line{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .text-right{
+                    align-items: flex-end;
+                    p{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 .gallery{
@@ -148,10 +277,10 @@ main{
         }
 
         .rollingL{
-            animation: rollingL 20s linear infinite;
+            animation: rollingL 50s linear infinite;
         }
         .rollingR{
-            animation: rollingR 20s linear infinite;
+            animation: rollingR 50s linear infinite;
             margin: 2rem 0;
         }
 
@@ -245,3 +374,316 @@ main{
 
 }
 
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/ 
+@media all and (min-width:1024px) and (max-width:1400px) { 
+
+.main-img{
+    .slider{
+        .swiper-wrapper .swiper-slide{
+            padding-bottom: 60%;
+        }
+    }
+
+    .slide_tit{
+        li{
+            h4{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    } 
+    
+}
+
+
+
+.intro{
+    .top-box{
+        img{
+            width: 36rem;
+        }
+        .text-box{
+            margin-top: 13rem;
+            img{
+                width: 5rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .bottom-box{
+        ul li .text {
+            padding: 0 4rem;
+
+            h4{
+                font-size:4rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+}
+
+.gallery{
+    ul {
+        margin: 1rem 0;
+
+        li {
+            width: 2640px;
+            .rolling-list {
+                div{
+                    width: 42rem;
+                    height: 26rem;
+                }
+            }
+        }
+    }
+    
+    
+    .rolling{
+        height: 6rem;
+    }
+
+} 
+
+
+
+
+
+}///끝
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) { 
+
+.main-img{
+    padding-bottom: 5rem;
+    
+    .slider{
+        .swiper-wrapper .swiper-slide{
+            padding-bottom: 74%;
+        }
+        .slide_tit{
+            li{
+
+                h4{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+                .bar{
+                    bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.intro{
+    padding: 10rem 0;
+    .top-box{
+        img{
+            width: 32rem;
+        }
+        .text-box{
+            margin-top: 10rem;
+            img{
+                width: 6rem;
+            }
+            p{
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+        }
+    } 
+    .bottom-box{
+        ul{
+            li{
+                .img-box{
+                    width: 42%;
+                }
+                .text{
+                    width: 58%;
+                    padding: 0 3rem;
+                    h4{
+                        font-size: 4.2rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+.gallery{
+    ul {
+        margin: 1rem 0;
+
+        li {
+            width: 2352px;
+            .rolling-list {
+                div{
+                    width: 38rem;
+                    height: 22rem;
+                    margin: 0 0.6rem;
+                }
+            }
+        }
+
+        .rollingR{
+            margin: 1.2rem 0;
+        }
+    }
+    
+    
+    .rolling{
+        height: 6rem;
+    }
+
+} 
+
+
+
+} ///끝
+
+/* 모바일 가로 & 테블릿 세로 (해상도 ~ 767px)*/ 
+@media all and (max-width:767px) {
+
+.main-img{
+    padding-bottom: 5rem;
+    
+    .slider{
+        .swiper-wrapper .swiper-slide{
+            padding-bottom: 100%;
+        }
+        
+        .slide_tit{
+            flex-wrap: wrap;
+            margin-top: 4rem;
+            gap: 2rem;
+
+            li{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 0 1rem 0;
+        
+                h4{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                }
+                .bar{
+                    bottom: 0rem;
+                    height: 0.4rem;
+                }
+            }
+        }
+    }
+}
+
+
+.intro{
+    padding: 10rem 0;
+    .top-box{
+        img{
+            width: 24rem;
+        }
+        .text-box{
+            margin-top: 10rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 6rem 0;
+            img{
+                width: 5rem;
+            }
+            p{
+                width: 100%;
+                font-size: 1.4rem;
+                line-height: 3rem;
+            }
+        }
+    } 
+    .bottom-box{
+        ul{
+            li{
+                flex-wrap: wrap;
+                margin-top: 8rem;
+                .img-box{
+                    width: 100%;
+                    height: 32rem;
+                }
+                .text{
+                    width: 100%;
+                    padding: 4rem 0 0 0;
+                    h4{
+                        font-size: 3.4rem;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                    }
+                }
+                &:nth-child(2){
+                    .text-right{
+                        order: 2;
+                        align-items: flex-start;
+                        p{
+                            text-align: start;
+                        }
+                    }
+                    .img2{
+                        order: 1;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.gallery{
+    ul {
+        margin: 0;
+
+        li {
+            width: 1872px;
+            .rolling-list {
+                div{
+                    width: 30rem;
+                    height: 20rem;
+                    margin: 0 0.6rem;
+                }
+            }
+        }
+
+        .rollingR{
+            margin: 1.2rem 0;
+        }
+    }
+    
+    
+    .rolling{
+        height: 5rem;
+    }
+
+    .more-btn{
+        a{
+            font-size: 1.8rem;
+            padding: 1.2rem 2.8rem;
+        }
+    }
+} 
+
+
+} 

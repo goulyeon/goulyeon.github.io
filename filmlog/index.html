@@ -7,13 +7,13 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="scss/css/common.css">
     <link rel="stylesheet" href="scss/css/main.css">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -27,19 +27,19 @@
     <header></header>
     <main>
         <section class="main-img">
-            <div class="slider mySwiper center">
+            <div class="slider mySwiper center" data-aos="fade-up">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <img src="images/main-img1.png" alt="">
+                        <div class="slide1"></div>
                     </li>
                     <li class="swiper-slide">
-                        <img src="images/main-img2.png" alt="">
+                        <div class="slide2"></div>
                     </li>
                     <li class="swiper-slide">
-                        <img src="images/main-img3.png" alt="">
+                        <div class="slide3"></div>
                     </li>
                     <li class="swiper-slide">
-                        <img src="images/main-img4.png" alt="">
+                        <div class="slide4"></div>
                     </li>
                 </ul>
                 <div class="page-nation">
@@ -66,9 +66,10 @@
         </section>
 
         <section class="intro">
-            <div class="center">
+            <div class="center top-box">
                 <img src="images/logoW.png" alt="" data-aos="fade-up">
                 <div class="text-box" data-aos="fade-up">
+                    <img src="/images/double.png" alt="" class="double1">
                     <p>
                         사람들은 사진을 찍기 위해 여전히 필름을 구입합니다.
                         그들은 사진을 보기 위해 필름 한롤이 모두 소진될 때까지 기다립니다.
@@ -81,10 +82,75 @@
                         우리는 당신의 가치를 존중합니다.
                         당신의 소중한 필름은 안전하고 편리하게 기록되어야 합니다. 필름 한 롤을 가장 가치있게 즐기는 방법, 필름로그 현상소
                     </p>
+                    <img src="/images/double.png" alt="" class="double2">
                 </div>
             </div>
+            <div class="center bottom-box">
+                <ul>
+                    <li>
+                        <div class="img-box img1" data-aos="zoom-in"></div>
+                        <div class="text" data-aos="fade-up" data-aos-delay="300">
+                            <h4>01. <span>온/오프라인</span></h4>
+                            <p>
+                                쇼룸에서는 필름 현상 접수가 가능하며 다양한 종류의 필름을 직접 눈으로 보고, 
+                                나에게 맞는 필름과 카메라, 굿즈 구입 상담을 받을 수 있습니다. 
+                                24시간 운영되는 전국 필름자판기에서도 필름 구매와 접수가 가능합니다.
+                            </p>
+                            <a href="https://m.place.naver.com/my/place/detailList/4efbd27be47f429092aa099de109cb5a?close" target="_blank">
+                                <div class="wrap">
+                                    <p>전국 필름로그 위치</p>
+                                    <span class="material-symbols-rounded">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up">
+                        <div class="text text-right" data-aos="fade-up" data-aos-delay="300">
+                            <h4>02. <span>업사이클링</span></h4>
+                            <p>
+                                현상소로 수거된 일회용 카메라는 컨디션을 점검해 다시 사용할 수 있도록 재탄생 됩니다. 
+                                이로써 필름로그를 통해 버려지는 ‘일회용’ 플라스틱 카메라는 더 이상 존재하지 않게 되었습니다. 
+                                비록 일회용 카메라로 제조되었지만 ‘다회용’으로 재탄생 시키는 작업은 현상소의 의지와 노력으로 충분히 할 수 있는 일이라는걸 보여주고 있습니다.
+                            </p>
+                            <a href="https://smartstore.naver.com/filmlog/category/6ebd2f1475cb404db3f5f70e6a84796c?cp=1" target="_blank">
+                                <div class="wrap">
+                                    <p>업사이클링 제품</p>
+                                    <span class="material-symbols-rounded">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                        <div class="img-box img2" data-aos="zoom-in"></div>
+                    </li>
+                    <li data-aos="fade-up">
+                        <div class="img-box img3" data-aos="zoom-in"></div>
+                        <div class="text" data-aos="fade-up" data-aos-delay="300">
+                            <h4>03. <span>워크샵</span></h4>
+                            <p>
+                                현상소로 수거된 일회용 카메라는 컨디션을 점검해 다시 사용할 수 있도록 재탄생 됩니다. 
+                                이로써 필름로그를 통해 버려지는 ‘일회용’ 플라스틱 카메라는 더 이상 존재하지 않게 되었습니다. 
+                                비록 일회용 카메라로 제조되었지만 ‘다회용’으로 재탄생 시키는 작업은 현상소의 의지와 노력으로 충분히 할 수 있는 일이라는걸 보여주고 있습니다.
+                            </p>
+                            <a href="https://booking.naver.com/booking/5/bizes/781472" target="_blank">
+                                <div class="wrap">
+                                    <p>워크샵 신청하기</p>
+                                    <span class="material-symbols-rounded">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
         </section>
-
         <section class="gallery">
             <div class="rolling"></div>
             <ul>
