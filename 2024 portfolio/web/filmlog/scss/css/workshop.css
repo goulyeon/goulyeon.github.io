@@ -1,0 +1,322 @@
+@charset "UTF-8";
+main {
+  margin-top: 10rem;
+}
+main .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14rem 0;
+}
+main .title h2 {
+  font-size: 6rem;
+}
+main .list {
+  padding-bottom: 10rem;
+}
+main .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .list ul li {
+  width: 23%;
+  cursor: pointer;
+  margin-bottom: 6rem;
+}
+main .list ul li img {
+  margin-bottom: 2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+main .list ul li > div h4 {
+  font-size: 2.2rem;
+  display: inline;
+  position: relative;
+}
+main .list ul li > div h4::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 0%;
+  height: 0.4rem;
+  background-color: var(--point-color);
+  transition: width 0.3s;
+}
+main .list ul li > div p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+main .list ul li:hover img {
+  opacity: 1;
+}
+main .list ul li:hover h4::after {
+  width: 100%;
+}
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+.modal .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fcfcfc;
+  color: #202020;
+  padding: 5%;
+  width: 90%;
+  height: 80%;
+  max-width: 120rem;
+  border-radius: 4rem;
+}
+.modal .box .content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  height: 90%;
+}
+.modal .box .content .img-wrap {
+  width: 40%;
+  height: 100%;
+}
+.modal .box .content .img-wrap.img1 {
+  background: url(../../images/work1.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img2 {
+  background: url(../../images/work2.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img3 {
+  background: url(../../images/work3.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img4 {
+  background: url(../../images/work4.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img5 {
+  background: url(../../images/work5.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img6 {
+  background: url(../../images/work6.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img7 {
+  background: url(../../images/work7.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .img-wrap.img8 {
+  background: url(../../images/work8.jpg) no-repeat center;
+  background-size: contain;
+}
+.modal .box .content .text-wrap {
+  width: 60%;
+  position: relative;
+  height: 100%;
+}
+.modal .box .content .text-wrap h2 {
+  font-size: 3rem;
+  margin-bottom: 2%;
+}
+.modal .box .content .text-wrap ul {
+  overflow-y: scroll;
+  height: 90%;
+}
+.modal .box .content .text-wrap ul li {
+  margin-bottom: 2rem;
+}
+.modal .box .content .text-wrap ul li h4 {
+  display: inline;
+  font-size: 1.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.3rem solid var(--point-color);
+}
+.modal .box .content .text-wrap ul li p {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+.modal .box .close {
+  position: absolute;
+  right: 5%;
+  top: 8%;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #949494;
+}
+.modal .box .apply {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.modal .box .apply a {
+  background-color: #949494;
+  color: #fcfcfc;
+  border-radius: 4rem;
+  padding: 1rem 6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.modal .box .apply a:hover {
+  color: #202020;
+  background: var(--point-color);
+}
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/
+@media all and (min-width: 1024px) and (max-width: 1400px) {
+  main .title {
+    padding: 12rem 0;
+  }
+  main .list ul {
+    justify-content: flex-start;
+    gap: 2%;
+  }
+  main .list ul li {
+    width: 32%;
+  }
+  main .list ul li > div h4 {
+    font-size: 2rem;
+  }
+  main .list ul li > div p {
+    font-size: 1.6rem;
+  }
+  .modal .box .content .text-wrap h2 {
+    font-size: 2.8rem;
+  }
+}
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  main .title {
+    padding: 10rem 0;
+  }
+  main .title h2 {
+    font-size: 5rem;
+  }
+  main .list ul li {
+    width: 49%;
+  }
+  main .list ul li > div h4 {
+    font-size: 2rem;
+  }
+  main .list ul li > div p {
+    font-size: 1.6rem;
+  }
+  .modal .box {
+    padding: 4rem;
+  }
+  .modal .box .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .modal .box .content .img-wrap {
+    width: 100%;
+    height: 36%;
+  }
+  .modal .box .content .text-wrap {
+    width: 100%;
+    height: 59%;
+  }
+  .modal .box .content .text-wrap h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  .modal .box .content .text-wrap ul li {
+    margin-bottom: 2rem;
+  }
+  .modal .box .content .text-wrap ul li h4 {
+    font-size: 1.4rem;
+  }
+  .modal .box .content .text-wrap ul li p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .modal .box .apply a {
+    font-size: 1.4rem;
+    padding: 1rem 5rem;
+  }
+  .modal .box .close {
+    right: 4rem;
+    top: 4rem;
+  }
+}
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/
+@media all and (max-width: 767px) {
+  main .title {
+    padding: 6rem 0;
+  }
+  main .title h2 {
+    font-size: 4rem;
+  }
+  main .list ul {
+    justify-content: flex-start;
+    gap: 0;
+  }
+  main .list ul li {
+    width: 100%;
+  }
+  main .list ul li > div h4 {
+    font-size: 2rem;
+  }
+  main .list ul li > div p {
+    font-size: 1.6rem;
+  }
+  .modal .box {
+    width: 90%;
+    height: 90%;
+    padding: 3rem;
+    border-radius: 2rem;
+  }
+  .modal .box .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .modal .box .content .img-wrap {
+    width: 100%;
+    height: 36%;
+  }
+  .modal .box .content .text-wrap {
+    width: 100%;
+    height: 59%;
+  }
+  .modal .box .content .text-wrap h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  .modal .box .content .text-wrap ul li {
+    margin-bottom: 2rem;
+  }
+  .modal .box .content .text-wrap ul li h4 {
+    font-size: 1.4rem;
+  }
+  .modal .box .content .text-wrap ul li p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .modal .box .apply a {
+    font-size: 1.4rem;
+    padding: 1rem 5rem;
+  }
+  .modal .box .close {
+    right: 2%;
+    top: 2%;
+    font-size: 3.4rem;
+  }
+}

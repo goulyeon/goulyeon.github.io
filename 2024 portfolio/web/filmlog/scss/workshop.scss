@@ -1,0 +1,439 @@
+main{
+    margin-top: 10rem;
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14rem 0;
+    
+        h2{
+            font-size: 6rem;
+        }
+    }
+    
+    .list{
+        padding-bottom: 10rem;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+    
+            li{
+                width: 23%;
+                cursor: pointer;
+                margin-bottom: 6rem;
+    
+                img{
+                    margin-bottom: 2rem;
+                    opacity: .7;
+                    transition: opacity .3s;
+                }
+    
+                >div{
+                    h4{
+                        font-size: 2.2rem;
+                        display: inline;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: -1rem;
+                            left: 0;
+                            width: 0%;
+                            height: .4rem;
+                            background-color: var(--point-color);
+                            transition: width .3s;
+                        }
+                    }
+    
+                    p{
+                        font-size: 1.6rem;
+                        margin-top: 1rem;
+                        opacity: .7;
+                    }
+                }
+                &:hover {
+                    img{
+                        opacity: 1;
+                    }
+                    h4::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    .bg{
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .6;
+    }
+
+    .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #fcfcfc;
+        color: #202020;
+        padding: 5%;
+        width: 90%;
+        height: 80%;
+        max-width: 120rem;
+        border-radius: 4rem;
+
+        .content{
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+            height: 90%;
+            .img-wrap{
+                width: 40%;
+                height: 100%;
+                
+                &.img1{
+                    background: url(../../images/work1.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img2{
+                    background: url(../../images/work2.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img3{
+                    background: url(../../images/work3.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img4{
+                    background: url(../../images/work4.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img5{
+                    background: url(../../images/work5.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img6{
+                    background: url(../../images/work6.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img7{
+                    background: url(../../images/work7.jpg) no-repeat center;
+                    background-size: contain;
+                }
+                &.img8{
+                    background: url(../../images/work8.jpg) no-repeat center;
+                    background-size: contain;
+                }
+            }
+
+            .text-wrap{
+                width: 60%;
+                position: relative;
+                height: 100%;
+                // position: relative;
+                // width: 100%;
+                // height: 0;
+                // overflow: hidden;
+                // padding-bottom: 52%;
+                h2{
+                    font-size: 3rem;
+                    margin-bottom: 2%;
+                }
+    
+                ul{
+                    overflow-y: scroll;
+                    height: 90%;
+                    // position: absolute;
+                    // top: 10%;
+                    // left: 0;
+                    // width: 100%;
+                    // height: 90%;
+                    li{
+                        margin-bottom: 2rem;
+                        h4{
+                            display: inline;
+                            font-size: 1.6rem;
+                            padding-bottom: .4rem;
+                            border-bottom: .3rem solid var(--point-color);
+                        }
+                        p{
+                            margin: 1rem 0;
+                            font-size: 1.6rem;
+                            line-height: 2.6rem;
+                        }
+                    }
+                }
+    
+            }
+
+        }
+
+        .close{
+            position: absolute;
+            right: 5%;
+            top: 8%;
+            font-size: 4rem;
+            cursor: pointer;
+            color: #949494;
+        }
+
+        .apply{
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+            a{
+                background-color: #949494;
+                color: #fcfcfc;
+                border-radius: 4rem;
+                padding: 1rem 6rem;
+                font-size: 1.6rem;
+                font-weight: 500;
+                transition: .3s;
+
+                &:hover{
+                    color: #202020;
+                    background: var(--point-color);
+                }
+            }
+            
+        }
+
+        
+
+        
+    }
+}
+
+
+
+// --------------------------------------------------------------------------------- 미디어쿼리
+
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/ 
+@media all and (min-width:1024px) and (max-width:1400px) { 
+
+main{
+    .title{
+        padding: 12rem 0;
+    }
+    .list{
+        ul{
+            justify-content: flex-start;
+            gap: 2%;
+            li{
+                width: 32%;
+                >div{
+                    h4{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal{
+    .box{
+        .content{
+            .text-wrap{
+                h2{
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    } 
+}
+
+
+
+}//끝
+
+
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) { 
+
+main{
+    .title{
+        padding: 10rem 0;
+        h2{
+            font-size: 5rem;
+        }
+    }
+    .list{
+        ul{
+            li{
+                width: 49%;
+                >div{
+                    h4{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}   
+
+.modal{
+    .box{
+        padding: 4rem;
+        .content{
+            flex-direction: column;
+            gap: 2rem;
+            .img-wrap{
+                width: 100%;
+                height: 36%;
+            }
+            .text-wrap{
+                width: 100%;
+                height: 59%;
+                
+                h2{
+                    font-size: 2.4rem;
+                    margin-bottom: 1rem;
+                }
+                ul{
+                    // height: 30vh;
+                    li{
+                        margin-bottom: 2rem;
+                        h4{
+                            font-size: 1.4rem;
+                        }    
+                        p{
+                            font-size: 1.4rem;
+                            line-height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .apply{
+            a{
+                font-size: 1.4rem;
+                padding: 1rem 5rem;
+            }
+        }
+        .close{
+            right: 4rem;
+            top: 4rem;
+        }
+    }
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/ 
+@media all and (max-width:767px) {
+
+
+
+main{
+    .title{
+        padding: 6rem 0;
+        h2{
+            font-size: 4rem;
+        }
+    }
+
+    .list{
+        ul{
+            justify-content: flex-start;
+            gap: 0;
+            li{
+                width: 100%;
+                >div{
+                    h4{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}   
+
+
+.modal{
+    .box{
+        width: 90%;
+        height: 90%;
+        padding: 3rem;
+        border-radius: 2rem;
+        .content{
+            flex-direction: column;
+            gap: 2rem;
+            .img-wrap{
+                width: 100%;
+                height: 36%;
+            }
+            .text-wrap{
+                width: 100%;
+                height: 59%;
+                
+                h2{
+                    font-size: 2.4rem;
+                    margin-bottom: 1rem;
+                }
+                ul{
+                    // height: 30vh;
+                    li{
+                        margin-bottom: 2rem;
+                        h4{
+                            font-size: 1.4rem;
+                        }    
+                        p{
+                            font-size: 1.4rem;
+                            line-height: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .apply{
+            a{
+                font-size: 1.4rem;
+                padding: 1rem 5rem;
+            }
+        }
+        .close{
+            right: 2%;
+            top: 2%;
+            font-size: 3.4rem;
+        }
+    }
+}
+
+
+
+
+}
+

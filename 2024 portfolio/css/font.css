@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../fonts/PretendardVariable.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'MontserratB';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}

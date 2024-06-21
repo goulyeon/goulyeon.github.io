@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../scss/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+
+    <title>파인드투어 B2B</title>
+</head>
+<body>
+    <main class="detail">
+        <section class="center">
+            <div class="title">
+                <p>UI/UX design</p>
+                <h2>파인드투어 B2B 사이트 웹/앱디자인</h2>
+            </div>
+        </section>
+        <section class="center">
+            <div class="logo-wrap">
+                <div>
+                    <img src="../images/findtour_logo.png" alt="">
+                </div>
+                <div class="black">
+                    <img src="../images/findtour_logo_w.png" alt="">
+                </div>
+            </div>
+            <ul class="tab-menu">
+                <li class="tab-web active">Web</li>
+                <li class="tab-app">App</li>
+            </ul>
+            <div class="tab-con">
+                <div class="uiux on">
+                    <img src="../images/de7-2.png" alt="">
+                    <img src="../images/de7-3.png" alt="">
+                    <img src="../images/de7-4.png" alt="">
+                    <img src="../images/de7-5.png" alt="">
+                    <img src="../images/de7-6.png" alt="">
+                </div>
+                <div class="uiux app">
+                    <div class="left">
+                        <img src="../images/de7-11.png" alt="">
+                        <img src="../images/de7-44.png" alt="">
+                        <img src="../images/de7-55.png" alt="">
+
+                    </div>
+                    <div class="middle">
+                        <img src="../images/de7-22.png" alt="">
+                        <img src="../images/de7-88.png" alt="">
+                        <img src="../images/de7-1010.png" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="../images/de7-33.png" alt="">
+                        <img src="../images/de7-66.png" alt="">
+                        <img src="../images/de7-99.png" alt="">
+                        <img src="../images/de7-77.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>
+            COPYRIGHT ⓒ 2024 JEONG SEUNGYEON. ALL RIGHTS RESERVED.<br>
+            본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용으로 제작되었습니다.
+        </p>
+    </footer>
+    <script>
+        //detail 탭메뉴
+        $(".detail .tab-menu li").on('click', function() {
+            let index = $(".detail .tab-menu li").index(this);
+
+            $(".detail .tab-menu li").removeClass("active");
+            $(this).addClass("active");
+        
+            //모든 div의 on 클래스 제거
+            $('.detail .tab-con >div').removeClass('on');
+            //클릭된 index에 해당하는 div에 on 추가
+            $('.detail .tab-con >div:eq('+ index +')').addClass('on');
+        });
+    </script>
+</body>
+</html>

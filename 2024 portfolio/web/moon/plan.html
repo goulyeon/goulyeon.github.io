@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화공간 | 행사일정</title>
+    <!-- 폰트 본고딕 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="icon" href="img/favi.png">
+
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- 풀캘린더 -->
+    <script src="js/fullcalendar/main.min.js"></script>
+    <script src="js/fullcalendar/locales-all.min.js"></script>
+    <link rel="stylesheet" href="css/fullcalender/main.min.css">
+    
+
+    <!-- 데이트피커 -->
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ko.js"></script>
+    
+    <!-- 기본 -->
+    <link rel="stylesheet" href="css/plan.css">
+    <script src="js/plan.js"></script>
+    
+    <script>				
+
+		$(document).ready(function() {
+
+			//datepicker 한국어로 사용하기 위한 언어설정
+			$.datepicker.setDefaults($.datepicker.regional['ko']); 	
+		
+			// Datepicker			
+			$(".datepicker").datepicker({
+				showButtonPanel: true,
+				dateFormat: "yy-mm-dd",
+				onClose : function ( selectedDate ) {
+				
+					var eleId = $(this).attr("id");
+					var optionName = "";
+
+					if(eleId.indexOf("StartDate") > 0) {
+						eleId = eleId.replace("StartDate", "EndDate");
+						optionName = "minDate";
+					} else {
+						eleId = eleId.replace("EndDate", "StartDate");
+						optionName = "maxDate";
+					}
+
+					$("#"+eleId).datepicker( "option", optionName, selectedDate );		
+					$(".searchDate").find(".chkbox2").removeClass("on"); 
+				}
+			}); 
+
+
+			$(".dateclick").dateclick();	// DateClick
+			$(".searchDate").schDate();		// searchDate
+			
+		});
+
+		// Search Date
+		jQuery.fn.schDate = function(){
+			var $obj = $(this);
+			var $chk = $obj.find("input[type=radio]");
+			$chk.click(function(){				
+				$('input:not(:checked)').parent(".chkbox2").removeClass("on");
+				$('input:checked').parent(".chkbox2").addClass("on");					
+			});
+		};
+
+		// DateClick
+		jQuery.fn.dateclick = function(){
+			var $obj = $(this);
+			$obj.click(function(){
+				$(this).parent().find("input").focus();
+			});
+		}	
+
+		
+		function setSearchDate(start){
+
+			var num = start.substring(0,1);
+			var str = start.substring(1,2);
+
+			var today = new Date();
+
+			
+			var endDate = $.datepicker.formatDate('yy-mm-dd', today);
+			$('#searchEndDate').val(endDate);
+			
+			if(str == 'd'){
+				today.setDate(today.getDate() - num);
+			}else if (str == 'w'){
+				today.setDate(today.getDate() - (num*7));
+			}else if (str == 'm'){
+				today.setMonth(today.getMonth() - num);
+				today.setDate(today.getDate() + 1);
+			}
+
+			var startDate = $.datepicker.formatDate('yy-mm-dd', today);
+			$('#searchStartDate').val(startDate);
+					
+			// 종료일은 시작일 이전 날짜 선택하지 못하도록 비활성화
+			$("#searchEndDate").datepicker( "option", "minDate", startDate );
+			
+			// 시작일은 종료일 이후 날짜 선택하지 못하도록 비활성화
+			$("#searchStartDate").datepicker( "option", "maxDate", endDate );
+
+		}
+
+			
+    </script>
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="center pc">
+            <h1><a href="index.html"><img src="img/logo.png" alt="문화공간"></a></h1>
+            <ul>
+                <li><a href="#" onclick="return false;">행사일정</a></li>
+                <li><a href="#" onclick="return false;">시설안내</a></li>
+                <li><a href="#" onclick="return false;">이용안내</a></li>
+                <li><a href="#" onclick="return false;">홍보센터</a></li>
+                <li><a href="#" onclick="return false;">고객센터</a></li>
+            </ul>
+            <button>ORGANIZER</button>
+        </div>
+        <div class="center mo">
+            <h1><a href="index.html"><img src="img/logo.png" alt="문화공간"></a></h1>
+            <div class="menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <button>ORGANIZER</button>
+            <ul>
+                <li><a href="#" onclick="return false;">행사일정</a></li>
+                <li><a href="#" onclick="return false;">시설안내</a></li>
+                <li><a href="#" onclick="return false;">이용안내</a></li>
+                <li><a href="#" onclick="return false;">홍보센터</a></li>
+                <li><a href="#" onclick="return false;">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- visual -->
+    <div id="visual">
+        <h2>행사일정</h2>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+        <div class="con1">
+            <div class="center">
+                <a href="index.html"><img src="img/home.png" alt="홈버튼"></a>
+                <p>행사일정</p>
+            </div>
+        </div>
+        <div class="tab center">
+            <ul class="tabnav">
+                <li><a href="#tab1" class="active">캘린더 보기</a></li>
+                <li><a href="#tab2">리스트 보기</a></li>
+            </ul>
+            <ul class="tabcon">
+                <li id="tab1" class="tab-wrap">
+                    <div id='calendar'></div>
+                    <ul class="name">
+                        <li>
+                            <div class="co1"></div>
+                            <p>초승달 전시장</p>
+                        </li>
+                        <li>
+                            <div class="co2"></div>
+                            <p>상현달 전시장</p>
+                        </li>
+                        <li>
+                            <div class="co3"></div>
+                            <p>보름달 전시장</p>
+                        </li>
+                        <li>
+                            <div class="co4"></div>
+                            <p>하현달 전시장</p>
+                        </li>
+                        <li>
+                            <div class="co5"></div>
+                            <p>그믐달 전시장</p>
+                        </li>
+                    </ul>
+                </li>
+                <li id="tab2" class="tab-wrap">
+                    <div class="wrap">
+                        <div class="search">
+                            <div class="searchBox">
+                                <ul class="searchDate">
+                                    <li>
+                                        <span class="chkbox2">
+                                            <input type="radio" name="dateType" id="dateType1" onclick="setSearchDate('0d')"/>
+                                            <label for="dateType1">당일</label>
+                                        </span>
+                                    <li>
+                                        <span class="chkbox2">
+                                            <input type="radio" name="dateType" id="dateType5" onclick="setSearchDate('1m')"/>
+                                            <label for="dateType5">1개월</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="chkbox2">
+                                            <input type="radio" name="dateType" id="dateType6" onclick="setSearchDate('3m')"/>
+                                            <label for="dateType6">3개월</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="clearfix">
+                                    <!-- 시작일 -->
+                                    <span class="dset">
+                                        <input type="text" class="datepicker inpType" name="searchStartDate" id="searchStartDate">
+                                    </span>
+                                    <span class="demi">~</span>
+                                    <!-- 종료일 -->
+                                    <span class="dset">
+                                        <input type="text" class="datepicker inpType" name="searchEndDate" id="searchEndDate" >
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="wrap1">
+                                <form action>
+                                    <input type="text" placeholder="전시명으로 검색 가능합니다.">
+                                    <button>검색</button>
+                                </form>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <div class="img9 img"></div>
+                                <div class="text">
+                                    <h4>소멸을 두려워하는 태도</h4>
+                                    <p>그믐달 전시장</p>
+                                    <span>2021.08.28 ~ 2021.09.15</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img1 img"></div>
+                                <div class="text">
+                                    <h4>냥만적인 가을</h4>
+                                    <p>초승달 전시장</p>
+                                    <span>2021.08.31 ~ 2021.10.03</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img2 img"></div>
+                                <div class="text">
+                                    <h4>구름 그림자</h4>
+                                    <p>그믐달 전시장</p>
+                                    <span>2021.09.07 ~ 2021.10.04</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img7 img"></div>
+                                <div class="text">
+                                    <h4>3 to 80</h4>
+                                    <p>하현달 전시장</p>
+                                    <span>2021.09.09 ~ 2021.09.18</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img3 img"></div>
+                                <div class="text">
+                                    <h4>상상의 정원</h4>
+                                    <p>보름달 전시장</p>
+                                    <span>2021.09.10 ~ 2021.11.28</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img4 img"></div>
+                                <div class="text">
+                                    <h4>이지현 : Montage</h4>
+                                    <p>하현달 전시장</p>
+                                    <span>2021.09.17 ~ 2021.10.19</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img5 img"></div>
+                                <div class="text">
+                                    <h4>먼길 이야기</h4>
+                                    <p>보름달 전시장</p>
+                                    <span>2021.10.05 ~ 2021.11.19</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img8 img"></div>
+                                <div class="text">
+                                    <h4>2021 부천만화대상 특별전 <새로운 연결:다르게 바라보다></h4>
+                                    <p>초승달 전시장</p>
+                                    <span>2021.10.11 ~ 2021.10.31</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img6 img"></div>
+                                <div class="text">
+                                    <h4>나의 친애하는</h4>
+                                    <p>그믐달 전시장</p>
+                                    <span>2021.10.21 ~ 2021.11.14</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page">
+                        <button class="prev"><img src="img/pg_prev.png" alt="이전버튼"></button>
+                        <ul>
+                            <li class="on"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <button class="next"><img src="img/pg_next.png" alt="다음버튼"></button>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div class="center">
+            <h1><a href="index.html"><img src="img/logo_g.png" alt="문화공간"></a></h1>
+            <ul class="f_m">
+                <li><a href="#" onclick="return false;">개인정보처리방침</a></li>
+                <li><a href="#" onclick="return false;">이용약관</a></li>
+                <li><a href="#" onclick="return false;">이메일수신거부</a></li>
+                <li><a href="#" onclick="return false;">사이트맵</a></li>
+            </ul>
+            <ul class="f_t">
+                <li>인천광역시 부평구 가나다로 123번길 45-6</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+                <li>대표자 : 홍길동</li>
+                <li>이메일 : abcde123@moonplace.com</li>
+                <li>고객센터 : 070-123-4567</li>
+            </ul>
+            <ul class="sns">
+                <li><a href="#" onclick="return false;"><img src="img/sns1.png" alt="페이스북"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns2.png" alt="인스타"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns3.png" alt="유튜브"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns4.png" alt="트위터"></a></li>
+            </ul>
+            <p>Copyright © MOONPLACE All rights reserved.</p>
+        </div>
+    </div>
+    <aside>
+        <div class="top_bt">
+            <p>top</p>
+        </div>
+    </aside>
+
+
+
+
+</body>
+</html>

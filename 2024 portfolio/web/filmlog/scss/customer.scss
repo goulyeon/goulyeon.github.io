@@ -1,0 +1,333 @@
+main{
+    margin-top: 10rem;
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14rem 0;
+    
+        h2{
+            font-size: 6rem;
+        }
+    }
+
+    .cus-con{
+        .tab-menu{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+            gap: 3rem;
+            flex-wrap: wrap;
+
+            li{
+                width: 30%;
+                max-width: 16rem;
+                min-width: 12rem;
+                font-size: 1.8rem;
+                text-align: center;
+                cursor: pointer;
+                padding: 1.2rem 0;
+                border: 2px solid var(--point-color);
+                border-radius: 4rem;
+                font-weight: 600;
+                color: var(--point-color);
+                transition: .3s;
+
+                &:hover{
+                    background: var(--point-color);
+                    color: var(--background-color);
+                }
+
+                &.active{
+                    background: var(--point-color);
+                    color: var(--background-color);
+                }
+            }
+        }
+
+        .tab-con{
+            display: none;
+            
+            &.faq{
+                ul{
+                    width: 48%;
+    
+                    li{
+                        
+                        h4{
+                            &:hover{
+                                color: var(--point-color);
+                            }
+                            &.active{
+                                color: var(--point-color);
+                                span{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            font-size: 1.8rem;
+                            padding: 1.8rem 0;
+                            border-bottom: .2rem solid var(--point-color);
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            transition: .3s;
+                            font-weight: 600;
+    
+                            span{
+                                font-size: 3rem;
+                                transition: transform .3s;
+                            }
+                        }
+                        div{
+                            display: none;
+                            p{
+                                font-size: 1.6rem;
+                                background-color: #303030;
+                                padding: 3rem;
+                                border-bottom: 2px solid var(--point-color);
+                            }
+                        }
+                    }
+                }
+                .img-box{
+                    width: 48%;
+                }
+            }
+            
+        }
+        .faq.on{
+            display: flex;
+            gap: 4%;
+        }
+        .map.on{
+            display: flex;
+            gap: 4%;
+
+            .info{
+                position: relative;
+
+                h4{
+                    font-size: 2.4rem;
+                    margin-bottom: 1rem;
+                }
+
+                ul{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.6rem;
+                        gap: 1rem;
+                        padding: 1rem 0;
+                        span{
+                            color: var(--point-color);
+                        }
+                    }
+                }
+
+                a{
+                    position: absolute;
+                    display: flex;
+                    gap: .8rem;
+                    font-size: 1.6rem;
+                    border-bottom: .2rem solid var(--point-color);
+                    padding: 1rem 0;
+                    left: 0;
+                    bottom: 0;
+                    transition: color .3s;
+                    &:hover{
+                        color: var(--point-color);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+//----------------------------------------------------------------------미디어쿼리
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/ 
+@media all and (min-width:1024px) and (max-width:1400px) { 
+
+main{
+    .title{
+        padding: 12rem 0;
+    }
+
+    .cus-con{
+
+        .tab-con{
+            &.faq{
+                ul{
+                    width: 58%;
+                }
+                .img-box{
+                    width: 38%;
+                }
+            }
+        }
+
+        .faq{
+            
+            &.on{
+                gap: 3%;
+            }
+        }
+
+        .map.on{
+            gap: 3%;
+        }
+    }
+}
+
+
+}//끝
+
+
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) { 
+
+main{
+    .title{
+        padding: 10rem 0;
+        h2{
+            font-size: 5rem;
+        }
+    }
+
+    .cus-con{
+        .tab-menu{
+            margin-bottom: 6rem;
+        }
+        .tab-con{
+            &.faq{
+                ul{
+                    width: 100%;
+                }
+                .img-box{
+                    display: none;
+                }
+            }
+        }
+        .map{
+            &.on{
+                display: block;
+                iframe{
+                    width: 100%;
+                }
+                .info{
+                    margin-top: 4rem;
+                    h4{
+                        font-size: 2.2rem;
+                    }
+                    a{
+                        position: relative;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+}//끝
+
+
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/ 
+@media all and (max-width:767px) {
+
+main{
+    .title{
+        padding: 6rem 0;
+        h2{
+            font-size: 4rem;
+        }
+    }
+
+    .cus-con{
+        .tab-menu{
+            margin-bottom: 4rem;
+            gap: 1rem;
+            li{
+                font-size: 1.6rem;
+            }
+        }
+        .tab-con{
+            &.faq{
+                ul{
+                    width: 100%;
+                    li{
+                        h4{
+                            font-size: 1.6rem;
+                            padding: 1.4rem 0;
+                        }
+                        div{
+                            p{
+                                padding: 2rem;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+                .img-box{
+                    display: none;
+                }
+            }
+            &.map{
+                &.on{
+                    display: block;
+                    iframe{
+                        width: 100%;
+                        height: 40rem;
+                    }
+                    .info{
+                        margin-top: 4rem;
+                        h4{
+                            font-size: 2rem;
+                        }
+                        ul{
+                            li{
+                                font-size: 1.4rem;
+                                padding: 0.5rem 0;
+                                span{
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        a{
+                            position: relative;
+                            margin-top: 1rem;
+                            font-size: 1.4rem;
+                            span{
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+
+
+    
+}
+
+
+
+
+
+}//끝
+
+
+

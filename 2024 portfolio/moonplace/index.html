@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화공간</title>
+    <!-- 슬라이더 css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 나타나기 css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 기본 css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 슬라이더 js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!-- 나타나기 js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 기본 js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="icon" href="img/favi.png">
+</head>
+<body>
+    <script>
+        AOS.init();
+      </script>
+    <!-- header -->
+    <div id="header">
+        <div class="center pc">
+            <h1><a href="index.html"><img src="img/logo.png" alt="문화공간"></a></h1>
+            <ul>
+                <li><a href="plan.html">행사일정</a></li>
+                <li><a href="#" onclick="return false;">시설안내</a></li>
+                <li><a href="#" onclick="return false;">이용안내</a></li>
+                <li><a href="#" onclick="return false;">홍보센터</a></li>
+                <li><a href="#" onclick="return false;">고객센터</a></li>
+            </ul>
+            <button>ORGANIZER</button>
+        </div>
+        <div class="center mo">
+            <h1><a href="index.html"><img src="img/logo.png" alt="문화공간"></a></h1>
+            <div class="menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <button>ORGANIZER</button>
+            <ul>
+                <li><a href="plan.html">행사일정</a></li>
+                <li><a href="#" onclick="return false;">시설안내</a></li>
+                <li><a href="#" onclick="return false;">이용안내</a></li>
+                <li><a href="#" onclick="return false;">홍보센터</a></li>
+                <li><a href="#" onclick="return false;">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- visual -->
+    <div id="visual">
+        <ul>
+            <li class="main1"></li>
+            <li class="main2"></li>
+            <li class="main3"></li>
+        </ul>
+        <div>
+            <p>
+            <span>문화공간</span>으로<br>
+            여러분을 초대합니다.
+            </p>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+        <!-- 일정안내 -->
+        <div class="center plan" data-aos="fade-up" data-aos-duration="1000">
+            <div class="title">
+                <h2>일정안내</h2>
+                <p>문화공간의 행사를 안내합니다.</p>
+                <div>
+                    <a href="plan.html">
+                        <span>전체보기</span>
+                        <img src="img/plus.png" alt="플러스">
+                    </a>
+                </div>
+            </div>
+            <div class="wrap swiper mySwiper">
+                <ul class="swiper-wrapper">
+                    <li class="list1 swiper-slide">
+                        <div class="text">
+                            <h4>장준석 : IMAGE SCULPTURE</h4>
+                            <p>2021.07.15 ~ 2021.08.25</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list2 swiper-slide">
+                        <div class="text">
+                            <h4>모호 MOHO : MOONASSI</h4>
+                            <p>2021.06.26 ~ 2021.08.22</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list3 swiper-slide">
+                        <div class="text">
+                            <h4>권철화 : touch</h4>
+                            <p>2021.06.10 ~ 2021.08.29</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list4 swiper-slide">
+                        <div class="text">
+                            <h4>GROUP-TALK</h4>
+                            <p>2021.07.16 ~ 2021.08.16</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list5 swiper-slide">
+                        <div class="text">
+                            <h4>13번째 망설임</h4>
+                            <p>2021.04.13 ~ 2022.03.27</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list6 swiper-slide">
+                        <div class="text">
+                            <h4>EMERGING ARTIST with SHINSEGAE</h4>
+                            <p>2021.07.20 ~ 2021.08.22</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list7 swiper-slide">
+                        <div class="text">
+                            <h4>Flex Art</h4>
+                            <p>2021.07.30 ~ 2021.08.29</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                    <li class="list8 swiper-slide">
+                        <div class="text">
+                            <h4>임종국 : The special moment</h4>
+                            <p>2021.07.21 ~ 2021.09.14</p>
+                            <button>자세히 보기</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-pagination page"></div>
+            </div>
+        </div>
+        <!-- 시설안내 -->
+        <div class="info" data-aos="fade-up" data-aos-duration="1000">
+            <div class="center">
+                <div class="title">
+                    <h2>시설안내</h2>
+                    <p>문화공간의 시설을 안내합니다.</p>
+                </div>
+                <ul class="name">
+                    <li class="on">
+                        <div class="bar"></div>
+                        <p>전시홀</p>
+                    </li>
+                    <li>
+                        <div class="bar"></div>
+                        <p>회의실</p>
+                    </li>
+                    <li>
+                        <div class="bar"></div>
+                        <p>식음시설</p>
+                    </li>
+                    <li>
+                        <div class="bar"></div>
+                        <p>지원시설</p>
+                    </li>
+                </ul>
+                <div class="box">
+                    <ul>
+                        <li class="on">
+                            <h4>Exhibition Halls</h4>
+                            <h3>전시홀</h3>
+                            <div class="bar"></div>
+                            <p>
+                                문화공간의 전시장은 전시를 위한 최적의 공간입니다.
+                                다양한 스토리를 담은 작품을 즐기고 공유할 수 있는 공간을 
+                                통해 작가와 관객이 교류할 수 있으며 최신의 설비로 최적의 시설과 서비스를 제공합니다.
+                            </p>
+                            <div class="more"><a href="#" onclick="return false;">
+                                <span>더보기</span>
+                                <img src="img/plus.png" alt="더보기">
+                            </a></div>
+                        </li>
+                        <li>
+                            <h4>Conference Room</h4>
+                            <h3>회의실</h3>
+                            <div class="bar"></div>
+                            <p>
+                                문화공간의 회의실은 다양한 규모로 분할 또는 통합이 가능하여 
+                                원하는 규모의 행사 개최가 가능합니다. 용도별로 강의식, 
+                                극장식, 리셉션 등 다양한 행사를 개최할 수 있습니다.
+                            </p>
+                            <div class="more"><a href="#" onclick="return false;">
+                                <span>더보기</span>
+                                <img src="img/plus.png" alt="더보기">
+                            </a></div>
+                        </li>
+                        <li>
+                            <h4>F&B</h4>
+                            <h3>식음시설</h3>
+                            <div class="bar"></div>
+                            <p>
+                                문화공간의 식음시설은 전문 레스토랑과 스낵, 디저트&카페를 
+                                보유하고 있어 다양한 메뉴를 이용하실 수 있습니다. 또한
+                                대형 푸드코트와 다수의 편의점 등을 보유하고 있습니다.
+                            </p>
+                            <div class="more"><a href="#" onclick="return false;">
+                                <span>더보기</span>
+                                <img src="img/plus.png" alt="더보기">
+                            </a></div>
+                        </li>
+                        <li>
+                            <h4>Support</h4>
+                            <h3>지원시설</h3>
+                            <div class="bar"></div>
+                            <p>
+                                문화공간은 의무실, 수유실 등 방문객들이 더욱 편리하게 
+                                이용할 수 있도록 지원시설을 운영하고 있습니다. 또한, 
+                                인천시 지역 홍보관을 운영하며 다양한 볼거리를 
+                                제공하고 있습니다.
+                            </p>
+                            <div class="more"><a href="#" onclick="return false;">
+                                <span>더보기</span>
+                                <img src="img/plus.png" alt="더보기">
+                            </a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg">
+                <ul>
+                    <li id="bg1"></li>
+                    <li id="bg2"></li>
+                    <li id="bg3"></li>
+                    <li id="bg4"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 행사갤러리 -->
+        <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
+            <div class="center">
+                <div class="title">
+                    <h2>행사갤러리</h2>
+                    <p>문화공간의 행사사진을 보여드립니다.</p>
+                    <div>
+                        <a href="#" onclick="return false;">
+                            <span>전체보기</span>
+                            <img src="img/plus.png" alt="플러스">
+                        </a>
+                    </div>
+                </div>
+                <ul class="tab_menu">
+                    <li class="on">8월</li>
+                    <li>7월</li>
+                    <li>6월</li>
+                    <li>5월</li>
+                </ul>
+                <div class="wrap">
+                    <div id="tab1" class="box on">
+                        <ul>
+                            <li style="background: url(img/g1.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g2.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g3.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g4.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g5.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g6.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g7.JPG) no-repeat center; background-size: cover;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g8.JPG) no-repeat center; background-size: cover;;">
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab2" class="box">
+                        <ul>
+                            <li style="background: url(img/g9.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g10.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g11.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g12.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab3" class="box">
+                        <ul>
+                            <li style="background: url(img/g13.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g14.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g15.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab4" class="box">
+                        <ul>
+                            <li style="background: url(img/g16.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g17.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                            <li style="background: url(img/g18.JPG) center; background-size: cover;;">                                
+                                <div class="bb">
+                                    <img src="img/plus_w.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 이용안내 -->
+        <div class="about" data-aos="fade-up" data-aos-duration="1000">
+            <div class="center">
+                <div class="title">
+                    <h2>이용안내</h2>
+                    <p>문화공간을 더욱 편리하게 이용하세요.</p>
+                </div>
+                <div class="wrap">
+                    <ul>
+                        <li class="a1"
+                        data-aos="fade-up" data-aos-easing="linear" 
+                        data-aos-duration="500" data-aos-delay="0">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <img src="img/a1_ic.png" alt="확성기아이콘">
+                                    <p>공지사항</p>
+                                </div>
+                                <div class="in"></div>
+
+                            </a>
+                        </li>
+                        <li class="a2"
+                        data-aos="fade-up" data-aos-easing="linear" 
+                        data-aos-duration="500" data-aos-delay="250">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <img src="img/a2_ic.png" alt="지도아이콘">
+                                    <p>오시는길</p>
+                                </div>
+                                <div class="in"></div>
+                            </a>
+                        </li>
+                        <li class="a3"
+                        data-aos="fade-up" data-aos-easing="linear" 
+                        data-aos-duration="500" data-aos-delay="500">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <img src="img/a3_ic.png" alt="자동차아이콘">
+                                    <p>주차안내</p>
+                                </div>
+                                <div class="in"></div>
+                            </a>
+                        </li>
+                        <li class="a4"
+                        data-aos="fade-up" data-aos-easing="linear" 
+                        data-aos-duration="500" data-aos-delay="750">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <img src="img/a4_ic.png" alt="상담원아이콘">
+                                    <p>고객센터</p>
+                                </div>
+                                <div class="in"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 이용안내 - 모바일 -->
+        <div class="about_m" data-aos="fade-up" data-aos-duration="1000">
+            <div class="center">
+                <div class="title">
+                    <h2>이용안내</h2>
+                    <p>문화공간을 더욱 편리하게 이용하세요.</p>
+                </div>
+                <div class="wrap">
+                    <ul>
+                        <li class="a1">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <h4>공지사항</h4>
+                                    <p>문화공간의 공지사항을 안내합니다.</p>
+                                    <img src="img/a1_icm.png" alt="확성기아이콘">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="a2">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <h4>오시는길</h4>
+                                    <p>빠르고 편리한 길을 안내합니다.</p>
+                                    <img src="img/a2_icm.png" alt="지도아이콘">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="a3">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <h4>주차안내</h4>
+                                    <p>실시간 주차상황을 확인할 수 있습니다.</p>
+                                    <img src="img/a3_icm.png" alt="자동차아이콘">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="a4">
+                            <a href="#" onclick="return false;">
+                                <div class="con">
+                                    <h4>고객센터</h4>
+                                    <p>고객센터를 통해 궁금증을 해결하세요.</p>
+                                    <img src="img/a4_icm.png" alt="상담원아이콘">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- footer -->
+    <div id="footer">
+        <div class="center">
+            <h1><a href="index.html"><img src="img/logo_g.png" alt="문화공간"></a></h1>
+            <ul class="f_m">
+                <li><a href="#" onclick="return false;">개인정보처리방침</a></li>
+                <li><a href="#" onclick="return false;">이용약관</a></li>
+                <li><a href="#" onclick="return false;">이메일수신거부</a></li>
+                <li><a href="#" onclick="return false;">사이트맵</a></li>
+            </ul>
+            <ul class="f_t">
+                <li>인천광역시 부평구 가나다로 123번길 45-6</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+                <li>대표자 : 홍길동</li>
+                <li>이메일 : abcde123@moonplace.com</li>
+                <li>고객센터 : 070-123-4567</li>
+            </ul>
+            <ul class="sns">
+                <li><a href="#" onclick="return false;"><img src="img/sns1.png" alt="페이스북"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns2.png" alt="인스타"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns3.png" alt="유튜브"></a></li>
+                <li><a href="#" onclick="return false;"><img src="img/sns4.png" alt="트위터"></a></li>
+            </ul>
+            <p>Copyright © MOONPLACE All rights reserved.</p>
+        </div>
+    </div>
+    <aside>
+        <div class="top_bt">
+            <p>top</p>
+        </div>
+    </aside>
+</body>
+</html>

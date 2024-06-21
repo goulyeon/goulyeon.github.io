@@ -1,0 +1,653 @@
+*{margin: 0; padding: 0;}
+body{
+    font-family: 'Noto Sans KR', sans-serif; 
+    padding: 0; color: #222; position: relative;
+}
+li{list-style: none;}
+a{text-decoration: none; color: #222;}
+button{background: none; border: 0; outline: none;}
+label, span{display: inline-block;}
+.center{
+    width: 90%; 
+    max-width: 1120px; 
+    margin: auto; position: relative;
+}
+/* pc */
+.mo{display: none;}
+
+/* ---------------- header ---------------- */
+header{
+    padding: 10px 0; position: relative; 
+    display: flex; 
+    justify-content: space-between;
+}
+header h1{display: inline-block;}
+header img{width: 140px; display: block;}
+
+header .pc .gnb{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/* 1 depth */
+header .pc .gnb .depth-1{position: relative; padding: 0 20px;}
+header .pc .gnb .depth-1:last-child{padding-right: 0;}
+header .pc .gnb .depth-1 p{
+    font-size: 18px; display: block;
+    padding: 18px 0; cursor: default;
+}
+header .pc .gnb .depth-1:hover>a{color: #F2BEB0;}
+header .pc .gnb .depth-1:hover .depth-2{display: block; transition: 1s;}
+header .pc .gnb .depth-1 .depth-2{
+    display: none;
+    position: absolute; z-index: 2;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
+    top: 60px; left: 50%; transform: translateX(-50%);
+    width: 100%;
+    padding: 14px;
+}
+/* 2 depth */
+header .pc .gnb .depth-1 .depth-2 li{padding: 10px 0;}
+header .pc .gnb .depth-1 .depth-2 li a{
+    display: block; text-align: center;
+    color: #777;
+}
+header .pc .gnb .depth-1 .depth-2 li:hover{ box-sizing: border-box;}
+header .pc .gnb .depth-1 .depth-2 li:hover a{border-bottom: 1px solid #F2BEB0;}
+
+/* ---------------- section ---------------- */
+/* 메인슬라이드 */
+.main-slide{height: 700px;}
+.main-slide .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.main-slide .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.main-slide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-slide .swiper-slide img.mo{display: none;}
+.main-slide .swiper-pagination-bullet{
+    width: 12px; height: 12px; opacity: 1;
+    background: #ccc;
+}
+.main-slide .swiper-pagination-bullet-active{
+    width: 40px; background: #94695D;
+    border-radius: 6px;
+}
+
+/* 메뉴 */
+.menu{position: relative; margin-top: 160px;}
+.menu h3{
+    text-align: center; font-size: 34px; 
+    color: #222; margin-bottom: 50px;
+    cursor: default;
+}
+.menu h3 span{position: relative;}
+.menu h3 span::after{
+    content:""; width: 100%; height: 50%;
+    display: inline-block; background: #F2BEB0;
+    position: absolute; bottom:0; left:0; z-index:-1;
+}
+
+.menu .Swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.menu .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+.menu ul li div{overflow: hidden;}
+.menu ul li img{
+    display: block; background: #eee;
+    width: 100%; transition: all 0.3s;
+}
+
+.menu ul li p{
+    margin-top: 20px; font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu ul li:hover img{transform: scale(1.1);}
+.menu ul li:hover p{color: #94695D;}
+
+.menu .swiper-pagination{
+    right: 0; top: 30px; width: auto; 
+    bottom: auto; left: auto;
+}
+.menu .swiper-pagination-bullet{
+    width: 12px; height: 12px;
+    background: #ccc; opacity: 1;
+}
+.menu .swiper-pagination-bullet-active{
+    width: 40px; background: #94695D;
+    border-radius: 6px;
+}
+
+/* 픽 */
+.pick{
+    margin-top: 160px; padding: 100px 0;
+    background: url(../img/pick_bg.jpeg) no-repeat fixed ;
+    background-size: cover; 
+    background-position: 0 center;
+}
+.pick .center{display: flex;}
+.pick .center::after{content: ''; clear: both; display: block;}
+.pick .left{
+    width: 45%; margin-right: 5%;
+    display: inline-block; 
+    /* float: left; */
+    text-align: right; color: #fff;
+    cursor: default;
+}
+.pick .left h2{font-size: 100px; letter-spacing: 10px; line-height: 90px;}
+.pick .left h3{font-size: 58px; letter-spacing: 4px; margin-bottom: 20px;}
+.pick .left p{font-size: 20px; margin-bottom:10px;}
+.pick .left span{font-size:14px; display: block; line-height: 24px;}
+.pick .left .button{
+    margin-top: 50px; border: 1px solid #fff; 
+    display: inline-block; cursor: pointer;
+    padding: 10px 30px; border-radius: 6px;
+    transition: 0.3s;
+}
+.pick .left .button:hover{
+    background: #fff; color: #222;
+}
+
+.pick .right{
+    display: inline-block; 
+    /* float: left; */
+    width: 50%;
+}
+
+.pick .right .swiper {
+    width: 340px;
+    height: 454px;
+}
+.pick .right .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.pick .right ul .card1{
+    background: url(../img/card1.jpg) no-repeat;
+    background-size: 100%;
+}
+.pick .right ul .card2{
+    background: url(../img/card2.jpg) no-repeat;
+    background-size: 100%;
+}
+.pick .right ul .card3{
+    background: url(../img/card3.jpg) no-repeat;
+    background-size: 100%;
+}
+
+
+/* 브랜드 */
+.brand{margin-top: 160px;}
+.brand .daldal{text-align: center; margin-bottom: 60px;}
+.brand .daldal img{width: 80px;}
+.brand .daldal p{color: #94695D; margin-top: 10px; font-weight: 600;}
+
+.brand .wrap.pc{width: 84%; margin: 0 auto;}
+.brand .wrap.pc::after{clear: both; content: ''; display: block;}
+.brand .wrap.pc>div{
+    width:50%; float: left; padding-bottom:50%; 
+    position:relative;
+}
+
+.brand .wrap.pc .img1{
+    background: url(../img/brand1.gif) no-repeat center; background-size: cover;
+}
+.brand .wrap.pc .img2{
+    background: url(../img/brand2.gif) no-repeat center; background-size: cover;
+}
+
+.brand .wrap.pc .text{
+    width:50%; margin:0 auto; padding-bottom:50%; 
+    position:relative; background: #fff;
+}
+.brand .wrap.pc .text>div{
+    position:absolute; font-size:15px; width: 80%;
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+
+}
+.brand .wrap.pc .text h3{font-weight: 400; font-size: 30px;}
+.brand .wrap.pc .text .bar{
+    border-bottom: 3px solid #F2BEB0;
+    width: 30px; margin: 20px 0;
+    display: inline-block;
+}
+.brand .wrap.pc .text p{font-size: 14px; margin-bottom: 40px;}
+.brand .wrap.pc .text a{
+    padding: 8px 20px; background: #94695D;
+    display: inline-block; color: #fff;
+    border-radius: 6px; font-size: 14px;
+}
+
+.brand .wrap.pc .text2{text-align: right;}
+
+/* 중간 배경 */
+.p-bg{position: relative;}
+.p-bg div{
+    background: #F2BEB0; z-index: -1;
+    width: 100%; height: 540px; position: absolute;
+    top: -150px;
+}
+
+/* 뉴스 */
+.news{margin-top: 160px;}
+.news .wrap{display: flex;}
+.news .wrap>li{margin-right: 10px;}
+.news .wrap .box1{
+    width: 30%;
+    background: url(../img/box_bg.jpg) no-repeat center center;
+    background-size: cover; 
+    box-sizing: border-box; padding: 30px;
+}
+.news .wrap .box1 a{color: #fff;}
+.news .wrap .box1 h3{font-size: 22px;}
+.news .wrap .box1 .bar{
+    background: #fff; width: 30px; height: 1px;
+    margin: 20px 0;
+}
+.news .wrap .box1 p{font-size: 14px;}
+
+.news .wrap .box2{
+    width: 30%; 
+    background: #94695D;
+    box-sizing: border-box; padding: 30px;
+    color: #fff;
+}
+.news .wrap .box2 h3{font-size: 22px;}
+.news .wrap .box2 .bar{
+    background: #fff; width: 30px; height: 1px;
+    margin: 20px 0;
+}
+.news .wrap .box2 p{font-size: 14px; margin-bottom: 40px;}
+.news .wrap .box2 form{position: relative;}
+.news .wrap .box2 form input{
+    background: none; padding: 6px 40px 6px 10px;
+    color: #fff; box-sizing: border-box;
+    height: 36px; width: 100%;
+    border: 1px solid #fff; display: block;
+}
+.news .wrap .box2 form input::placeholder{color: #fff;}
+.news .wrap .box2 form button{
+    width: 30px; position: absolute; cursor: pointer;
+    right: 10px; top: 50%; transform: translateY(-50%);
+}
+.news .wrap .box2 form button img{display: block; width: 100%;}
+
+
+.news .wrap .box3{
+    width: 40%; 
+    margin-right: 0;
+}
+.news .wrap .box3 .top{
+    height: 180px; position: relative;
+    margin-top: 10px; margin-left: 10px;
+}
+.news .wrap .box3 .top h3{font-size: 22px; margin-bottom: 20px;}
+.news .wrap .box3 .top .more{
+    color: #666;position: absolute;
+    font-size: 14px; right: 0; top: 0;
+}
+.news .wrap .box3 .top ul li{
+    position: relative; line-height: 30px;
+}
+.news .wrap .box3 .top ul li a{
+    width: 80%; display: block;
+    color: #444;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+
+}
+.news .wrap .box3 .top ul li span{
+    position: absolute; top: 50%; transform: translateY(-50%);
+    right: 0; font-size: 12px; color: #777;
+}
+
+.news .wrap .box3 .bottom{
+    height: 120px; position: relative;
+    background: #fbe7d2;
+    cursor: pointer; padding: 30px; box-sizing: border-box;
+}
+.news .wrap .box3 .bottom h3{
+    position: absolute; color: #94695D;
+    top: 50%; transform: translateY(-50%);
+    font-size: 24px;
+    
+}
+.news .wrap .box3 .bottom img{
+    width: 150px;
+    position: absolute; right: 0; bottom: 0;
+}
+
+/* sns */
+.sns{margin-top: 160px;}
+.sns h3{
+    text-align: center; font-size: 34px; 
+    color: #222; margin-bottom: 50px;
+    cursor: default;
+}
+.sns h3 span{position: relative;}
+.sns h3 span::after{
+    content:""; width: 100%; height: 50%;
+    display: inline-block; background: #F2BEB0;
+    position: absolute; bottom:0; left:0; z-index:-1;
+}
+.sns ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.sns ul li{
+    width: 100%;
+    max-width: 25%;
+}
+.sns ul li a img{width: 100%; height: 100%; display: block;}
+
+
+
+
+/* ---------------- footer ---------------- */
+footer{
+    margin-top: 160px;
+    background: #eee;
+    padding: 60px 0;
+    color: #666;
+    font-size: 15px;
+}
+footer .wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+footer .wrap .number strong{
+    font-size: 28px;
+    color: #94695D;
+}
+
+footer .wrap .ft-menu ul{
+    display: flex;
+}
+footer .wrap .ft-menu ul li{
+    /* box-sizing: border-box; */
+    padding: 6px 0; 
+}
+footer .wrap .ft-menu ul li a{
+    color: #666; padding: 0 14px;
+    border-right: 2px solid #ccc;
+}
+footer .wrap .ft-menu ul .no_b{border-right: none;}
+
+footer .wrap .follow p{margin-bottom: 8px;}
+footer .wrap .follow ul{
+    display: flex;
+}
+footer .wrap .follow ul li{margin-right: 10px;}
+
+footer .text{
+    margin-top: 60px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+footer .text span{margin-top: 10px;}
+
+/* ---------------- aside ---------------- */
+/* 위로가기 */
+aside .top-bt{
+    position: fixed;
+    cursor: pointer;
+    right: 10px; bottom: 10px;
+    z-index: 10;
+    display: none;
+}
+aside .top-bt img{width: 36px;}
+
+
+/* ---------------------------- 미디어쿼리 - mo ----------------------- */
+@media (max-width: 767px){
+.pc{display: none;}
+.mo{display: block;}
+.center{width: 92%;}
+
+
+/* ---------------- header ---------------- */
+header h1 img{width: 120px;}
+header .mo .bar{cursor: pointer;}
+header .mo .bar img{width: 40px; padding: 6px 0;}
+header .mo .open{
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; right: -100%; z-index: 11;
+    display: flex;
+    justify-content: flex-end;
+}
+header .mo .open-bg{
+    width: 100%; height: 100%;
+    position: fixed; top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+header .mo .open .close{
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-right: 10px;
+    z-index: 20;
+    cursor: pointer;
+}
+header .mo .open .close img{width: 40px;}
+header .mo .open .gnb{
+    width: 70%;
+    background: #fff;
+    box-sizing: border-box; padding: 0 20px;
+    overflow-y: auto;
+    z-index: 20;
+}
+header .mo .open .gnb .depth-1{
+    position: relative;
+    margin: 20px 0;
+}
+header .mo .open .gnb .depth-1 .name-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+header .mo .open .gnb .depth-1 .name-wrap p{
+    font-size: 20px; font-weight: 600;
+    display: block; padding: 10px 0;
+}
+header .mo .open .gnb .depth-1 .name-wrap img{
+    width: 24px; height: 24px;
+    cursor: pointer;
+}
+header .mo .open .gnb .depth-1 .depth-2{
+    display: none;
+}
+header .mo .open .gnb .depth-1 .depth-2 li a{
+    font-size: 16px; display: block;
+    padding: 10px 0;
+}
+/* depth-1에 on 붙었을 때 */
+header .mo .open .gnb .depth-1.on .name-wrap{
+    border-bottom: 2px solid #F2BEB0;
+}
+header .mo .open .gnb .depth-1.on .name-wrap p{
+    color: #F2BEB0;
+}
+
+/* 메인슬라이드 */
+.main-slide{height: auto;}
+.main-slide .swiper-slide img.mo{display: block;}
+.main-slide .swiper-slide img.pc{display: none;}
+
+
+/* 메뉴 */
+.menu{margin-top: 100px;}
+.menu h3{font-size: 26px;}
+.menu .swiper-pagination{
+    position: relative; margin-top: 26px;
+    right: auto;
+    top: auto;
+    width: auto;
+    bottom: auto;
+    left: auto;
+}
+.menu ul li p{font-size: 15px;}
+
+
+/* 픽 */
+.pick{margin-top: 100px;}
+.pick .center{
+    display: block;
+}
+.pick .left{
+    width: 100%;
+    margin-right: 0;
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.pick .left h2{
+    font-size: 84px;
+    letter-spacing: 8px;
+    line-height: 76px;
+}
+.pick .left h3{font-size: 46px;}
+.pick .left .button{padding: 10px 20px; font-size: 14px; margin-top: 30px;}
+.pick .right{
+    width: 100%; height: 0;
+    position: relative;
+    padding-bottom: 86%;
+}
+.pick .right .swiper{
+    width: 64%; height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%; transform: translateX(-50%);
+}
+
+/* 브랜드 */
+.brand{margin-top: 100px;}
+.brand .wrap.mo .img1{
+    background: url(../img/brand1.gif) center;
+    background-size: cover;
+    width: 100%; padding-bottom: 100%;
+}
+
+.brand .wrap.mo .img2{
+    background: url(../img/brand2.gif) center;
+    background-size: cover;
+    width: 100%; padding-bottom: 100%;
+}
+
+.brand .wrap.mo .text{
+    padding: 30px 14px;
+    background: #fff;
+}
+.brand .wrap.mo .text h3{font-size: 26px;}
+.brand .wrap.mo .text .bar{
+    border-bottom: 3px solid #F2BEB0;
+    width: 40px;
+    margin: 14px 0;
+    display: inline-block;
+}
+.brand .wrap.mo .text p{font-size: 13px;}
+.brand .wrap.mo .text a{
+    padding: 6px 14px;
+    background: #94695D;
+    display: inline-block;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.brand .wrap.mo .text2{text-align: right;}
+
+
+
+.p-bg div{height: 400px; top: -100px;}
+
+
+/* 카드섹션 */
+.news{
+    margin-top: 100px;
+    /* background: #F2BEB0;  */
+    width: 100%; 
+    padding: 4% 4%; box-sizing: border-box;
+}
+.news .wrap{
+    flex-wrap: wrap;
+}
+.news .wrap>li{margin-right: 0;}
+.news .wrap .box1{margin-right: 2%;}
+.news .wrap .box1, .news .wrap .box2{
+    width: 49%; padding: 5%;
+}
+.news .wrap .box3{width: 100%;}
+.news .wrap .box3 .top{margin: 0; height: auto; padding: 20px 0;}
+.news .wrap .box3 .top .more{top: 20px;}
+.news .wrap .box3 .bottom{margin-top: 2%; padding: 5%;}
+.news .wrap .box3 .bottom img{width: 140px;}
+
+.news .wrap .box1 h3, .news .wrap .box2 h3,
+.news .wrap .box3 .top h3, .news .wrap .box3 .bottom h3{
+    font-size: 18px;
+}
+.news .wrap .box1 p,.news .wrap .box2 p{font-size: 13px;}
+.news .wrap .box3 .top ul li a{font-size: 14px;}
+.news .wrap .box2 form input{font-size: 10px;}
+
+
+.sns{margin-top: 100px;}
+.sns h3{font-size: 30px;}
+.sns ul li{max-width: 33.333%;}
+.sns ul li:nth-child(7), .sns ul li:nth-child(8){display: none;}
+
+
+footer .wrap{display: block;}
+footer .wrap .number{text-align: center; margin-bottom: 20px;}
+footer .wrap .number p{font-size: 14px;}
+footer .wrap .number strong{font-size: 24px;}
+footer .wrap .ft-menu ul{justify-content: center;}
+
+footer .wrap .ft-menu{margin-bottom: 20px;}
+footer .wrap .ft-menu ul.pc{display: none;}
+footer .wrap .ft-menu ul li a{font-size: 12px; padding: 0 5px;}
+
+footer .wrap .follow{text-align: center;}
+footer .wrap .follow ul{justify-content: center;}
+footer .wrap .follow ul li{margin: 0 5px; width: 32px;}
+footer .wrap .follow ul li img{width: 100%; display: block;}
+
+footer .text{margin-top: 40px; font-size: 10px;}
+
+
+
+
+
+
+}
