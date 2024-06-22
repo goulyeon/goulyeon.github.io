@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   font-size: 62.5%;
   --font: "Pretendard", sans-serif;
@@ -117,6 +118,9 @@ header {
 }
 header.active .center nav ul li {
   color: var(--navy-color);
+}
+header .menu-mo {
+  display: none;
 }
 header .center {
   position: relative;
@@ -251,13 +255,13 @@ main .home .scroll-downs .mousey .scroller {
 main .about {
   display: flex;
   padding-top: 20rem;
+  gap: 6%;
 }
 main .about img {
-  width: 48%;
+  width: 44%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   flex-grow: 1;
-  padding-right: 5rem;
 }
 main .about .info-wrap {
   font-size: 1.6rem;
@@ -325,41 +329,55 @@ main .portfolio .web-wrap {
 }
 main .portfolio .web-wrap ul li {
   display: flex;
+  gap: 4%;
+  align-items: center;
 }
-main .portfolio .web-wrap ul li img {
+main .portfolio .web-wrap ul li .left {
   width: 60%;
-  height: 40rem;
+  height: 0;
+  padding-bottom: 34%;
   border-radius: 1rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-right: 4rem;
 }
-main .portfolio .web-wrap ul li div {
+main .portfolio .web-wrap ul li .left.web1 {
+  background: url(../../images/filmlog_main.png) no-repeat center;
+  background-size: cover;
+}
+main .portfolio .web-wrap ul li .left.web2 {
+  background: url(../../images/moon_main.png) no-repeat center;
+  background-size: cover;
+}
+main .portfolio .web-wrap ul li .left.web3 {
+  background: url(../../images/findtour_main.JPG) no-repeat center;
+  background-size: cover;
+}
+main .portfolio .web-wrap ul li .left.web4 {
+  background: url(../../images/daldal_main.png) no-repeat center;
+  background-size: cover;
+}
+main .portfolio .web-wrap ul li .right {
   position: relative;
-  padding: 6rem 0;
   flex: 1;
 }
-main .portfolio .web-wrap ul li div span {
+main .portfolio .web-wrap ul li .right span {
   font-size: 1.6rem;
   color: var(--text-gray-color);
 }
-main .portfolio .web-wrap ul li div h4 {
-  font-size: 4.4rem;
+main .portfolio .web-wrap ul li .right h4 {
+  font-size: 4rem;
 }
-main .portfolio .web-wrap ul li div p {
+main .portfolio .web-wrap ul li .right p {
   font-size: 2rem;
   margin-top: 2rem;
 }
-main .portfolio .web-wrap ul li div a {
+main .portfolio .web-wrap ul li .right a {
   font-size: 1.6rem;
-  position: absolute;
-  bottom: 6rem;
   color: var(--white-color);
   background-color: var(--button-color);
   padding: 1rem 3rem;
   border-radius: 3rem;
+  margin-top: 8rem;
 }
-main .portfolio .web-wrap ul li div a:hover {
+main .portfolio .web-wrap ul li .right a:hover {
   animation: jelly 0.5s;
 }
 main .portfolio .web-wrap .page span {
@@ -598,6 +616,7 @@ footer {
   font-size: 2rem;
   padding: 1rem 0;
   width: 10%;
+  min-width: 8rem;
   text-align: center;
   cursor: pointer;
   font-weight: 600;
@@ -703,4 +722,294 @@ footer {
   height: 0.1rem;
   background: #D9D9D9;
   margin: 1rem 0;
+}
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/
+@media all and (min-width: 1024px) and (max-width: 1400px) {
+  .center {
+    width: 90%;
+  }
+  main .portfolio .web-wrap ul li .right h4 {
+    font-size: 3.4rem;
+  }
+  main .portfolio .web-wrap ul li .right a {
+    margin-top: 4rem;
+  }
+}
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .center {
+    width: 90%;
+  }
+  main .home .center h2 {
+    font-size: 9rem;
+  }
+  main .about {
+    display: block;
+  }
+  main .about img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  main .about .info-wrap {
+    margin-top: 4rem;
+  }
+  main .portfolio .web-wrap ul li {
+    display: block;
+  }
+  main .portfolio .web-wrap ul li .left {
+    width: 100%;
+    padding-bottom: 50%;
+  }
+  main .portfolio .web-wrap ul li .right {
+    padding: 4rem 0;
+  }
+  main .portfolio .web-wrap ul li .right a {
+    position: relative;
+    bottom: auto;
+    margin-top: 4rem;
+  }
+  main .portfolio .design-wrap ul li {
+    width: 49%;
+    padding-bottom: 49%;
+  }
+  main .contact .center {
+    padding: 10rem 6rem;
+  }
+  main .contact .center p {
+    margin: 4rem 0;
+  }
+}
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/
+@media all and (max-width: 767px) {
+  .center {
+    width: 90%;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  header {
+    padding: 0;
+  }
+  header.active .menu-mo nav .menu {
+    color: var(--navy-color);
+  }
+  header .center {
+    display: none;
+  }
+  header .menu-mo {
+    display: block;
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    transition: right 0.3s;
+  }
+  header .menu-mo .gnb {
+    align-items: start;
+    justify-content: end;
+  }
+  header .menu-mo .gnb .icon {
+    color: var(--white-color);
+    font-size: 4rem;
+    padding: 4%;
+    cursor: pointer;
+    position: absolute;
+    left: -15%;
+  }
+  header .menu-mo .gnb .icon.close {
+    display: none;
+  }
+  header .menu-mo .gnb ul {
+    background-color: var(--white-color);
+    width: 80%;
+    height: 100vh;
+    padding: 3rem 4rem;
+  }
+  header .menu-mo .gnb ul li {
+    padding-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
+  }
+  header .menu-mo .gnb ul li p {
+    font-size: 2.4rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+  header .menu-mo .gnb ul li span {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: var(--point-color);
+    top: 0.4rem;
+    left: -0.4rem;
+    transition: scale 0.3s;
+    scale: 0;
+  }
+  header .menu-mo .gnb ul li.on span {
+    scale: 1;
+  }
+  header .menu-mo.on {
+    right: -20%;
+  }
+  header .menu-mo.on .gnb::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    left: -20%;
+  }
+  header .menu-mo.on .icon.menu {
+    display: none;
+  }
+  header .menu-mo.on .icon.close {
+    display: block;
+  }
+  main .home .center h2 {
+    font-size: 4rem;
+  }
+  main .about {
+    display: block;
+    padding-top: 10rem;
+  }
+  main .about img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .about .info-wrap {
+    margin-top: 4rem;
+  }
+  main .about .info-wrap .bottom-box .list p {
+    width: 6rem;
+  }
+  main .portfolio {
+    padding-top: 14rem;
+  }
+  main .portfolio h3 {
+    margin-bottom: 2rem;
+  }
+  main .portfolio hr {
+    margin: 4rem 0;
+  }
+  main .portfolio .web-wrap {
+    padding-bottom: 4rem;
+  }
+  main .portfolio .web-wrap ul li {
+    display: block;
+  }
+  main .portfolio .web-wrap ul li .left {
+    width: 100%;
+    padding-bottom: 60%;
+  }
+  main .portfolio .web-wrap ul li .right {
+    padding: 3rem 0;
+  }
+  main .portfolio .web-wrap ul li .right h4 {
+    font-size: 3.2rem;
+  }
+  main .portfolio .web-wrap ul li .right p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  main .portfolio .web-wrap ul li .right a {
+    position: relative;
+    bottom: auto;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    padding: 1rem 2.8rem;
+  }
+  main .portfolio .design-wrap ul li {
+    width: 49%;
+    padding-bottom: 49%;
+  }
+  main .contact {
+    padding-top: 14rem;
+  }
+  main .contact .center {
+    padding: 6rem 2rem;
+  }
+  main .contact .center p {
+    margin: 4rem 0;
+    font-size: 1.6rem;
+  }
+  main .contact .center .mail i {
+    font-size: 2rem;
+  }
+  main .contact .center .mail span {
+    font-size: 1.6rem;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+  .detail .title {
+    padding: 6rem 0;
+  }
+  .detail .title h2 {
+    font-size: 3.4rem;
+  }
+  .detail .img-wrap {
+    display: block;
+  }
+  .detail .img-wrap img {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .detail .logo-wrap {
+    display: block;
+  }
+  .detail .logo-wrap div {
+    width: 100%;
+    margin-bottom: 4%;
+    padding: 3rem 0;
+  }
+  .detail .logo-wrap img {
+    max-width: 20rem;
+  }
+  .detail .logo-wrap img.st2 {
+    max-height: 87px;
+  }
+  .detail .uiux.app {
+    display: block;
+  }
+  .detail .uiux.main {
+    margin-bottom: 2rem;
+  }
+  .detail .uiux.sub {
+    display: block;
+  }
+  .detail .uiux.sub div {
+    width: 100%;
+  }
+  .detail .tab-con .uiux.app.on {
+    display: block;
+  }
+  .detail .explain {
+    margin: 6rem 0;
+    display: block;
+  }
+  .detail .explain .top-left {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .detail .explain .top-left .text {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+  .detail .explain .top-left a {
+    padding: 1rem 2.8rem;
+    font-size: 1.4rem;
+  }
+  .detail .explain .top-left .chip div {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .detail .explain .top-right {
+    width: 100%;
+  }
+  .detail .explain .top-right ul {
+    gap: 2rem;
+  }
 }

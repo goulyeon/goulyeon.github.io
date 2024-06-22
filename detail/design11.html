@@ -55,24 +55,10 @@
         </section>
     </main>
     <footer>
-        <p>
+        <p class="center">
             COPYRIGHT ⓒ 2024 JEONG SEUNGYEON. ALL RIGHTS RESERVED.<br>
             본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용으로 제작되었습니다.
         </p>
     </footer>
-    <script>
-        //detail 탭메뉴
-        $(".detail .tab-menu li").on('click', function() {
-            let index = $(".detail .tab-menu li").index(this);
-
-            $(".detail .tab-menu li").removeClass("active");
-            $(this).addClass("active");
-        
-            //모든 div의 on 클래스 제거
-            $('.detail .tab-con >div').removeClass('on');
-            //클릭된 index에 해당하는 div에 on 추가
-            $('.detail .tab-con >div:eq('+ index +')').addClass('on');
-        });
-    </script>
 </body>
 </html>

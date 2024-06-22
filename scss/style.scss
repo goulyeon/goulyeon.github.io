@@ -12,7 +12,7 @@
     --border-gray-color: #b5b5b5;
     --gradient-color: linear-gradient(0deg, #544b79 0%, #12163A 100%)
 }
-// -----------------------------
+// ---------------------------------------------------------------------------------------
 
 
 html {
@@ -112,7 +112,9 @@ header{
     &.active .center nav ul li{
         color: var(--navy-color);
     }
-
+    .menu-mo{
+        display: none;
+    }
     .center{
         position: relative;
         display: flex;
@@ -154,6 +156,7 @@ header{
     }
 }
 
+// ---------------------------------------------------------------------------------------
 
 main{
 
@@ -261,15 +264,16 @@ main{
         }
     }
 
+// ---------------------------------------------------------------------------------------
+
     .about{
         display: flex;
         padding-top: 20rem;
-
+        gap: 6%;
         img{
-            width: 48%;
+            width: 44%;
             object-fit: scale-down;
             flex-grow: 1;
-            padding-right: 5rem;
         }
 
         .info-wrap{
@@ -341,6 +345,8 @@ main{
         }
     }
 
+// ---------------------------------------------------------------------------------------
+
     .portfolio{
         padding-top: 20rem;
 
@@ -353,28 +359,42 @@ main{
             ul{
                 li{
                     display: flex;
-
-                    img{
+                    gap: 4%;
+                    align-items: center;
+                    
+                    .left{
                         width: 60%;
-                        height: 40rem;
+                        height: 0;
+                        padding-bottom: 34%;
                         border-radius: 1rem;
-                        object-fit: cover;
-                        margin-right: 4rem;
+                        &.web1{
+                            background: url(../../images/filmlog_main.png) no-repeat center;
+                            background-size: cover;
+                        }
+                        &.web2{
+                            background: url(../../images/moon_main.png) no-repeat center;
+                            background-size: cover;
+                        }
+                        &.web3{
+                            background: url(../../images/findtour_main.JPG) no-repeat center;
+                            background-size: cover;
+                        }
+                        &.web4{
+                            background: url(../../images/daldal_main.png) no-repeat center;
+                            background-size: cover;
+                        }
                     }
-
-                    div{
+                    .right{
                         position: relative;
-                        padding: 6rem 0;
                         flex: 1;
-
+                        
                         span{
                             font-size: 1.6rem;
                             color: var(--text-gray-color);
                         }
 
                         h4{
-                            font-size: 4.4rem;
-                            // font-weight: 800;
+                            font-size: 4rem;
                         }
 
                         p{
@@ -384,12 +404,11 @@ main{
 
                         a{
                             font-size: 1.6rem;
-                            position: absolute;
-                            bottom: 6rem;
                             color: var(--white-color);
                             background-color: var(--button-color);
                             padding: 1rem 3rem;
                             border-radius: 3rem;
+                            margin-top: 8rem;
 
                             &:hover {
                                 animation: jelly 0.5s;
@@ -519,6 +538,8 @@ main{
         }
     }
 
+// ---------------------------------------------------------------------------------------
+
     .contact{
         padding-top: 20rem;
         display: flex;
@@ -572,6 +593,7 @@ footer{
     background-color: var(--white-color);
 }
 
+// ---------------------------------------------------------------------------------------
 
 .detail{
     .title{
@@ -670,11 +692,13 @@ footer{
             font-size: 2rem;
             padding: 1rem 0;
             width: 10%;
+            min-width: 8rem;
             text-align: center;
             cursor: pointer;
             font-weight: 600;
             border-bottom: .4rem solid var(--background-color);
             color: var(--text-gray-color);
+
             &.active{
                 border-bottom: .4rem solid var(--point-color);
                 color: var(--text-color);
@@ -785,3 +809,397 @@ footer{
 
     
 }
+
+// ---------------------------------------------------------------------------------------
+
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1400px)*/ 
+@media all and (min-width:1024px) and (max-width:1400px) { 
+
+.center{
+    width: 90%;
+}
+
+main{
+    .portfolio{
+        .web-wrap{
+            ul{
+                li{
+                    .right{
+                        h4{
+                            font-size: 3.4rem;
+                        }
+                        a{
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+}//끝
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) { 
+
+.center{
+    width: 90%;
+}
+
+main{
+    .home{
+        .center{
+            h2{
+                font-size: 9rem;
+            }
+        }
+    }
+    .about{
+        display: block;
+        img{
+            width: 60%;
+            margin: 0 auto;
+        }
+        .info-wrap{
+            margin-top: 4rem;
+        }
+    }
+    .portfolio{
+        .web-wrap{
+            ul{
+                li{
+                    display: block;
+                    .left{
+                        width: 100%;
+                        padding-bottom: 50%;
+                    }
+                    .right{
+                        padding: 4rem 0;
+                        a{
+                            position: relative;
+                            bottom: auto;
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+        .design-wrap{
+            ul{
+                li{
+                    width: 49%;
+                    padding-bottom: 49%;
+                }
+            }
+        }
+    }
+    .contact{
+        .center{
+            padding: 10rem 6rem;
+            p{
+                margin: 4rem 0;
+            }
+        }
+        
+    }
+}
+
+
+
+}//끝
+
+
+/* 모바일 가로 & 테블릿 세로 (해상도  ~ 767px)*/ 
+@media all and (max-width:767px) {
+
+.center{
+    width: 90%;
+}
+h3{
+    font-size: 4rem;
+}
+
+header{
+    padding: 0;
+
+    &.active .menu-mo nav .menu{
+        color: var(--navy-color);
+    }
+
+    .center{
+        display: none;
+    }
+    .menu-mo{
+        display: block;
+        position: absolute;
+        right: -100%;
+        width: 100%;
+        transition: right .3s;
+        .gnb{
+            // display: flex;
+            align-items: start;
+            justify-content: end;
+            
+
+            .icon{
+                color: var(--white-color);
+                font-size: 4rem;
+                padding: 4%;
+                cursor: pointer;
+                position: absolute;
+                left: -15%;
+                &.close{
+                    display: none;
+                }
+            }
+            ul{
+                background-color: var(--white-color);
+                width: 80%;
+                height: 100vh;
+                padding: 3rem 4rem;
+                li{
+                    padding-bottom: 2rem;
+                    position: relative;
+                    cursor: pointer;
+                    p{
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    span{
+                        position: absolute;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        border-radius: 50%;
+                        background: var(--point-color);
+                        top: .4rem;
+                        left: -.4rem;
+                        transition: scale .3s;
+                        scale: 0;
+                        
+                    }
+                    &.on span{
+                        scale: 1;
+                    }
+                }
+            }
+        }
+        &.on{
+            right: -20%;
+            .gnb::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                background: rgb(0 0 0 / 50%);
+                left: -20%;
+            }
+            .icon{
+                &.menu{
+                    display: none;
+                }
+                &.close{
+                    display: block;
+                }
+            }
+        
+        }
+    }
+}
+
+main{
+
+    .home{
+        .center{
+            h2{
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .about{
+        display: block;
+        padding-top: 10rem;
+
+        img{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .info-wrap{
+            margin-top: 4rem;
+            .bottom-box{
+                .list{
+                    p{
+                        width: 6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio{
+        padding-top: 14rem;
+        h3{
+            margin-bottom: 2rem;
+        }
+        hr{
+            margin: 4rem 0;
+        }
+        .web-wrap{
+            padding-bottom: 4rem;
+            ul{
+                li{
+                    display: block;
+                    .left{
+                        width: 100%;
+                        padding-bottom: 60%;
+                    }
+                    .right{
+                        padding: 3rem 0;
+                        h4{
+                            font-size: 3.2rem;
+                        }
+                        p{
+                            font-size: 1.8rem;
+                            margin-top: 1rem;
+                        }
+                        a{
+                            position: relative;
+                            bottom: auto;
+                            margin-top: 2rem;
+                            font-size: 1.4rem;
+                            padding: 1rem 2.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        .design-wrap{
+            ul{
+                li{
+                    width: 49%;
+                    padding-bottom: 49%;
+                }
+            }
+        }
+    }
+    .contact{
+        padding-top: 14rem;
+        .center{
+            padding: 6rem 2rem;
+            p{
+                margin: 4rem 0;
+                font-size: 1.6rem;
+            }
+            .mail{
+                i{
+                    font-size: 2rem;
+                }
+                span{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+    }
+    
+}
+
+footer{
+    font-size: 1.2rem;
+}
+
+
+.detail{
+    
+    .title{
+        padding: 6rem 0;
+        h2{
+            font-size: 3.4rem;
+        }
+    }
+    .img-wrap{
+        display: block;
+        img{
+            width: 100%;
+            margin-bottom: 4%;
+            
+        }
+    }
+    .logo-wrap{
+        display: block;
+        div{
+            width: 100%;
+            margin-bottom: 4%;
+            padding: 3rem 0;
+        }
+        img{
+            max-width: 20rem;
+            &.st2{
+                max-height: 87px;
+            }
+        }
+    }
+    .uiux{
+        &.app{
+            display: block;
+        }
+        &.main{
+            margin-bottom: 2rem;
+        }
+        &.sub{
+            display: block;
+            div{
+                width: 100%;
+            }
+        }
+    }
+
+    .tab-con{
+        .uiux{
+            &.app{
+                &.on{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .explain{
+        margin: 6rem 0;
+        display: block;
+
+        .top-left{
+            width: 100%;
+            margin-bottom: 4rem;
+            .text{
+                font-size: 1.8rem;
+                padding: 2rem 0;
+            }
+            a{
+                padding: 1rem 2.8rem;
+                font-size: 1.4rem;
+            }
+            .chip{
+                div{
+                    width: 2.2rem;
+                    height: 2.2rem;
+                }
+            }
+        }
+        .top-right{
+            width: 100%;
+            ul{
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+
+}//끝
+
