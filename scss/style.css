@@ -259,8 +259,7 @@ main .about {
 }
 main .about img {
   width: 44%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   flex-grow: 1;
 }
 main .about .info-wrap {
@@ -393,8 +392,7 @@ main .portfolio hr {
 main .portfolio .design-wrap ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1%;
+  justify-content: flex-start;
 }
 main .portfolio .design-wrap ul li {
   width: 24%;
@@ -402,7 +400,7 @@ main .portfolio .design-wrap ul li {
   background-color: #909090;
   border-radius: 1rem;
   padding-bottom: 24%;
-  margin-bottom: 1%;
+  margin: 0.5% 0.5%;
   transition: 0.3s;
   overflow: hidden;
 }
@@ -434,52 +432,68 @@ main .portfolio .design-wrap ul li a .bg p {
 main .portfolio .design-wrap ul li a:hover .bg {
   opacity: 1;
 }
-main .portfolio .design-wrap ul li.design1 {
-  background: url(../../images/de1-1.jpg) no-repeat center;
+main .portfolio .design-wrap ul li.po-card {
+  background: url(../images/po/card1.jpg) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design2 {
-  background: url(../../images/de2-1.jpg) no-repeat center;
+main .portfolio .design-wrap ul li.po-book {
+  background: url(../images/po/book1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design3 {
-  background: url(../../images/de3-1.jpg) no-repeat center;
+main .portfolio .design-wrap ul li.po-delivery {
+  background: url(../images/po/delivery1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design4 {
-  background: url(../../images/de4-1.jpg) no-repeat center;
+main .portfolio .design-wrap ul li.po-cock {
+  background: url(../images/po/cock1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design5 {
-  background: url(../../images/de5-1.jpg) no-repeat center;
+main .portfolio .design-wrap ul li.po-spring {
+  background: url(../images/po/spring.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design6 {
-  background: url(../../images/de6-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-summer {
+  background: url(../images/po/summer.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design7 {
-  background: url(../../images/de7-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-autumn {
+  background: url(../images/po/autumn.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design8 {
-  background: url(../../images/de8-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-winter {
+  background: url(../images/po/winter.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design9 {
-  background: url(../../images/de9-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-night {
+  background: url(../images/po/night1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design10 {
-  background: url(../../images/de10-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-salad {
+  background: url(../images/po/salad1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design11 {
-  background: url(../../images/de11-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-quick {
+  background: url(../images/po/quick1.png) no-repeat center;
   background-size: auto 100%;
 }
-main .portfolio .design-wrap ul li.design12 {
-  background: url(../../images/de12-1.png) no-repeat center;
+main .portfolio .design-wrap ul li.po-find {
+  background: url(../images/po/find1.png) no-repeat center;
+  background-size: auto 100%;
+}
+main .portfolio .design-wrap ul li.po-lumen {
+  background: url(../images/po/lumen1.png) no-repeat center;
+  background-size: auto 100%;
+}
+main .portfolio .design-wrap ul li.po-sending {
+  background: url(../images/po/sending1.png) no-repeat center;
+  background-size: auto 100%;
+}
+main .portfolio .design-wrap ul li.po-dh {
+  background: url(../images/po/dh1.png) no-repeat center;
+  background-size: auto 100%;
+}
+main .portfolio .design-wrap ul li.po-delpay {
+  background: url(../images/po/delpay.png) no-repeat center;
   background-size: auto 100%;
 }
 main .portfolio .design-wrap ul li:hover {
@@ -536,6 +550,10 @@ footer {
 }
 .detail .title h2 {
   font-size: 4rem;
+}
+.detail .img-flex {
+  display: flex;
+  justify-content: center;
 }
 .detail .img-wrap {
   display: flex;

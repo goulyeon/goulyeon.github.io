@@ -436,8 +436,7 @@ main{
             ul{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 1%;
+                justify-content: flex-start;
 
                 li{
                     width: 24%;
@@ -445,7 +444,7 @@ main{
                     background-color: #909090;
                     border-radius: 1rem;
                     padding-bottom: 24%;
-                    margin-bottom: 1%;
+                    margin: 0.5% 0.5%;
                     transition: 0.3s;
                     overflow: hidden;
                     a{
@@ -480,52 +479,68 @@ main{
                         }
                     }
                     
-                    &.design1{
-                        background: url(../../images/de1-1.jpg) no-repeat center;
+                    &.po-card{
+                        background: url(../images/po/card1.jpg) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design2{
-                        background: url(../../images/de2-1.jpg) no-repeat center;
+                    &.po-book{
+                        background: url(../images/po/book1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design3{
-                        background: url(../../images/de3-1.jpg) no-repeat center;
+                    &.po-delivery{
+                        background: url(../images/po/delivery1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design4{
-                        background: url(../../images/de4-1.jpg) no-repeat center;
+                    &.po-cock{
+                        background: url(../images/po/cock1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design5{
-                        background: url(../../images/de5-1.jpg) no-repeat center;
+                    &.po-spring{
+                        background: url(../images/po/spring.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design6{
-                        background: url(../../images/de6-1.png) no-repeat center;
+                    &.po-summer{
+                        background: url(../images/po/summer.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design7{
-                        background: url(../../images/de7-1.png) no-repeat center;
+                    &.po-autumn{
+                        background: url(../images/po/autumn.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design8{
-                        background: url(../../images/de8-1.png) no-repeat center;
+                    &.po-winter{
+                        background: url(../images/po/winter.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design9{
-                        background: url(../../images/de9-1.png) no-repeat center;
+                    &.po-night{
+                        background: url(../images/po/night1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design10{
-                        background: url(../../images/de10-1.png) no-repeat center;
+                    &.po-salad{
+                        background: url(../images/po/salad1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design11{
-                        background: url(../../images/de11-1.png) no-repeat center;
+                    &.po-quick{
+                        background: url(../images/po/quick1.png) no-repeat center;
                         background-size: auto 100%;
                     }
-                    &.design12{
-                        background: url(../../images/de12-1.png) no-repeat center;
+                    &.po-find{
+                        background: url(../images/po/find1.png) no-repeat center;
+                        background-size: auto 100%;
+                    }
+                    &.po-lumen{
+                        background: url(../images/po/lumen1.png) no-repeat center;
+                        background-size: auto 100%;
+                    }
+                    &.po-sending{
+                        background: url(../images/po/sending1.png) no-repeat center;
+                        background-size: auto 100%;
+                    }
+                    &.po-dh{
+                        background: url(../images/po/dh1.png) no-repeat center;
+                        background-size: auto 100%;
+                    }
+                    &.po-delpay{
+                        background: url(../images/po/delpay.png) no-repeat center;
                         background-size: auto 100%;
                     }
 
@@ -605,7 +620,10 @@ footer{
             font-size: 4rem;
         }
     }
-
+    .img-flex{
+        display: flex;
+        justify-content: center;
+    }
     .img-wrap{
         display: flex;
         justify-content: center;
